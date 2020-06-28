@@ -1,3 +1,11 @@
 /*******************************
          Site Overrides
 *******************************/
+
+h1.ui.header {
+  font-size: 4rem;
+}
+
+h2.ui.header {
+  font-size: 3rem;
+}

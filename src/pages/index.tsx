@@ -1,83 +1,98 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { PageProps } from 'gatsby';
 import get from 'lodash/get';
 import { Helmet } from 'react-helmet';
-import Hero from '../components/hero';
-import Layout from '../components/layout';
-import ArticlePreview from '../components/article-preview';
+import { Container, Header, Button, Grid, Item } from 'semantic-ui-react';
 
-const RootIndex = (props: any) => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
-  const posts = get(props, 'data.allContentfulBlogPost.edges');
-  const [author] = get(props, 'data.allContentfulPerson.edges');
+const Section = ({ children }: { children: any }) => {
   return (
-    <Layout>
-      <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
-        <Hero data={author.node} />
-        <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
-          <ul className="article-list">
-            {posts.map(({ node }: { node: any }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-    </Layout>
+    <Container fluid style={{ paddingTop: '20px', paddingBottom: '70px' }}>
+      {children}
+    </Container>
+  );
+};
+
+const RootIndex = (props: PageProps) => {
+  const siteTitle = get(props, 'data.site.siteMetadata.title');
+  return (
+    <>
+      <Helmet title={siteTitle} />
+      <Container fluid>
+        <Container
+          fluid
+          style={{
+            paddingTop: '200px',
+            height: '600px',
+          }}
+        >
+          <Grid columns={1}>
+            <Grid.Row>
+              <Grid.Column>
+                <Header as="h1" textAlign="center">
+                  An agency
+                  <Header.Subheader>
+                    We solve business problems with software.
+                  </Header.Subheader>
+                </Header>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column textAlign="center">
+                <Button primary>Schedule a chat</Button>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+        <Section>
+          <Container>
+            <Header as="h2">Our services</Header>
+            <Grid columns={2}>
+              {[
+                { title: 'Website development' },
+                { title: 'Consulting' },
+                { title: 'Maintenance & support' },
+              ].map((service) => (
+                <Grid.Row>
+                  <Grid.Column>
+                    <Header as="h3">{service.title}</Header>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Header as="h3">{service.title}</Header>
+                  </Grid.Column>
+                </Grid.Row>
+              ))}
+            </Grid>
+          </Container>
+        </Section>
+        <Section>
+          <Container>
+            <Header as="h2">Who we are</Header>
+            <Item.Group>
+              {[
+                { name: 'Nicol Vojacek ' },
+                { name: 'Megan Russell' },
+                { name: 'Jason Russell' },
+              ].map((person) => (
+                <Item>
+                  <Item.Image
+                    size="small"
+                    src="https://react.semantic-ui.com/images/wireframe/image.png"
+                  />
+                  <Item.Content>
+                    <Item.Header>{person.name}</Item.Header>
+                    <Item.Meta>Linked In | GitHub | Email</Item.Meta>
+                    <Item.Description>
+                      This person is super cool
+                    </Item.Description>
+                  </Item.Content>
+                </Item>
+              ))}
+            </Item.Group>
+          </Container>
+        </Section>
+      </Container>
+    </>
   );
 };
 
 export default RootIndex;
-
-export const pageQuery = graphql`
-  query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
-`;

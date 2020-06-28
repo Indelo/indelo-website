@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import styles from './navigation.module.css';
+import { Menu, Container } from 'semantic-ui-react';
 
-export default () => (
-  <nav role="navigation">
-    <ul className={styles.navigation}>
-      <li className={styles.navigationItem}>
-        <Link to="/">Home</Link>
-      </li>
-      <li className={styles.navigationItem}>
-        <Link to="/blog/">Blog</Link>
-      </li>
-    </ul>
-  </nav>
-);
+export const Navigation = () => {
+  return (
+    <Menu secondary pointing>
+      <Container>
+        <Menu.Item header>An agency</Menu.Item>
+        <Menu.Menu position="right" />
+      </Container>
+    </Menu>
+  );
+};
