@@ -45,7 +45,7 @@ const RootIndex = (props: PageProps) => {
           fluid
           style={{
             paddingTop: '200px',
-            height: '750px',
+            height: 'calc(100vh - 50px)',
           }}
         >
           <Grid columns={1}>
@@ -57,6 +57,13 @@ const RootIndex = (props: PageProps) => {
                 <Header as="h3" textAlign="center">
                   We solve business problems with software
                 </Header>
+                <Segment
+                  basic
+                  textAlign="center"
+                  style={{ fontSize: '1.33em' }}
+                >
+                  Website development - UI/UX - Design - Branding
+                </Segment>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
