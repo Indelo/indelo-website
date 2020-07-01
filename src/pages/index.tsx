@@ -62,7 +62,7 @@ const RootIndex = (props: PageProps) => {
                   textAlign="center"
                   style={{ fontSize: '1.33em' }}
                 >
-                  Website development - UI/UX - Design - Branding
+                  Website development - UI/UX - Design - Branding - SEO
                 </Segment>
               </Grid.Column>
             </Grid.Row>
