@@ -1,13 +1,28 @@
 import React from 'react';
-import { Menu, Container } from 'semantic-ui-react';
+import { Menu, Container, Button, Header } from 'semantic-ui-react';
 
 export const Navigation = () => {
   return (
-    <Menu secondary pointing>
-      <Container>
-        <Menu.Item header>An agency</Menu.Item>
-        <Menu.Menu position="right" />
-      </Container>
-    </Menu>
+    <>
+      <Menu
+        secondary
+        pointing
+        fixed="top"
+        // size="huge"
+        style={{ backgroundColor: 'white' }}
+      >
+        <Container>
+          <Menu.Item header>
+            <Header>An Agency</Header>
+          </Menu.Item>
+          <Menu.Menu position="right">
+            <Menu.Item>
+              <Button primary>Contact us</Button>
+            </Menu.Item>
+          </Menu.Menu>
+        </Container>
+      </Menu>
+      <div style={{ height: 50 }} />
+    </>
   );
 };
