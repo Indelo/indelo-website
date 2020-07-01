@@ -38,7 +38,9 @@ const RootIndex = (props: PageProps) => {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column textAlign="center">
-                <Button primary>Schedule a chat</Button>
+                <Button primary size="huge">
+                  Schedule a chat
+                </Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -48,16 +50,24 @@ const RootIndex = (props: PageProps) => {
             <Header as="h2">Our services</Header>
             <Grid columns={2}>
               {[
-                { title: 'Website development' },
-                { title: 'Consulting' },
-                { title: 'Maintenance & support' },
-              ].map((service) => (
+                { title: 'Website development', image: 'image' },
+                { title: 'Consulting', image: 'image' },
+                { title: 'Maintenance & support', image: 'image' },
+              ].map((service, index) => (
                 <Grid.Row>
                   <Grid.Column>
-                    <Header as="h3">{service.title}</Header>
+                    {index % 2 === 0 ? (
+                      <Header as="h3">{service.title}</Header>
+                    ) : (
+                      service.image
+                    )}
                   </Grid.Column>
                   <Grid.Column>
-                    <Header as="h3">{service.title}</Header>
+                    {index % 2 === 1 ? (
+                      <Header as="h3">{service.title}</Header>
+                    ) : (
+                      service.image
+                    )}
                   </Grid.Column>
                 </Grid.Row>
               ))}

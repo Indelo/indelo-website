@@ -2,10 +2,18 @@
          Site Overrides
 *******************************/
 
+.ui.header {
+  font-weight: 400;
+}
+
 h1.ui.header {
   font-size: 4rem;
 }
 
 h2.ui.header {
   font-size: 3rem;
+}
+
+h3.ui.header {
+  font-size: 2rem;
 }
