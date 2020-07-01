@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        isTSX: true, // defaults to false
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        allExtensions: true,
       },
     },
     'gatsby-plugin-eslint',
