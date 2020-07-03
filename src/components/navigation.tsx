@@ -13,7 +13,7 @@ export const Navigation = () => {
       >
         <Container>
           <Menu.Item header>
-            <Header>An Agency</Header>
+            <Header>Indelo</Header>
           </Menu.Item>
           <Menu.Menu position="right">
             <Menu.Item>
@@ -22,7 +22,7 @@ export const Navigation = () => {
           </Menu.Menu>
         </Container>
       </Menu>
-      <div style={{ height: 50 }} />
+      <div style={{ height: 46 }} />
     </>
   );
 };

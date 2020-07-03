@@ -22,7 +22,7 @@ const Section = ({
   children,
 }: {
   title: string;
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }) => {
   return (
     <Container style={{ paddingTop: '20px', paddingBottom: '70px' }}>
@@ -45,14 +45,14 @@ const RootIndex = (props: PageProps) => {
           fluid
           style={{
             paddingTop: '200px',
-            height: 'calc(100vh - 50px)',
+            height: 'calc(100vh - 46px)',
           }}
         >
           <Grid columns={1}>
             <Grid.Row>
               <Grid.Column>
                 <Header as="h1" textAlign="center">
-                  An agency
+                  Indelo
                 </Header>
                 <Header as="h3" textAlign="center">
                   We solve business problems with software
@@ -127,6 +127,14 @@ const RootIndex = (props: PageProps) => {
           </Grid>
         </Section>
         <Section title="Who we are">
+          <Grid centered columns={1}>
+            <Grid.Column width={9}>
+              <p style={{ fontSize: '1.33em' }}>
+                We are a passionate, world-class bunch of developers, engineers,
+                designers and UI/UX exports.
+              </p>
+            </Grid.Column>
+          </Grid>
           <Item.Group>
             {[
               { name: 'Nicol Vojacek ' },
@@ -151,7 +159,7 @@ const RootIndex = (props: PageProps) => {
           <Grid columns={1} centered>
             <Grid.Column width={8}>
               <Segment>
-                <Form>
+                <Form size="large">
                   <Form.Field>
                     <label>Your name</label>
                     <input />
@@ -164,7 +172,7 @@ const RootIndex = (props: PageProps) => {
                     label="About"
                     placeholder="Tell us more about you..."
                   />
-                  <Button primary fluid>
+                  <Button primary fluid size="large">
                     Send message
                   </Button>
                 </Form>
@@ -178,32 +186,34 @@ const RootIndex = (props: PageProps) => {
             inverted
             style={{ paddingTop: '3em', paddingBottom: '3em' }}
           >
-            <Grid inverted divided>
-              <Grid.Row>
-                <Grid.Column width="3">
-                  <Header inverted as="h4">
-                    About
-                  </Header>
-                </Grid.Column>
-                <Grid.Column width="3">
-                  <Header inverted as="h4">
-                    Services
-                  </Header>
-                  <List>
-                    {[
-                      { title: 'Website development' },
-                      { title: 'UI/UX' },
-                      { title: 'Branding' },
-                      { title: 'Design' },
-                    ].map(({ title }) => (
-                      <List.Item as="a" key={title}>
-                        {title}
-                      </List.Item>
-                    ))}
-                  </List>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
+            <Container>
+              <Grid inverted divided>
+                <Grid.Row>
+                  <Grid.Column width="3">
+                    <Header inverted as="h4">
+                      About
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column width="3">
+                    <Header inverted as="h4">
+                      Services
+                    </Header>
+                    <List>
+                      {[
+                        { title: 'Website development' },
+                        { title: 'UI/UX' },
+                        { title: 'Branding' },
+                        { title: 'Design' },
+                      ].map(({ title }) => (
+                        <List.Item as="a" key={title}>
+                          {title}
+                        </List.Item>
+                      ))}
+                    </List>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Container>
           </Segment>
         </Container>
       </Container>
