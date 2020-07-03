@@ -26,12 +26,13 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Indelo | Website development',
+    siteUrl: 'https://indelo.co.za',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: 'gatsby-plugin-typescript',
       options: {
         isTSX: true,
         allExtensions: true,
@@ -41,6 +42,15 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-less',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: ['/*'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
