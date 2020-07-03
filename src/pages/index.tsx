@@ -38,7 +38,11 @@ const RootIndex = (props: PageProps) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title');
   return (
     <>
-      <Helmet title={siteTitle} />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Indelo | Development agency</title>
+        <link rel="canonical" href="https://indelo.co.za" />
+      </Helmet>
       <Container fluid>
         <Navigation />
         <Container

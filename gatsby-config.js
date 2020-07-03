@@ -26,7 +26,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Indelo | Website development',
+    title: 'Indelo | Development agency',
     siteUrl: 'https://indelo.co.za',
   },
   plugins: [
