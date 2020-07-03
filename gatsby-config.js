@@ -29,40 +29,51 @@ module.exports = {
     title: 'Indelo | Website development',
     siteUrl: 'https://indelo.co.za',
   },
-  pathPrefix: '/gatsby-contentful-starter',
   plugins: [
+    // SEO
+    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-typescript',
+      resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        isTSX: true,
-        allExtensions: true,
+        host: 'https://indelo.co.za',
+        sitemap: 'https://indeo.co.za/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    'gatsby-plugin-eslint',
-    'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-less',
     {
       resolve: 'gatsby-plugin-offline',
       options: {
         precachePages: ['/*'],
       },
     },
-    {
-      resolve: 'gatsby-plugin-sitemap',
-    },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    // CMS
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
+    // assets
+    'gatsby-plugin-less',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: `${__dirname}/src/assets/`,
         },
+      },
+    },
+    // Dev
+    'gatsby-plugin-eslint',
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
       },
     },
   ],
