@@ -18,9 +18,7 @@ export const Navigation = () => {
           </Menu.Item>
           <Menu.Menu position="right">
             <Menu.Item>
-              <AnchorLink to="/#contact" title="Contact Us">
-                <Button primary>Contact us</Button>
-              </AnchorLink>
+              <AnchorLink to="/#contact" title="Contact Us" />
             </Menu.Item>
           </Menu.Menu>
         </Container>
