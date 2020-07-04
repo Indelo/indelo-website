@@ -67,6 +67,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-anchor-links',
     // Dev
     'gatsby-plugin-eslint',
     {
