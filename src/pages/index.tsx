@@ -149,31 +149,33 @@ const RootIndex = () => {
             ))}
           </Item.Group>
         </Section>
-        <Section title="Contact us">
-          <Grid columns={1} centered>
-            <Grid.Column width={8}>
-              <Segment>
-                <Form size="large">
-                  <Form.Field>
-                    <label>Your name</label>
-                    <input />
-                  </Form.Field>
-                  <Form.Field>
-                    <label>Your email</label>
-                    <input />
-                  </Form.Field>
-                  <Form.TextArea
-                    label="About"
-                    placeholder="Tell us more about you..."
-                  />
-                  <Button primary fluid size="large">
-                    Send message
-                  </Button>
-                </Form>
-              </Segment>
-            </Grid.Column>
-          </Grid>
-        </Section>
+        <div id="contact">
+          <Section title="Contact us">
+            <Grid columns={1} centered>
+              <Grid.Column width={8}>
+                <Segment>
+                  <Form size="large">
+                    <Form.Field>
+                      <label>Your name</label>
+                      <input />
+                    </Form.Field>
+                    <Form.Field>
+                      <label>Your email</label>
+                      <input />
+                    </Form.Field>
+                    <Form.TextArea
+                      label="About"
+                      placeholder="Tell us more about you..."
+                    />
+                    <Button primary fluid size="large">
+                      Send message
+                    </Button>
+                  </Form>
+                </Segment>
+              </Grid.Column>
+            </Grid>
+          </Section>
+        </div>
         <Container fluid>
           <Segment
             basic
