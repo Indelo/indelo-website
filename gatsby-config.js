@@ -27,7 +27,11 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Indelo | Development agency',
-    siteUrl: 'https://indelo.co.za',
+    titleTemplate: '%s - Indelo | Development agency',
+    description:
+      'Indelo is a software development and design agency based in Cape Town, South Africa.',
+    url: 'https://indelo.co.za',
+    image: 'images/indelo.png',
   },
   plugins: [
     // SEO

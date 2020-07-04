@@ -1,7 +1,4 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
-import get from 'lodash/get';
-import { Helmet } from 'react-helmet';
 import {
   Container,
   Header,
@@ -16,6 +13,7 @@ import WebDeveloperSvg from '../assets/web_developer.svg';
 import ConsultingSvg from '../assets/consulting.svg';
 import CollaboratingSvg from '../assets/collaborators.svg';
 import { Navigation } from '../components/navigation';
+import { SEO } from '../components/seo';
 
 const Section = ({
   title,
@@ -34,23 +32,15 @@ const Section = ({
   );
 };
 
-const RootIndex = (props: PageProps) => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
+const RootIndex = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Indelo | Development agency</title>
-        <link rel="canonical" href="https://indelo.co.za" />
-      </Helmet>
+      <SEO />
       <Container fluid>
         <Navigation />
         <Container
           fluid
-          style={{
-            paddingTop: '200px',
-            height: 'calc(100vh - 46px)',
-          }}
+          style={{ paddingTop: '200px', height: 'calc(100vh - 46px)' }}
         >
           <Grid columns={1}>
             <Grid.Row>
