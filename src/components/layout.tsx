@@ -5,7 +5,7 @@ import { Footer } from './footer';
 
 export const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
   return (
-    <div>
+    <>
       <Navigation />
       <Container>{children}</Container>
       <Footer />
