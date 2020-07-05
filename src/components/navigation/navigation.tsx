@@ -7,25 +7,24 @@ import css from './navigation.module.css';
 export const Navigation = () => {
   return (
     <>
-      <Menu secondary pointing fixed="top" className={css.menu}>
-        <Container>
+      <Menu secondary stackable pointing fixed="top" className={css.menu}>
+        <Container basic>
           <Menu.Item header>
             <AnchorLink to="/">
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <Image
-                  src={smallLogo}
-                  style={{ width: '2.5em', marginRight: 6 }}
-                />
-                <Header
-                  style={{
-                    color: '#fff',
-                    fontSize: 30,
-                    margin: 'auto',
-                    fontFamily: 'Avenir',
-                  }}
-                >
-                  indelo
-                </Header>
+                <div style={{ paddingRight: '10px' }}>
+                  <Image src={smallLogo} className={css.logo} />
+                </div>
+                <div>
+                  <Header
+                    style={{
+                      color: '#fff',
+                      fontFamily: 'Avenir',
+                    }}
+                  >
+                    indelo
+                  </Header>
+                </div>
               </div>
             </AnchorLink>
           </Menu.Item>
@@ -62,7 +61,7 @@ export const Navigation = () => {
           </Menu.Menu>
         </Container>
       </Menu>
-      <div style={{ height: 62 }} />
+      <div style={{ height: 46 }} />
     </>
   );
 };

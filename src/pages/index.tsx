@@ -20,11 +20,7 @@ const RootIndex = () => {
               <Hero />
             </div>
             <div>
-              <img
-                style={{ width: '100%', height: '170px' }}
-                alt="waves"
-                src={waves}
-              />
+              <img className={css.waveImage} alt="waves" src={waves} />
             </div>
           </div>
         </div>

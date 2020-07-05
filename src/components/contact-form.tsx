@@ -7,7 +7,7 @@ export const ContactForm = () => {
     <div id="contact">
       <Section title="Contact us">
         <Grid columns={1} centered>
-          <Grid.Column width={8}>
+          <Grid.Column computer={8} mobile={16}>
             <Segment size="huge">
               <Form size="large">
                 <Form.Field>
