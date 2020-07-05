@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Grid, Image } from 'semantic-ui-react';
+import { Header, Grid, Image, Container } from 'semantic-ui-react';
 import { Layout } from '../components/layout';
 import mainLogo from '../assets/images/mainlogo.png';
 import waves from '../assets/images/waves.png';
@@ -30,48 +30,49 @@ const BlogIndex = () => {
           </div>
         </div>
       </div>
-
-      <Grid columns={3} centered>
-        {[
-          {
-            title: 'article 1',
-            date: new Date().toISOString(),
-            readingTime: '5 min',
-            description: 'this is a blog post',
-          },
-          {
-            title: 'article 2',
-            date: new Date().toISOString(),
-            readingTime: '5 min',
-            description: 'this is a blog post',
-          },
-          {
-            title: 'article 3',
-            date: new Date().toISOString(),
-            readingTime: '5 min',
-            description: 'this is a blog post',
-          },
-          {
-            title: 'article 4',
-            date: new Date().toISOString(),
-            readingTime: '5 min',
-            description: 'this is a blog post',
-          },
-        ].map(({ title, date, readingTime, description }) => {
-          return (
-            <Grid.Row>
-              <Grid.Column>
-                <Header className={css.header}>{title}</Header>
-                <div>
-                  {date}
-                  {readingTime}
-                </div>
-                {description}
-              </Grid.Column>
-            </Grid.Row>
-          );
-        })}
-      </Grid>
+      <Container style={{ paddingBottom: 50 }}>
+        <Grid columns={3} centered>
+          {[
+            {
+              title: 'article 1',
+              date: new Date().toISOString(),
+              readingTime: '5 min',
+              description: 'this is a blog post',
+            },
+            {
+              title: 'article 2',
+              date: new Date().toISOString(),
+              readingTime: '5 min',
+              description: 'this is a blog post',
+            },
+            {
+              title: 'article 3',
+              date: new Date().toISOString(),
+              readingTime: '5 min',
+              description: 'this is a blog post',
+            },
+            {
+              title: 'article 4',
+              date: new Date().toISOString(),
+              readingTime: '5 min',
+              description: 'this is a blog post',
+            },
+          ].map(({ title, date, readingTime, description }) => {
+            return (
+              <Grid.Row>
+                <Grid.Column>
+                  <Header className={css.header}>{title}</Header>
+                  <div>
+                    {date}
+                    {readingTime}
+                  </div>
+                  {description}
+                </Grid.Column>
+              </Grid.Row>
+            );
+          })}
+        </Grid>
+      </Container>
     </Layout>
   );
 };

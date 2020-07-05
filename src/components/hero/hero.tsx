@@ -7,7 +7,13 @@ export const Hero = () => {
   return (
     <Grid columns={1}>
       <Grid.Row>
-        <Grid.Column>
+        <Grid.Column
+          style={{
+            marginLeft: '0 important',
+            marginRight: '0 !important',
+            padding: 0,
+          }}
+        >
           <Image src={mainLogo} style={{ width: '7em', margin: 'auto' }} />
           <Header
             inverted
