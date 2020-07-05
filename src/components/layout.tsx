@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react';
 import { Footer } from './footer';
 import { Navigation } from './navigation/navigation';
 
@@ -11,7 +10,7 @@ export const Layout = ({
   return (
     <>
       <Navigation />
-      <Container fluid>{children}</Container>
+      {children}
       <Footer />
     </>
   );
