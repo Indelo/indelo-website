@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { Menu, Container, Button, Header } from 'semantic-ui-react';
+import { Menu, Container, Header } from 'semantic-ui-react';
 
 export const Navigation = () => {
   return (
@@ -14,11 +14,16 @@ export const Navigation = () => {
       >
         <Container>
           <Menu.Item header>
-            <Header>Indelo</Header>
+            <AnchorLink to="/">
+              <Header>Indelo</Header>
+            </AnchorLink>
           </Menu.Item>
           <Menu.Menu position="right">
             <Menu.Item>
               <AnchorLink to="/#contact" title="Contact Us" />
+            </Menu.Item>
+            <Menu.Item>
+              <AnchorLink to="/blog" title="Blog" />
             </Menu.Item>
           </Menu.Menu>
         </Container>
