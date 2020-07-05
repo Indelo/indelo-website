@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
-import { Navigation } from '../components/navigation';
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
 import { Services } from '../components/services';
