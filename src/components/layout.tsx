@@ -9,7 +9,7 @@ export const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) 
       <Navigation />
       <Container>{children}</Container>
       <Footer />
-    </div>
+    </>
   );
 };
 
