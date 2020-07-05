@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react';
 import { Navigation } from '../components/navigation';
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
@@ -14,7 +15,13 @@ const RootIndex = () => {
       <SEO />
       <Layout>
         <Navigation />
-        <Hero />
+        <Container
+          fluid
+          style={{ paddingTop: '200px', height: 'calc(100vh - 46px)' }}
+        >
+          <Hero />
+        </Container>
+
         <Services />
         <TechnologyStack />
         <AboutUs />
