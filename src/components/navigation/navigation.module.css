@@ -1,4 +1,12 @@
-.link a {
+.link {
+  color: #fff;
+}
+
+.linkButton {
+  color: #fff;
+}
+
+.linkButton:hover {
   color: #fff;
 }
 

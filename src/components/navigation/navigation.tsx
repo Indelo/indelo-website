@@ -42,12 +42,21 @@ export const Navigation = () => {
             })}
             <Menu.Item>
               <Button
-                primary
+                color="red"
                 as={(props: any) => (
-                  <AnchorLink {...props} to="/#contact" title="contact us" />
+                  <AnchorLink
+                    className={css.linkButton}
+                    {...props}
+                    to="/#contact"
+                    title="contact us"
+                  />
                 )}
               >
-                <AnchorLink to="/#contact" title="contact us" />
+                <AnchorLink
+                  className={css.linkButton}
+                  to="/#contact"
+                  title="contact us"
+                />
               </Button>
             </Menu.Item>
           </Menu.Menu>
