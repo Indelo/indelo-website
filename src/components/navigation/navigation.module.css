@@ -1,0 +1,10 @@
+.link a {
+  color: #fff;
+}
+
+.menu {
+  background-color: #17284c !important;
+  display: flex;
+  align-items: center;
+  border-bottom: none !important;
+}

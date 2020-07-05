@@ -1,25 +1,13 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { Menu, Container, Header, Image, Button } from 'semantic-ui-react';
-import smallLogo from '../assets/images/smalllogo.png';
-import styles from './css/navigation.module.css';
+import smallLogo from '../../assets/images/smalllogo.png';
+import css from './navigation.module.css';
 
 export const Navigation = () => {
   return (
     <>
-      <Menu
-        secondary
-        pointing
-        fixed="top"
-        style={{
-          backgroundColor: '#17284C',
-          display: 'flex',
-          alignItems: 'center',
-          paddingTop: 6,
-          paddingBottom: 6,
-          borderBottom: 'none',
-        }}
-      >
+      <Menu secondary pointing fixed="top" className={css.menu}>
         <Container>
           <Menu.Item header>
             <AnchorLink to="/">
@@ -48,7 +36,7 @@ export const Navigation = () => {
             ].map(({ title, path }) => {
               return (
                 <Menu.Item>
-                  <AnchorLink to={path} title={title} className={styles.link} />
+                  <AnchorLink to={path} title={title} className={css.link} />
                 </Menu.Item>
               );
             })}
@@ -65,7 +53,7 @@ export const Navigation = () => {
           </Menu.Menu>
         </Container>
       </Menu>
-      <div style={{ height: 46 }} />
+      <div style={{ height: 62 }} />
     </>
   );
 };

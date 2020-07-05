@@ -1,0 +1,13 @@
+.container {
+  height: calc(100vh - 62px);
+}
+
+.heroContainer {
+  padding-top: 110px;
+  background-color: #17284c;
+  padding-bottom: 80px;
+}
+
+.waveImage {
+  width: 100vh;
+}

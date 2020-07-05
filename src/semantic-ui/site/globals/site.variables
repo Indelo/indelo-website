@@ -4,7 +4,7 @@
 
 @primaryColor: @blue;
 @secondaryColor: @grey;
-@red: #b03060;
+@red: #c63c5d;
 @orange: #fe9a76;
 @yellow: #ffd700;
 @olive: #32cd32;
