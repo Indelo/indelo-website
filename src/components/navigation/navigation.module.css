@@ -1,13 +1,18 @@
 .link {
-  color: #fff;
+  color: white;
+}
+
+.link:hover {
+  color: white;
+  opacity: 0.5;
 }
 
 .linkButton {
-  color: #fff;
+  color: white;
 }
 
 .linkButton:hover {
-  color: #fff;
+  color: white;
 }
 
 .menu {
