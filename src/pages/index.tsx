@@ -14,14 +14,16 @@ const RootIndex = () => {
     <>
       <SEO />
       <Layout>
-        <Navigation />
         <Container
           fluid
-          style={{ paddingTop: '200px', height: 'calc(100vh - 46px)' }}
+          style={{
+            paddingTop: '200px',
+            height: 'calc(100vh - 46px)',
+            backgroundColor: 'blue',
+          }}
         >
           <Hero />
         </Container>
-
         <Services />
         <TechnologyStack />
         <AboutUs />
