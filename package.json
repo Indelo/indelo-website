@@ -71,6 +71,7 @@
     "serve": "gatsby serve",
     "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
+    "lint": "eslint ./src/**/*.ts",
     "netlify:login": "netlify login",
     "netlify:deploy": "netlify deploy -d public -p"
   }
