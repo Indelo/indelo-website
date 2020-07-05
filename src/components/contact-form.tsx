@@ -8,8 +8,8 @@ export const ContactForm = () => {
       <Section title="Contact us">
         <Grid columns={1} centered>
           <Grid.Column width={8}>
-            <Segment>
-              <Form size="large" style={{ padding: 20 }}>
+            <Segment size="huge">
+              <Form size="large">
                 <Form.Field>
                   <label>Your name</label>
                   <input />
