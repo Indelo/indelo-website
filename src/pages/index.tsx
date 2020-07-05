@@ -18,7 +18,7 @@ const RootIndex = () => {
           style={{
             paddingTop: '200px',
             height: 'calc(100vh - 46px)',
-            backgroundColor: 'blue',
+            backgroundColor: '#17284C',
           }}
         >
           <Hero />

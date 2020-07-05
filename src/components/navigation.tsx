@@ -1,6 +1,8 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { Menu, Container, Header } from 'semantic-ui-react';
+import { Menu, Container, Header, Image, Button } from 'semantic-ui-react';
+import smallLogo from '../assets/images/smalllogo.png';
+import styles from './css/navigation.module.css';
 
 export const Navigation = () => {
   return (
@@ -9,21 +11,56 @@ export const Navigation = () => {
         secondary
         pointing
         fixed="top"
-        // size="huge"
-        style={{ backgroundColor: 'white' }}
+        style={{
+          backgroundColor: '#17284C',
+          display: 'flex',
+          alignItems: 'center',
+          paddingTop: 6,
+          paddingBottom: 6,
+          borderBottom: 'none',
+        }}
       >
         <Container>
           <Menu.Item header>
             <AnchorLink to="/">
-              <Header>Indelo</Header>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image
+                  src={smallLogo}
+                  style={{ width: '2.5em', marginRight: 6 }}
+                />
+                <Header
+                  style={{
+                    color: '#fff',
+                    fontSize: 30,
+                    margin: 'auto',
+                    fontFamily: 'Avenir',
+                  }}
+                >
+                  indelo
+                </Header>
+              </div>
             </AnchorLink>
           </Menu.Item>
           <Menu.Menu position="right">
+            {[
+              { title: 'portfolio', path: '/portfolio' },
+              { title: 'blog', path: '/blog' },
+            ].map(({ title, path }) => {
+              return (
+                <Menu.Item>
+                  <AnchorLink to={path} title={title} className={styles.link} />
+                </Menu.Item>
+              );
+            })}
             <Menu.Item>
-              <AnchorLink to="/#contact" title="Contact Us" />
-            </Menu.Item>
-            <Menu.Item>
-              <AnchorLink to="/blog" title="Blog" />
+              <Button
+                primary
+                as={(props: any) => (
+                  <AnchorLink {...props} to="/#contact" title="contact us" />
+                )}
+              >
+                <AnchorLink to="/#contact" title="contact us" />
+              </Button>
             </Menu.Item>
           </Menu.Menu>
         </Container>

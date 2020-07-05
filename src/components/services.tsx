@@ -1,8 +1,8 @@
 import React from 'react';
 import { Header, Grid, Segment, Card } from 'semantic-ui-react';
-import WebDeveloperSvg from '../assets/web_developer.svg';
-import ConsultingSvg from '../assets/consulting.svg';
-import CollaboratingSvg from '../assets/collaborators.svg';
+import WebDeveloperSvg from '../assets/svgs/web_developer.svg';
+import ConsultingSvg from '../assets/svgs/consulting.svg';
+import CollaboratingSvg from '../assets/svgs/collaborators.svg';
 import { Section } from './section';
 
 export const Services = () => {

@@ -6,14 +6,16 @@ export const Hero = () => {
     <Grid columns={1}>
       <Grid.Row>
         <Grid.Column>
-          <Header as="h1" textAlign="center">
-            Indelo
+          <Header inverted as="h1" textAlign="center">
+            indelo
           </Header>
-          <Header as="h3" textAlign="center">
+          <Header inverted as="h3" textAlign="center">
             We solve business problems with software
           </Header>
           <Segment basic textAlign="center" style={{ fontSize: '1.33em' }}>
-            Website development - UI/UX - Design - Branding - SEO
+            <p style={{ color: 'gray' }}>
+              Website development - UI/UX - Design - Branding - SEO
+            </p>
           </Segment>
         </Grid.Column>
       </Grid.Row>
