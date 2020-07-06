@@ -9,9 +9,10 @@ export const Layout = ({
 }) => {
   return (
     <>
-      <Navigation />
-      {children}
-      <Footer />
+      <Navigation>
+        {children}
+        <Footer />
+      </Navigation>
     </>
   );
 };
