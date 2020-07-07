@@ -1,0 +1,13 @@
+#root,
+.pushable {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pusher > div {
+  position: absolute;
+  top: 67px;
+  bottom: 0;
+  overflow-y: scroll;
+  width: 100%;
+}

@@ -74,84 +74,91 @@ export const Navigation = ({ children }: { children: any }) => {
         {children}
       </Responsive>
       <Responsive {...Responsive.onlyMobile}>
-        <Sidebar
-          as={Menu}
-          animation="overlay"
-          direction="right"
-          vertical
-          visible={isVisible}
-        >
-          <Menu.Item header>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}
+        <div>
+          <Sidebar.Pushable>
+            <Sidebar
+              as={Menu}
+              animation="overlay"
+              direction="right"
+              vertical
+              visible={isVisible}
             >
-              <Header style={{ marginBottom: 0 }}>indelo</Header>
-              <div>
-                <Icon
-                  onClick={() => setVisible(!isVisible)}
-                  size="large"
-                  name="close"
-                />
-              </div>
-            </div>
-          </Menu.Item>
-          <Menu.Item>
-            <Button
-              color="red"
-              as={(props: any) => (
-                <AnchorLink
-                  className={css.linkButton}
-                  {...props}
-                  to="/#contact"
-                  title="Contact us"
-                />
-              )}
-            >
-              <AnchorLink
-                className={css.linkButton}
-                to="/#contact"
-                title="Contact us"
-              />
-            </Button>
-          </Menu.Item>
-        </Sidebar>
-        <Sidebar.Pushable>
-          <Sidebar.Pusher
-            dimmed={isVisible}
-            onClick={isVisible ? () => setVisible(!isVisible) : undefined}
-          >
-            <Menu secondary className={css.menu} style={{ marginBottom: 0 }}>
               <Menu.Item header>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <div style={{ paddingRight: '10px' }}>
-                    <Image src={smallLogo} className={css.logo} />
-                  </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <Header style={{ marginBottom: 0 }}>indelo</Header>
                   <div>
-                    <Header
+                    <Icon
+                      onClick={() => setVisible(!isVisible)}
                       size="large"
-                      style={{
-                        color: '#fff',
-                        fontFamily: 'Avenir',
-                      }}
-                    >
-                      indelo
-                    </Header>
+                      name="close"
+                    />
                   </div>
                 </div>
               </Menu.Item>
-              <Menu.Menu position="right">
-                <Menu.Item onClick={() => setVisible(!isVisible)}>
-                  <Icon name="bars" inverted />
+              <Menu.Item>
+                <Button
+                  color="red"
+                  as={(props: any) => (
+                    <AnchorLink
+                      className={css.linkButton}
+                      {...props}
+                      to="/#contact"
+                      title="Contact us"
+                    />
+                  )}
+                >
+                  <AnchorLink
+                    className={css.linkButton}
+                    to="/#contact"
+                    title="Contact us"
+                  />
+                </Button>
+              </Menu.Item>
+            </Sidebar>
+            <Sidebar.Pusher
+              dimmed={isVisible}
+              onClick={isVisible ? () => setVisible(!isVisible) : undefined}
+            >
+              <Menu
+                secondary
+                fixed="top"
+                className={css.menu}
+                style={{ marginBottom: 0 }}
+              >
+                <Menu.Item header>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ paddingRight: '10px' }}>
+                      <Image src={smallLogo} className={css.logo} />
+                    </div>
+                    <div>
+                      <Header
+                        size="large"
+                        style={{
+                          color: '#fff',
+                          fontFamily: 'Avenir',
+                        }}
+                      >
+                        indelo
+                      </Header>
+                    </div>
+                  </div>
                 </Menu.Item>
-              </Menu.Menu>
-            </Menu>
-            {children}
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
+                <Menu.Menu position="right">
+                  <Menu.Item onClick={() => setVisible(!isVisible)}>
+                    <Icon name="bars" inverted />
+                  </Menu.Item>
+                </Menu.Menu>
+              </Menu>
+              <div>{children}</div>
+            </Sidebar.Pusher>
+          </Sidebar.Pushable>
+        </div>
       </Responsive>
     </>
   );
