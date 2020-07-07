@@ -4,10 +4,11 @@ import { Section } from './section';
 
 export const ContactForm = () => {
   return (
-    <div id="contact">
+    <>
+      <div id="contact" style={{ position: 'relative', top: '-54px' }} />
       <Section title="Contact us">
         <Grid columns={1} centered>
-          <Grid.Column computer={8} mobile={16}>
+          <Grid.Column computer={8} tablet={10} mobile={16}>
             <Segment size="huge">
               <Form size="large">
                 <Form.Field>
@@ -30,6 +31,6 @@ export const ContactForm = () => {
           </Grid.Column>
         </Grid>
       </Section>
-    </div>
+    </>
   );
 };

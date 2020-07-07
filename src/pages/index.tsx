@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Segment } from 'semantic-ui-react';
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
 import { Services } from '../components/services';
@@ -15,19 +16,23 @@ const RootIndex = () => {
       <SEO />
       <Layout>
         <div className={css.container}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div className={css.heroContainer}>
-              <Hero />
-            </div>
-            <div>
-              <img className={css.waveImage} alt="waves" src={waves} />
-            </div>
+          <div className={css.heroContainer}>
+            <Container>
+              <Segment basic padded>
+                <Hero />
+              </Segment>
+            </Container>
+          </div>
+          <div className={css.waveContainer}>
+            <img className={css.waveImage} alt="waves" src={waves} />
           </div>
         </div>
-        <Services />
-        <TechnologyStack />
-        <AboutUs />
-        <ContactForm />
+        <Container>
+          <Services />
+          <TechnologyStack />
+          <AboutUs />
+          <ContactForm />
+        </Container>
       </Layout>
     </>
   );

@@ -29,6 +29,7 @@ export const Navigation = ({ children }: { children: any }) => {
                   </div>
                   <div>
                     <Header
+                      size="large"
                       style={{
                         color: '#fff',
                         fontFamily: 'Avenir',
@@ -41,19 +42,13 @@ export const Navigation = ({ children }: { children: any }) => {
               </AnchorLink>
             </Menu.Item>
             <Menu.Menu position="right">
-              {[{ title: 'portfolio', path: '/portfolio' }].map(
-                ({ title, path }) => {
-                  return (
-                    <Menu.Item key={title}>
-                      <AnchorLink
-                        to={path}
-                        title={title}
-                        className={css.link}
-                      />
-                    </Menu.Item>
-                  );
-                },
-              )}
+              {[].map(({ title, path }) => {
+                return (
+                  <Menu.Item key={title}>
+                    <AnchorLink to={path} title={title} className={css.link} />
+                  </Menu.Item>
+                );
+              })}
               <Menu.Item>
                 <Button
                   color="red"
@@ -62,14 +57,14 @@ export const Navigation = ({ children }: { children: any }) => {
                       className={css.linkButton}
                       {...props}
                       to="/#contact"
-                      title="contact us"
+                      title="Contact us"
                     />
                   )}
                 >
                   <AnchorLink
                     className={css.linkButton}
                     to="/#contact"
-                    title="contact us"
+                    title="Contact us"
                   />
                 </Button>
               </Menu.Item>
@@ -86,17 +81,25 @@ export const Navigation = ({ children }: { children: any }) => {
           vertical
           visible={isVisible}
         >
-          <Menu.Item as="a">
-            <Icon name="home" />
-            Home
-          </Menu.Item>
-          <Menu.Item as="a">
-            <Icon name="gamepad" />
-            Games
-          </Menu.Item>
-          <Menu.Item as="a">
-            <Icon name="camera" />
-            Channels
+          <Menu.Item header>indelo</Menu.Item>
+          <Menu.Item>
+            <Button
+              color="red"
+              as={(props: any) => (
+                <AnchorLink
+                  className={css.linkButton}
+                  {...props}
+                  to="/#contact"
+                  title="Contact us"
+                />
+              )}
+            >
+              <AnchorLink
+                className={css.linkButton}
+                to="/#contact"
+                title="Contact us"
+              />
+            </Button>
           </Menu.Item>
         </Sidebar>
         <Sidebar.Pushable>
@@ -104,7 +107,7 @@ export const Navigation = ({ children }: { children: any }) => {
             dimmed={isVisible}
             onClick={isVisible ? () => setVisible(!isVisible) : undefined}
           >
-            <Menu pointing secondary fixed="top" className={css.menu}>
+            <Menu secondary className={css.menu} style={{ marginBottom: 0 }}>
               <Menu.Item header>
                 <Header style={{ fontFamily: 'Avenir', color: 'white' }}>
                   indelo
@@ -112,7 +115,7 @@ export const Navigation = ({ children }: { children: any }) => {
               </Menu.Item>
               <Menu.Menu position="right">
                 <Menu.Item onClick={() => setVisible(!isVisible)}>
-                  Menu
+                  <Icon name="bars" inverted />
                 </Menu.Item>
               </Menu.Menu>
             </Menu>

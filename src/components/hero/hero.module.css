@@ -1,3 +1,7 @@
-.header {
-  font-family: 'Avenir';
+.linkButton {
+  color: white;
+}
+
+.linkButton:hover {
+  color: white;
 }

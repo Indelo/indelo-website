@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Button, Grid, Segment, Image } from 'semantic-ui-react';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import mainLogo from '../../assets/images/mainlogo.png';
 import css from './hero.module.css';
 
@@ -44,8 +45,23 @@ export const Hero = () => {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column textAlign="center">
-          <Button color="red" size="huge" style={{ fontFamily: 'Avenir' }}>
-            Schedule a chat
+          <Button
+            size="huge"
+            color="red"
+            as={(props: any) => (
+              <AnchorLink
+                className={css.linkButton}
+                {...props}
+                to="/#contact"
+                title="Contact us"
+              />
+            )}
+          >
+            <AnchorLink
+              className={css.linkButton}
+              to="/#contact"
+              title="Contact us"
+            />
           </Button>
         </Grid.Column>
       </Grid.Row>
