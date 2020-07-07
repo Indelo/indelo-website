@@ -1,5 +1,5 @@
 /* eslint-disable max-classes-per-file */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import {
   Menu,
@@ -16,10 +16,30 @@ import css from './navigation.module.css';
 
 export const Navigation = ({ children }: { children: any }) => {
   const [isVisible, setVisible] = useState(false);
+  const [status, setStatus] = useState('top');
+
+  useEffect(() => {
+    document.addEventListener('scroll', () => {
+      const scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 10) {
+        if (status === 'top') {
+          setStatus('scrolled');
+        }
+      } else {
+        setStatus('top');
+      }
+    });
+  });
+
   return (
     <>
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        <Menu secondary pointing fixed="top" className={css.menu}>
+        <Menu
+          secondary
+          pointing
+          fixed="top"
+          className={status === 'top' ? css.menu : css.scrolled}
+        >
           <Container>
             <Menu.Item header>
               <AnchorLink to="/">
