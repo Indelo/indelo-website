@@ -81,7 +81,24 @@ export const Navigation = ({ children }: { children: any }) => {
           vertical
           visible={isVisible}
         >
-          <Menu.Item header>indelo</Menu.Item>
+          <Menu.Item header>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Header style={{ marginBottom: 0 }}>indelo</Header>
+              <div>
+                <Icon
+                  onClick={() => setVisible(!isVisible)}
+                  size="large"
+                  name="close"
+                />
+              </div>
+            </div>
+          </Menu.Item>
           <Menu.Item>
             <Button
               color="red"
@@ -109,9 +126,22 @@ export const Navigation = ({ children }: { children: any }) => {
           >
             <Menu secondary className={css.menu} style={{ marginBottom: 0 }}>
               <Menu.Item header>
-                <Header style={{ fontFamily: 'Avenir', color: 'white' }}>
-                  indelo
-                </Header>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{ paddingRight: '10px' }}>
+                    <Image src={smallLogo} className={css.logo} />
+                  </div>
+                  <div>
+                    <Header
+                      size="large"
+                      style={{
+                        color: '#fff',
+                        fontFamily: 'Avenir',
+                      }}
+                    >
+                      indelo
+                    </Header>
+                  </div>
+                </div>
               </Menu.Item>
               <Menu.Menu position="right">
                 <Menu.Item onClick={() => setVisible(!isVisible)}>
