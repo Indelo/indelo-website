@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Segment } from 'semantic-ui-react';
+import { Container, Segment, Grid } from 'semantic-ui-react';
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
 import { Services } from '../components/services';
@@ -19,7 +19,11 @@ const RootIndex = () => {
           <div className={css.heroContainer}>
             <Container>
               <Segment basic padded>
-                <Hero />
+                <Grid centered columns={1}>
+                  <Grid.Column computer={9} tablet={12} mobile={16}>
+                    <Hero />
+                  </Grid.Column>
+                </Grid>
               </Segment>
             </Container>
           </div>
