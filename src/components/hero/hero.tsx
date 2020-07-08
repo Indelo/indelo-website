@@ -30,7 +30,7 @@ export const Hero = () => {
             textAlign="center"
             style={{ fontFamily: 'Avenir' }}
           >
-            We solve business problems with software
+            Innovative design and development to solve your business needs
           </Header>
           <Segment
             basic
