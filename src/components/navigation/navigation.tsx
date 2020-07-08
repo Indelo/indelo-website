@@ -29,7 +29,7 @@ export const Navigation = ({ children }: { children: any }) => {
         setStatus('top');
       }
     });
-  });
+  }, [status]);
 
   return (
     <>
