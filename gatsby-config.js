@@ -58,6 +58,12 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
     // assets
     'gatsby-plugin-less',
     'gatsby-transformer-remark',

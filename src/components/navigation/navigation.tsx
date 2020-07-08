@@ -5,22 +5,36 @@ import {
   Menu,
   Container,
   Header,
-  Image,
   Button,
   Sidebar,
   Icon,
   Responsive,
 } from 'semantic-ui-react';
-import smallLogo from '../../assets/images/smalllogo.png';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import css from './navigation.module.css';
+
+const query = graphql`
+  query {
+    file(relativePath: { eq: "small-logo.png" }) {
+      childImageSharp {
+        fixed(width: 25, height: 26) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
 
 export const Navigation = ({ children }: { children: any }) => {
   const [isVisible, setVisible] = useState(false);
   const [status, setStatus] = useState('top');
+  const data = useStaticQuery(query);
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
-      const scrolled = document.scrollingElement.scrollTop;
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const scrolled = document.scrollingElement!.scrollTop;
       if (scrolled >= 10) {
         if (status === 'top') {
           setStatus('scrolled');
@@ -45,7 +59,7 @@ export const Navigation = ({ children }: { children: any }) => {
               <AnchorLink to="/">
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <div style={{ paddingRight: '10px' }}>
-                    <Image src={smallLogo} className={css.logo} />
+                    <Img fixed={data.file.childImageSharp.fixed} />
                   </div>
                   <div>
                     <Header
@@ -148,7 +162,7 @@ export const Navigation = ({ children }: { children: any }) => {
               <Menu.Item header>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <div style={{ paddingRight: '10px' }}>
-                    <Image src={smallLogo} className={css.logo} />
+                    <Img fixed={data.file.childImageSharp.fixed} />
                   </div>
                   <div>
                     <Header
