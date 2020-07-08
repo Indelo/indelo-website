@@ -1,10 +1,25 @@
 import React from 'react';
-import { Header, Button, Grid, Segment, Image } from 'semantic-ui-react';
+import { Header, Button, Grid, Segment } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import mainLogo from '../../assets/images/mainlogo.png';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import css from './hero.module.css';
 
+const query = graphql`
+  query {
+    file(relativePath: { eq: "main-logo.png" }) {
+      childImageSharp {
+        fixed(width: 130, height: 131) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
+
 export const Hero = () => {
+  const data = useStaticQuery(query);
+
   return (
     <Grid columns={1}>
       <Grid.Row>
@@ -15,7 +30,9 @@ export const Hero = () => {
             padding: 0,
           }}
         >
-          <Image src={mainLogo} style={{ width: '7em', margin: 'auto' }} />
+          <Segment style={{ marginBottom: 0 }} basic textAlign="center">
+            <Img fixed={data.file.childImageSharp.fixed} />
+          </Segment>
           <Header
             inverted
             as="h1"
