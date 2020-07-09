@@ -1,17 +1,34 @@
 import React from 'react';
-import { Header, Grid, Image, Container } from 'semantic-ui-react';
+import { Header, Grid, Container, Segment } from 'semantic-ui-react';
+import Img from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Layout } from '../components/layout';
-import mainLogo from '../assets/images/mainlogo.png';
 import waves from '../assets/images/waves.png';
 import css from './blog.module.css';
 
+const query = graphql`
+  query {
+    file(relativePath: { eq: "main-logo.png" }) {
+      childImageSharp {
+        fixed(width: 150, height: 151) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
+
 const BlogIndex = () => {
+  const data = useStaticQuery(query);
+
   return (
     <Layout>
       <div className={css.container}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div className={css.heroContainer}>
-            <Image src={mainLogo} style={{ width: '7em', margin: 'auto' }} />
+            <Segment basic textAlign="center">
+              <Img style={{}} fixed={data.file.childImageSharp.fixed} />
+            </Segment>
             <Header
               inverted
               as="h1"
