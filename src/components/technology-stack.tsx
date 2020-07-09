@@ -1,14 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
 import { Grid, Image } from 'semantic-ui-react';
-import { Section } from './section';
+import { Section } from './section/section';
 
 const columns = _.times(5, (i) => (
   <Grid.Column key={i}>
     <Image
       src="https://react.semantic-ui.com/images/wireframe/square-image.png"
       size="medium"
-      circular
     />
   </Grid.Column>
 ));
