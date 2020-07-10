@@ -3,7 +3,7 @@ import { Header, Grid, Segment, Card } from 'semantic-ui-react';
 import WebDeveloperSvg from '../assets/svgs/web_developer.svg';
 import ConsultingSvg from '../assets/svgs/consulting.svg';
 import CollaboratingSvg from '../assets/svgs/collaborators.svg';
-import { Section } from './section';
+import { Section } from './section/section';
 
 export const Services = () => {
   return (
