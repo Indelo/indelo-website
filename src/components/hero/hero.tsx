@@ -4,7 +4,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import css from './hero.module.css';
-import logo from '../../assets/images/logo.gif';
+import logo from '../../assets/images/test.gif';
 
 const query = graphql`
   query {
