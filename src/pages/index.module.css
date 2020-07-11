@@ -11,8 +11,7 @@
   display: flex;
   align-items: center;
   flex-grow: 9;
-  background: rgb(23,40,76);
-  background: radial-gradient(circle, rgba(23,40,76,1) 23%, rgba(29,55,96,1) 73%);
+  background: rgb(23, 40, 76);
 }
 
 .waveContainer {
