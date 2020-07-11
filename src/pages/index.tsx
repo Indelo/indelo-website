@@ -6,7 +6,7 @@ import { Layout } from '../components/layout';
 import { Services } from '../components/services';
 import { TechnologyStack } from '../components/technology-stack';
 import { AboutUs } from '../components/about-us/about-us';
-import { ContactForm } from '../components/contact-form';
+import { Contact } from '../components/contact-form';
 import { Hero } from '../components/hero/hero';
 import waves from '../assets/images/waves.png';
 import css from './index.module.css';
@@ -41,7 +41,7 @@ const RootIndex = () => {
         <Services />
         <TechnologyStack />
         <AboutUs />
-        <ContactForm />
+        <Contact />
       </Layout>
     </>
   );
