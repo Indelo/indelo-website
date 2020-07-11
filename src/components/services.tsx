@@ -84,8 +84,8 @@ export const Services = () => {
         </Grid>
       </Responsive>
       <Responsive {...Responsive.onlyMobile}>
-        <Grid columns={1}>
-          <Grid.Column>
+        <Grid columns={1} centered>
+          <Grid.Column textAlign="center">
             {services.map(({ title, body, image }) => {
               return (
                 <>
