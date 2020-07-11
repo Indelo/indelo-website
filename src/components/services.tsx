@@ -29,7 +29,7 @@ const services = [
     image: <DesignAndBrandingSvg style={{ width: 300, height: 300 }} />,
   },
   {
-    title: 'Ongoing maintenance & support',
+    title: 'Ongoing maintenance and support',
     body: (
       <div>
         We help you keep your online offering fully optimized for your business
