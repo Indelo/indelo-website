@@ -55,7 +55,9 @@ export const Services = () => {
                 <Segment basic>
                   {index % 2 === 0 ? (
                     <>
-                      <Header as="h3">{title}</Header>
+                      <Header style={{ fontWeight: 600 }} as="h3">
+                        {title}
+                      </Header>
                       <p style={{ fontSize: '1.33em' }}>{body}</p>
                     </>
                   ) : (
@@ -69,7 +71,9 @@ export const Services = () => {
                 <Segment basic>
                   {index % 2 === 1 ? (
                     <>
-                      <Header as="h3">{title}</Header>
+                      <Header style={{ fontWeight: 600 }} as="h3">
+                        {title}
+                      </Header>
                       <p style={{ fontSize: '1.33em' }}>{body}</p>
                     </>
                   ) : (
@@ -88,13 +92,15 @@ export const Services = () => {
           <Grid.Column textAlign="center">
             {services.map(({ title, body, image }) => {
               return (
-                <>
-                  <Grid.Row>{image}</Grid.Row>
+                <div style={{ paddingBottom: '20px' }}>
                   <Grid.Row>
-                    <Header as="h3">{title}</Header>
+                    <Header style={{ fontWeight: 600 }} as="h3">
+                      {title}
+                    </Header>
                     <p style={{ fontSize: '1.33em' }}>{body}</p>
                   </Grid.Row>
-                </>
+                  <Grid.Row>{image}</Grid.Row>
+                </div>
               );
             })}
           </Grid.Column>
