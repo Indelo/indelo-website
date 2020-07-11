@@ -1,8 +1,8 @@
 import React from 'react';
 import { Header, Grid, Segment, Responsive } from 'semantic-ui-react';
-import WebDeveloperSvg from '../assets/svgs/web_developer.svg';
-import ConsultingSvg from '../assets/svgs/consulting.svg';
-import CollaboratingSvg from '../assets/svgs/collaborators.svg';
+import WebDevelopmentSvg from '../assets/svgs/web-development.svg';
+import DesignAndBrandingSvg from '../assets/svgs/design-and-branding.svg';
+import OngoingSupportSvg from '../assets/svgs/ongoing-support.svg';
 import { Section } from './section/section';
 
 const services = [
@@ -15,7 +15,7 @@ const services = [
         development offering caters for all requirements.
       </div>
     ),
-    image: <WebDeveloperSvg style={{ width: 300, height: 300 }} />,
+    image: <WebDevelopmentSvg style={{ width: 300, height: 300 }} />,
   },
   {
     title: 'Design and branding',
@@ -26,7 +26,7 @@ const services = [
         signatures and more.
       </div>
     ),
-    image: <ConsultingSvg style={{ width: 300, height: 300 }} />,
+    image: <DesignAndBrandingSvg style={{ width: 300, height: 300 }} />,
   },
   {
     title: 'Ongoing maintenance & support',
@@ -40,7 +40,7 @@ const services = [
         online experiance.
       </div>
     ),
-    image: <CollaboratingSvg style={{ width: 300, height: 300 }} />,
+    image: <OngoingSupportSvg style={{ width: 300, height: 300 }} />,
   },
 ];
 
