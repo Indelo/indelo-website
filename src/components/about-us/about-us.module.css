@@ -30,6 +30,7 @@
   box-shadow: 3px 3px 20px rgba(70,101,160,.164);
   height: 25em;
   margin: 15px;
+  background-color: white;
 }
 
 .cardBody {
