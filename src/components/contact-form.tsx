@@ -90,7 +90,11 @@ export const Contact = () => {
               </Segment>
             </Grid.Column>
             <Grid.Column computer={8}>
-              <Segment padded basic>
+              <Segment
+                padded
+                basic
+                style={{ width: '50%', marginLeft: 'auto' }}
+              >
                 <ContactDetails />
               </Segment>
             </Grid.Column>
