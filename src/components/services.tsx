@@ -1,76 +1,105 @@
 import React from 'react';
-import { Header, Grid, Segment, Card } from 'semantic-ui-react';
+import { Header, Grid, Segment, Responsive } from 'semantic-ui-react';
 import WebDeveloperSvg from '../assets/svgs/web_developer.svg';
 import ConsultingSvg from '../assets/svgs/consulting.svg';
 import CollaboratingSvg from '../assets/svgs/collaborators.svg';
 import { Section } from './section/section';
 
+const services = [
+  {
+    title: 'Website development',
+    body: (
+      <div>
+        From off the shelf Wordpress setups to fully bespoke and customized
+        websites using the latest technology and UI/UX principles, our website
+        development offering caters for all requirements.
+      </div>
+    ),
+    image: <WebDeveloperSvg style={{ width: 300, height: 300 }} />,
+  },
+  {
+    title: 'Design and branding',
+    body: (
+      <div>
+        Our design & branding offering ranges from individual logo and broucher
+        designs, to full corporate image packs including business cards, email
+        signatures and more.
+      </div>
+    ),
+    image: <ConsultingSvg style={{ width: 300, height: 300 }} />,
+  },
+  {
+    title: 'Ongoing maintenance & support',
+    body: (
+      <div>
+        We help you keep your online offering fully opttimized for your business
+        requirements. From security updates and database backups to analytics
+        reviews and SEO optimizations.
+        <br />
+        Our support & maintenance offering has what you need for an optimal
+        online experiance.
+      </div>
+    ),
+    image: <CollaboratingSvg style={{ width: 300, height: 300 }} />,
+  },
+];
+
 export const Services = () => {
   return (
     <Section title="Our services">
-      <Grid columns={2}>
-        {[
-          {
-            title: 'Website development',
-            body:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
-            image: <WebDeveloperSvg style={{ width: 300, height: 300 }} />,
-          },
-          {
-            title: 'Consulting',
-            body:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-            image: <ConsultingSvg style={{ width: 300, height: 300 }} />,
-          },
-          {
-            title: 'Maintenance & support',
-            body:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-            image: <CollaboratingSvg style={{ width: 300, height: 300 }} />,
-          },
-        ].map((service, index) => (
-          <Grid.Row>
-            <Grid.Column>
-              <Segment basic>
-                {index % 2 === 0 ? (
-                  <Card
-                    fluid
-                    color="blue"
-                    style={{
-                      boxShadow: '0px 2px 0px 0px #2185D0',
-                      padding: 18,
-                    }}
-                  >
-                    <Header as="h3">{service.title}</Header>
-                    <p style={{ fontSize: '1.33em' }}>{service.body}</p>
-                  </Card>
-                ) : (
-                  service.image
-                )}
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment basic>
-                {index % 2 === 1 ? (
-                  <Card
-                    fluid
-                    color="blue"
-                    style={{
-                      boxShadow: '0px 2px 0px 0px #2185D0',
-                      padding: 18,
-                    }}
-                  >
-                    <Header as="h3">{service.title}</Header>
-                    <p style={{ fontSize: '1.33em' }}>{service.body}</p>
-                  </Card>
-                ) : (
-                  service.image
-                )}
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-        ))}
-      </Grid>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Grid columns={2} verticalAlign="middle">
+          {services.map(({ title, body, image }, index) => (
+            <Grid.Row>
+              <Grid.Column>
+                <Segment basic>
+                  {index % 2 === 0 ? (
+                    <>
+                      <Header as="h3">{title}</Header>
+                      <p style={{ fontSize: '1.33em' }}>{body}</p>
+                    </>
+                  ) : (
+                    <Segment basic textAlign="center">
+                      {image}
+                    </Segment>
+                  )}
+                </Segment>
+              </Grid.Column>
+              <Grid.Column>
+                <Segment basic>
+                  {index % 2 === 1 ? (
+                    <>
+                      <Header as="h3">{title}</Header>
+                      <p style={{ fontSize: '1.33em' }}>{body}</p>
+                    </>
+                  ) : (
+                    <Segment basic textAlign="center">
+                      {image}
+                    </Segment>
+                  )}
+                </Segment>
+              </Grid.Column>
+            </Grid.Row>
+          ))}
+        </Grid>
+      </Responsive>
+      <Responsive {...Responsive.onlyMobile}>
+        <Grid columns={1}>
+          <Grid.Column>
+            {services.map(({ title, body, image }) => {
+              return (
+                <>
+                  <Grid.Row>{image}</Grid.Row>
+                  <Grid.Row>
+                    <Header as="h3">{title}</Header>
+                    <p style={{ fontSize: '1.33em' }}>{body}</p>
+                  </Grid.Row>
+                </>
+              );
+            })}
+          </Grid.Column>
+        </Grid>
+      </Responsive>
     </Section>
   );
 };
