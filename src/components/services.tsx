@@ -21,7 +21,7 @@ const services = [
     title: 'Design and branding',
     body: (
       <div>
-        Our design & branding offering ranges from individual logo and brochure
+        Our design and branding offering ranges from individual logo and brochure
         designs, to full corporate image packs including business cards, email
         signatures and more.
       </div>
