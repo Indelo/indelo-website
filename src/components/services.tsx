@@ -10,7 +10,7 @@ const services = [
     title: 'Website development',
     body: (
       <div>
-        From off the shelf Wordpress setups to fully bespoke and customized
+        From off the shelf WordPress setups to fully bespoke and customized
         websites using the latest technology and UI/UX principles, our website
         development offering caters for all requirements.
       </div>
@@ -21,7 +21,7 @@ const services = [
     title: 'Design and branding',
     body: (
       <div>
-        Our design & branding offering ranges from individual logo and broucher
+        Our design & branding offering ranges from individual logo and brochure
         designs, to full corporate image packs including business cards, email
         signatures and more.
       </div>
@@ -32,12 +32,12 @@ const services = [
     title: 'Ongoing maintenance & support',
     body: (
       <div>
-        We help you keep your online offering fully opttimized for your business
+        We help you keep your online offering fully optimized for your business
         requirements. From security updates and database backups to analytics
         reviews and SEO optimizations.
         <br />
-        Our support & maintenance offering has what you need for an optimal
-        online experiance.
+        Our support and maintenance offering has what you need for an optimal
+        online experience.
       </div>
     ),
     image: <OngoingSupportSvg style={{ width: 300, height: 300 }} />,
