@@ -64,7 +64,7 @@ export const Hero = () => {
             textAlign="center"
             style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
           >
-            <p style={{ color: 'gray', fontFamily: 'Avenir' }}>
+            <p style={{ color: '#ccc', fontFamily: 'Avenir' }}>
               Website development - UI/UX - Design - Branding - SEO
             </p>
           </Segment>
