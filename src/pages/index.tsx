@@ -26,17 +26,17 @@ const RootIndex = () => {
           <div className={css.heroContainer}>
             <Container>
               <Segment basic padded>
-                <Grid centered columns={1}>
-                  <Grid.Column computer={9} tablet={12} mobile={16}>
+                <Grid columns={1}>
+                  <Grid.Column computer={16} tablet={12} mobile={16}>
                     <Hero />
                   </Grid.Column>
                 </Grid>
               </Segment>
             </Container>
           </div>
-          <div className={css.waveContainer}>
+          {/* <div className={css.waveContainer}>
             <img className={css.waveImage} alt="waves" src={waves} />
-          </div>
+          </div> */}
         </div>
         <Services />
         <TechnologyStack />

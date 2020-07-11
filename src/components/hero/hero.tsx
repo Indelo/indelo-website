@@ -5,6 +5,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import css from './hero.module.css';
 import logo from '../../assets/images/test.gif';
+import test from '../../assets/test3.svg';
+import smallLogo from '../../assets/images/small-logo.png';
 
 const query = graphql`
   query {
@@ -22,7 +24,7 @@ export const Hero = () => {
   const data = useStaticQuery(query);
 
   return (
-    <Grid columns={1}>
+    <Grid columns={2}>
       <Grid.Row>
         <Grid.Column
           style={{
@@ -32,46 +34,62 @@ export const Hero = () => {
           }}
         >
           <Segment
-            style={{ marginBottom: 0, padding: 0, marginTop: 30 }}
+            style={{
+              marginBottom: 0,
+              padding: 0,
+              marginTop: 30,
+              width: 100,
+              display: 'flex',
+            }}
             basic
-            textAlign="center"
+            textAlign="left"
           >
+            <Image src={smallLogo} />
             {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-            <Image
+            {/* <Image
               style={{ width: 200, margin: 'auto' }}
               src={logo}
               alt="logo"
-            />
+            /> */}
+            <Header
+              inverted
+              as="h1"
+              textAlign="left"
+              style={{ marginLeft: 12, marginTop: 12, fontFamily: 'Avenir' }}
+            >
+              indelo
+            </Header>
           </Segment>
-          <Header
+          {/* <Header
             inverted
             as="h1"
-            textAlign="center"
+            textAlign="left"
             style={{ marginTop: 12, fontFamily: 'Avenir' }}
           >
             indelo
-          </Header>
+          </Header> */}
           <Header
             inverted
             as="h3"
-            textAlign="center"
-            style={{ fontFamily: 'Avenir' }}
+            textAlign="left"
+            style={{ fontFamily: 'Avenir', color: '#E7E3D4' }}
           >
             Innovative design and development to solve your business needs
           </Header>
           <Segment
             basic
-            textAlign="center"
-            style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
+            textAlign="left"
+            style={{
+              fontSize: '1.33em',
+              margin: 0,
+              padding: 0,
+              marginBottom: 20,
+            }}
           >
-            <p style={{ color: '#ccc', fontFamily: 'Avenir' }}>
+            <p style={{ color: '#E7E3D4', fontFamily: 'Avenir' }}>
               Website development - UI/UX - Design - Branding - SEO
             </p>
           </Segment>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column textAlign="center">
           <Button
             size="huge"
             color="red"
@@ -90,6 +108,11 @@ export const Hero = () => {
               title="Contact us"
             />
           </Button>
+        </Grid.Column>
+        <Grid.Column>
+          <div data-aos="fade-left">
+            <Image src={test} />
+          </div>
         </Grid.Column>
       </Grid.Row>
     </Grid>
