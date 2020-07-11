@@ -53,7 +53,7 @@ const ContactDetails = () => {
 export const Contact = () => {
   return (
     <>
-      <div id="contact" style={{ position: 'relative', top: '-54px' }} />
+      <div id="contact" style={{ position: 'relative', top: '-90px' }} />
       <Section title="Contact us">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={2} centered>
