@@ -15,12 +15,20 @@ const ContactForm = () => {
   return (
     <Form size="large">
       <Form.Field>
-        <label>Your name</label>
-        <input placeholder="John Doe" />
+        <label>First name</label>
+        <input placeholder="John" />
+      </Form.Field>
+      <Form.Field>
+        <label>Last name</label>
+        <input placeholder="Doe" />
       </Form.Field>
       <Form.Field>
         <label>Your email</label>
         <input placeholder="john@doe.com" />
+      </Form.Field>
+      <Form.Field>
+        <label>Company / Website</label>
+        <input placeholder="johndoe.com" />
       </Form.Field>
       <Form.TextArea
         label="Your message"
