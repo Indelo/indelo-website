@@ -38,16 +38,10 @@ const RootIndex = () => {
             <img className={css.waveImage} alt="waves" src={waves} />
           </div>
         </div>
-        <Container>
-          <Services />
-          <TechnologyStack />
-        </Container>
-        <Container style={{ width: 1400 }}>
-          <AboutUs />
-        </Container>
-        <Container>
-          <Contact />
-        </Container>
+        <Services />
+        <TechnologyStack />
+        <AboutUs />
+        <Contact />
       </Layout>
     </>
   );

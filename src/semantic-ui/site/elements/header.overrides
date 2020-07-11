@@ -4,6 +4,7 @@
 
 .ui.header {
   font-weight: 400;
+  font-family: 'Avenir';
 }
 
 h1.ui.header {
