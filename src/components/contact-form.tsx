@@ -50,19 +50,14 @@ const ContactForm = () => {
 const ContactDetails = () => {
   return (
     <div style={{ textAlign: 'start' }}>
-      <Header style={{ color: '#1d3760', fontWeight: 'bold' }}>Email</Header>
+      <Header style={{ fontWeight: 'bold' }}>Email</Header>
       <p>
-        <Icon name="mail" color="blue" />
+        <Icon name="mail" />
         hello@indelo.co.za
       </p>
-      <Header style={{ color: '#1d3760', fontWeight: 'bold' }}>Phone</Header>
+      <Header style={{ fontWeight: 'bold' }}>Address</Header>
       <p>
-        <Icon name="phone" color="blue" />
-        +27834475256 +27721722298
-      </p>
-      <Header style={{ color: '#1d3760', fontWeight: 'bold' }}>Address</Header>
-      <p>
-        <Icon name="map marker alternate" color="blue" />
+        <Icon name="map marker alternate" />
         Claremont, Cape Town, South Africa
       </p>
     </div>
@@ -76,7 +71,7 @@ export const Contact = () => {
       <Section title="Contact us">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={2} centered>
-            <Grid.Column computer={8}>
+            <Grid.Column computer={7} tablet={8}>
               <Segment
                 padded
                 size="huge"
@@ -89,12 +84,8 @@ export const Contact = () => {
                 <ContactForm />
               </Segment>
             </Grid.Column>
-            <Grid.Column computer={8}>
-              <Segment
-                padded
-                basic
-                style={{ width: '50%', marginLeft: 'auto' }}
-              >
+            <Grid.Column computer={7} tablet={8}>
+              <Segment padded basic>
                 <ContactDetails />
               </Segment>
             </Grid.Column>
@@ -104,11 +95,7 @@ export const Contact = () => {
           <Grid columns={1}>
             <Grid.Column>
               <Grid.Row>
-                <Segment
-                  padded
-                  basic
-                  style={{ width: '50%', marginRight: 'auto' }}
-                >
+                <Segment padded basic>
                   <ContactDetails />
                 </Segment>
               </Grid.Row>

@@ -50,15 +50,12 @@ export const Services = () => {
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
-            <Grid.Row>
+            <Grid.Row style={{ padding: 0 }}>
               <Grid.Column>
                 <Segment basic>
                   {index % 2 === 0 ? (
                     <>
-                      <Header
-                        style={{ fontWeight: 600, color: '#1d3760' }}
-                        as="h3"
-                      >
+                      <Header style={{ fontWeight: 600 }} as="h3">
                         {title}
                       </Header>
                       <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
@@ -76,10 +73,7 @@ export const Services = () => {
                 <Segment basic>
                   {index % 2 === 1 ? (
                     <>
-                      <Header
-                        style={{ fontWeight: 600, color: '#1d3760' }}
-                        as="h3"
-                      >
+                      <Header style={{ fontWeight: 600 }} as="h3">
                         {title}
                       </Header>
                       <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
