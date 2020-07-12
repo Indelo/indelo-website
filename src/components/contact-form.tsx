@@ -14,10 +14,7 @@ import { Section } from './section/section';
 const ContactForm = () => {
   return (
     <>
-      <Header as="h3" style={{ color: '#1d3760', fontWeight: 'bold' }}>
-        Send us a message
-      </Header>
-
+      <Header as="h3">Send us a message</Header>
       <Form size="large">
         <Form.Field>
           <label>First name</label>
@@ -50,13 +47,13 @@ const ContactForm = () => {
 const ContactDetails = () => {
   return (
     <div style={{ textAlign: 'start' }}>
-      <Header style={{ fontWeight: 'bold' }}>Email</Header>
-      <p>
+      <Header as="h3">Email</Header>
+      <p style={{ fontSize: '1.33em' }}>
         <Icon name="mail" />
         hello@indelo.co.za
       </p>
-      <Header style={{ fontWeight: 'bold' }}>Address</Header>
-      <p>
+      <Header as="h3">Address</Header>
+      <p style={{ fontSize: '1.33em' }}>
         <Icon name="map marker alternate" />
         Claremont, Cape Town, South Africa
       </p>
