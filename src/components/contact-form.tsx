@@ -13,48 +13,59 @@ import { Section } from './section/section';
 
 const ContactForm = () => {
   return (
-    <Form size="large">
-      <Form.Field>
-        <label>First name</label>
-        <input placeholder="John" />
-      </Form.Field>
-      <Form.Field>
-        <label>Last name</label>
-        <input placeholder="Doe" />
-      </Form.Field>
-      <Form.Field>
-        <label>Your email</label>
-        <input placeholder="john@doe.com" />
-      </Form.Field>
-      <Form.Field>
-        <label>Company / Website</label>
-        <input placeholder="johndoe.com" />
-      </Form.Field>
-      <Form.TextArea
-        label="Your message"
-        placeholder="Let us know how we can help you..."
-      />
-      <Button fluid color="red" size="large">
-        Send message
-      </Button>
-    </Form>
+    <>
+      <Header as="h3" style={{ color: '#1d3760', fontWeight: 'bold' }}>
+        Send us a message
+      </Header>
+
+      <Form size="large">
+        <Form.Field>
+          <label>First name</label>
+          <input placeholder="John" />
+        </Form.Field>
+        <Form.Field>
+          <label>Last name</label>
+          <input placeholder="Doe" />
+        </Form.Field>
+        <Form.Field>
+          <label>Your email</label>
+          <input placeholder="john@doe.com" />
+        </Form.Field>
+        <Form.Field>
+          <label>Company / Website</label>
+          <input placeholder="johndoe.com" />
+        </Form.Field>
+        <Form.TextArea
+          label="Your message"
+          placeholder="Let us know how we can help you..."
+        />
+        <Button fluid color="red" size="large">
+          Send message
+        </Button>
+      </Form>
+    </>
   );
 };
 
 const ContactDetails = () => {
   return (
-    <>
-      <Header>Address</Header>
+    <div style={{ textAlign: 'start' }}>
+      <Header style={{ color: '#1d3760', fontWeight: 'bold' }}>Email</Header>
       <p>
-        <Icon name="map marker alternate" />
-        Claremont, Cape Town, South Africa
-      </p>
-      <Header>Email</Header>
-      <p>
-        <Icon name="mail" />
+        <Icon name="mail" color="blue" />
         hello@indelo.co.za
       </p>
-    </>
+      <Header style={{ color: '#1d3760', fontWeight: 'bold' }}>Phone</Header>
+      <p>
+        <Icon name="phone" color="blue" />
+        +27834475256 +27721722298
+      </p>
+      <Header style={{ color: '#1d3760', fontWeight: 'bold' }}>Address</Header>
+      <p>
+        <Icon name="map marker alternate" color="blue" />
+        Claremont, Cape Town, South Africa
+      </p>
+    </div>
   );
 };
 
@@ -66,12 +77,24 @@ export const Contact = () => {
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={2} centered>
             <Grid.Column computer={8}>
-              <Segment padded size="huge">
+              <Segment
+                padded
+                size="huge"
+                style={{
+                  boxShadow: '3px 3px 20px rgba(70,101,160,.164)',
+                  padding: 30,
+                  border: 'none',
+                }}
+              >
                 <ContactForm />
               </Segment>
             </Grid.Column>
             <Grid.Column computer={8}>
-              <Segment padded basic>
+              <Segment
+                padded
+                basic
+                style={{ width: '50%', marginLeft: 'auto' }}
+              >
                 <ContactDetails />
               </Segment>
             </Grid.Column>
@@ -81,7 +104,11 @@ export const Contact = () => {
           <Grid columns={1}>
             <Grid.Column>
               <Grid.Row>
-                <Segment padded basic textAlign="center">
+                <Segment
+                  padded
+                  basic
+                  style={{ width: '50%', marginRight: 'auto' }}
+                >
                   <ContactDetails />
                 </Segment>
               </Grid.Row>
@@ -90,7 +117,13 @@ export const Contact = () => {
           <Grid columns={1}>
             <Grid.Column>
               <Grid.Row>
-                <Segment padded>
+                <Segment
+                  padded
+                  style={{
+                    boxShadow: '3px 3px 20px rgba(70,101,160,.164)',
+                    border: 'none',
+                  }}
+                >
                   <ContactForm />
                 </Segment>
               </Grid.Row>

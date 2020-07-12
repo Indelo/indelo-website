@@ -21,9 +21,9 @@ const services = [
     title: 'Design and branding',
     body: (
       <div>
-        Our design and branding offering ranges from individual logo and brochure
-        designs, to full corporate image packs including business cards, email
-        signatures and more.
+        Our design and branding offering ranges from individual logo and
+        brochure designs, to full corporate image packs including business
+        cards, email signatures and more.
       </div>
     ),
     image: <DesignAndBrandingSvg style={{ width: 300, height: 300 }} />,
@@ -55,14 +55,19 @@ export const Services = () => {
                 <Segment basic>
                   {index % 2 === 0 ? (
                     <>
-                      <Header style={{ fontWeight: 600 }} as="h3">
+                      <Header
+                        style={{ fontWeight: 600, color: '#1d3760' }}
+                        as="h3"
+                      >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.33em' }}>{body}</p>
+                      <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                        {body}
+                      </p>
                     </>
                   ) : (
                     <Segment basic textAlign="center">
-                      {image}
+                      <div data-aos="fade-right">{image}</div>
                     </Segment>
                   )}
                 </Segment>
@@ -71,14 +76,19 @@ export const Services = () => {
                 <Segment basic>
                   {index % 2 === 1 ? (
                     <>
-                      <Header style={{ fontWeight: 600 }} as="h3">
+                      <Header
+                        style={{ fontWeight: 600, color: '#1d3760' }}
+                        as="h3"
+                      >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.33em' }}>{body}</p>
+                      <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                        {body}
+                      </p>
                     </>
                   ) : (
                     <Segment basic textAlign="center">
-                      {image}
+                      <div data-aos="fade-left">{image}</div>
                     </Segment>
                   )}
                 </Segment>
@@ -94,10 +104,15 @@ export const Services = () => {
               return (
                 <div style={{ paddingBottom: '20px' }}>
                   <Grid.Row>
-                    <Header style={{ fontWeight: 600 }} as="h3">
+                    <Header
+                      style={{ fontWeight: 600, color: '#1d3760' }}
+                      as="h3"
+                    >
                       {title}
                     </Header>
-                    <p style={{ fontSize: '1.33em' }}>{body}</p>
+                    <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                      {body}
+                    </p>
                   </Grid.Row>
                   <Grid.Row>{image}</Grid.Row>
                 </div>
