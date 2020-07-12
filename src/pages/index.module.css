@@ -11,7 +11,17 @@
   display: flex;
   align-items: center;
   flex-grow: 9;
-  background: #3B8BEB
+  /* background: #3B8BEB */
+/* background: #465c8b; */
+/* background: rgb(23,40,76);
+background: linear-gradient(135deg, rgba(23,40,76,1) 66%, rgba(40,109,168,1) 100%); */
+/* background: #286da8; */
+/* background: rgb(134,187,216);
+background: radial-gradient(circle, rgba(134,187,216,1) 2%, rgba(23,40,76,1) 100%); */
+/* background: rgb(23,40,76);
+background: linear-gradient(90deg, rgba(23,40,76,1) 36%, rgba(134,187,216,1) 100%); */
+background: rgb(134,187,216);
+background: radial-gradient(circle, rgba(134,187,216,1) 0%, rgba(23,40,76,1) 86%);
 }
 
 .waveContainer {

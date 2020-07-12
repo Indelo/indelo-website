@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import css from './hero.module.css';
 import logo from '../../assets/images/test.gif';
-import test from '../../assets/test3.svg';
+import test from '../../assets/test20.svg';
 import smallLogo from '../../assets/images/small-logo.png';
 
 const query = graphql`
