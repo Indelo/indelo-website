@@ -22,8 +22,12 @@ background: radial-gradient(circle, rgba(134,187,216,1) 2%, rgba(23,40,76,1) 100
 background: linear-gradient(90deg, rgba(23,40,76,1) 36%, rgba(134,187,216,1) 100%); */
 /* background: rgb(134,187,216);
 background: radial-gradient(circle, rgba(134,187,216,1) 0%, rgba(23,40,76,1) 86%); */
-background: rgb(0,126,167);
-background: radial-gradient(circle, rgba(0,126,167,1) 20%, rgba(23,40,76,1) 100%);
+/* background: rgb(0,126,167);
+background: radial-gradient(circle, rgba(0,126,167,1) 20%, rgba(23,40,76,1) 100%); */
+/* background: rgb(61,214,208);
+background: radial-gradient(circle, rgba(61,214,208,1) 0%, rgba(23,40,76,1) 100%); */
+background: rgb(89,149,237);
+background: radial-gradient(circle, rgba(89,149,237,1) 0%, rgba(23,40,76,1) 100%);
 }
 
 .waveContainer {
