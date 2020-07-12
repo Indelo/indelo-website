@@ -19,7 +19,9 @@ export const Section = ({
       <Header as="h2" textAlign="center">
         {title}
       </Header>
-      <div style={{ paddingTop: '40px' }}>{children}</div>
+      <div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+        {children}
+      </div>
     </Container>
   );
 };
