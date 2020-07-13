@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import css from './hero.module.css';
 import logo from '../../assets/images/test.gif';
-import test from '../../assets/test21.svg';
+import test from '../../assets/images/some4.svg';
 import smallLogo from '../../assets/images/small-logo.png';
 
 const query = graphql`
@@ -35,10 +35,11 @@ export const Hero = () => {
         >
           <Segment
             style={{
+              flexDirection: 'column',
               marginBottom: 0,
               padding: 0,
               marginTop: 30,
-              width: 100,
+              width: 200,
               display: 'flex',
             }}
             basic
@@ -47,7 +48,7 @@ export const Hero = () => {
             <Image src={smallLogo} />
             {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
             {/* <Image
-              style={{ width: 200, margin: 'auto' }}
+              style={{ width: 400, marginRight: 'auto' }}
               src={logo}
               alt="logo"
             /> */}
@@ -74,8 +75,11 @@ export const Hero = () => {
             textAlign="left"
             style={{ fontFamily: 'Avenir', color: '#E7E3D4' }}
           >
-            Innovative design and development to solve your business needs
-          </Header>
+            <strong style={{ color: '#f59f15' }}>Innovative design</strong>
+{' '}
+and
+            development to solve your business needs
+</Header>
           <Segment
             basic
             textAlign="left"
