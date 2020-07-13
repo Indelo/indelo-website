@@ -36,7 +36,7 @@ const ContactForm = () => {
           label="Your message"
           placeholder="Let us know how we can help you..."
         />
-        <Button fluid color="red" size="large">
+        <Button fluid primary size="large">
           Send message
         </Button>
       </Form>

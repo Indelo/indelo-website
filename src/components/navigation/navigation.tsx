@@ -85,7 +85,7 @@ export const Navigation = ({ children }: { children: any }) => {
               })}
               <Menu.Item>
                 <Button
-                  color="red"
+                  primary
                   as={(props: any) => (
                     <AnchorLink
                       className={css.linkButton}
@@ -135,7 +135,7 @@ export const Navigation = ({ children }: { children: any }) => {
           </Menu.Item>
           <Menu.Item>
             <Button
-              color="red"
+              primary
               as={(props: any) => (
                 <AnchorLink
                   className={css.linkButton}
@@ -183,7 +183,7 @@ export const Navigation = ({ children }: { children: any }) => {
                 </Menu.Item>
               </Menu.Menu>
             </Menu>
-            {children}
+            <div style={{ marginTop: '-68px' }}>{children}</div>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Responsive>
