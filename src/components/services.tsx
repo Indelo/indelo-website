@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header, Grid, Segment, Responsive } from 'semantic-ui-react';
-import WebDevelopmentSvg from '../assets/svgs/web-development.svg';
-import DesignAndBrandingSvg from '../assets/svgs/design-and-branding.svg';
-import OngoingSupportSvg from '../assets/svgs/ongoing-support.svg';
+import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react';
+import WebDevelopment from '../assets/images/web-development-new.png';
+import DesignAndBranding from '../assets/images/design-and-branding-new.png';
+import OngoingSupport from '../assets/images/ongoing-support-new.png';
 import { Section } from './section/section';
 
 const services = [
@@ -15,7 +15,9 @@ const services = [
         development offering caters for all requirements.
       </div>
     ),
-    image: <WebDevelopmentSvg style={{ width: 300, height: 300 }} />,
+    image: (
+      <Image src={WebDevelopment} style={{ marginLeft: 15, height: 350 }} />
+    ),
   },
   {
     title: 'Design and branding',
@@ -26,7 +28,7 @@ const services = [
         cards, email signatures and more.
       </div>
     ),
-    image: <DesignAndBrandingSvg style={{ width: 300, height: 300 }} />,
+    image: <Image src={DesignAndBranding} style={{ height: 350 }} />,
   },
   {
     title: 'Ongoing maintenance and support',
@@ -40,7 +42,9 @@ const services = [
         online experience.
       </div>
     ),
-    image: <OngoingSupportSvg style={{ width: 300, height: 300 }} />,
+    image: (
+      <Image src={OngoingSupport} style={{ marginLeft: 15, height: 350 }} />
+    ),
   },
 ];
 
