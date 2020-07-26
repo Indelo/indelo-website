@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Grid,
@@ -8,35 +8,87 @@ import {
   Responsive,
   Header,
   Icon,
+  Input,
 } from 'semantic-ui-react';
 import { Section } from './section/section';
 
 const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
+
+  const [firstName, setFirstName] = useState<string | undefined>(undefined);
+  const [lastName, setLastName] = useState<string | undefined>(undefined);
+  const [email, setEmail] = useState<string | undefined>(undefined);
+  const [company, setCompany] = useState<string | undefined>(undefined);
+  const [website, setWebsite] = useState<string | undefined>(undefined);
+  const [message, setMessage] = useState<string | undefined>(undefined);
+
+  const submit = () => {
+    setIsLoading(true);
+    setHasBeenSubmitted(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      alert('submitted');
+    }, 500);
+  };
+
+  const getError = (value?: string) => {
+    const result =
+      hasBeenSubmitted && (!value || value === '')
+        ? { content: 'Required' }
+        : undefined;
+    return result;
+  };
+
   return (
     <>
       <Header as="h3">Send us a message</Header>
-      <Form size="large">
-        <Form.Field>
-          <label>First name</label>
-          <input placeholder="John" />
-        </Form.Field>
-        <Form.Field>
-          <label>Last name</label>
-          <input placeholder="Doe" />
-        </Form.Field>
-        <Form.Field>
-          <label>Your email</label>
-          <input placeholder="john@doe.com" />
-        </Form.Field>
-        <Form.Field>
-          <label>Company / Website</label>
-          <input placeholder="johndoe.com" />
-        </Form.Field>
+      <Form size="large" loading={isLoading}>
+        <Form.Field
+          required
+          label="First name"
+          control={Input}
+          value={firstName}
+          error={getError(firstName)}
+          onChange={(e: any) => setFirstName(e.target.value)}
+        />
+        <Form.Field
+          required
+          label="Last name"
+          control={Input}
+          value={lastName}
+          error={getError(lastName)}
+          onChange={(e: any) => setLastName(e.target.value)}
+        />
+        <Form.Field
+          required
+          label="Email"
+          control={Input}
+          value={email}
+          error={getError(email)}
+          onChange={(e: any) => setEmail(e.target.value)}
+        />
+        <Form.Field
+          label="Company"
+          control={Input}
+          value={company}
+          onChange={(e: any) => setCompany(e.target.value)}
+        />
+        <Form.Field
+          label="Website"
+          control={Input}
+          value={website}
+          onChange={(e: any) => setWebsite(e.target.value)}
+        />
         <Form.TextArea
+          required
           label="Your message"
           placeholder="Let us know how we can help you..."
+          value={message}
+          error={getError(message)}
+          onChange={(e: any) => setMessage(e.target.value)}
         />
-        <Button primary size="large">
+        <Button primary size="large" onClick={submit}>
           Send message
         </Button>
       </Form>
