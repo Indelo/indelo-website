@@ -15,7 +15,7 @@ const services = [
         development offering caters for all requirements.
       </div>
     ),
-    image: <WebDevelopmentSvg style={{ width: 300, height: 300 }} />,
+    image: <WebDevelopmentSvg style={{ width: 350, height: 300 }} />,
   },
   {
     title: 'Design and branding',
@@ -26,7 +26,7 @@ const services = [
         cards, email signatures and more.
       </div>
     ),
-    image: <DesignAndBrandingSvg style={{ width: 300, height: 300 }} />,
+    image: <DesignAndBrandingSvg style={{ width: 350, height: 300 }} />,
   },
   {
     title: 'Ongoing maintenance and support',

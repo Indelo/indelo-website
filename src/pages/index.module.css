@@ -1,8 +1,7 @@
 .container {
-  /* height: 100%; */
-  margin-bottom: 200px;
+  height: 900px;
 }
 
 .hero {
-  margin-top: 150px;
+  padding-top: 150px;
 }
