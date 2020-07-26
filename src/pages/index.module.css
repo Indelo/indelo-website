@@ -1,19 +1,8 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  min-height: 100vh;
-  align-items: stretch;
-  background: rgb(89, 149, 237);
-  background: radial-gradient(
-    circle,
-    rgba(89, 149, 237, 1) 0%,
-    rgba(23, 40, 76, 1) 100%
-  );
+  /* height: 100%; */
+  margin-bottom: 200px;
 }
 
-.heroContainer {
-  display: flex;
-  align-items: center;
-  flex-grow: 9;
+.hero {
+  margin-top: 170px;
 }

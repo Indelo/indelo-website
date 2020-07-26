@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Container, Segment, Grid } from 'semantic-ui-react';
+import { Container, Segment } from 'semantic-ui-react';
 import AOS from 'aos';
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
@@ -7,7 +7,7 @@ import { Services } from '../components/services';
 import { AboutUs } from '../components/about-us/about-us';
 import { Contact } from '../components/contact-form';
 import { Hero } from '../components/hero/hero';
-import waves from '../assets/images/waves.png';
+import Waves from '../assets/svgs/waves.svg';
 import css from './index.module.css';
 import 'aos/dist/aos.css';
 
@@ -20,8 +20,21 @@ const RootIndex = () => {
     <>
       <SEO />
       <Layout>
+        <div
+          style={{
+            position: 'absolute',
+            height: '680px',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: -10,
+          }}
+        >
+          <Waves height="680px" width="100%" preserveAspectRatio="none" />
+        </div>
         <div className={css.container}>
-          <div className={css.heroContainer}>
+          <div className={css.hero}>
             <Container>
               <Segment basic padded>
                 <Hero />
@@ -29,6 +42,7 @@ const RootIndex = () => {
             </Container>
           </div>
         </div>
+
         <Services />
         <AboutUs />
         <Contact />
