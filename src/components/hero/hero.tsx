@@ -28,7 +28,6 @@ export const Hero = () => {
               </Segment>
               <br />
               <Button
-                // basic
                 primary
                 size="large"
                 as={(props: any) => (
@@ -48,9 +47,9 @@ export const Hero = () => {
               </Button>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
+          <Grid.Row style={{ paddingTop: 50 }}>
             <Grid.Column verticalAlign="middle">
-              {/* <HeroImage style={{ width: '95%', maxHeight: '400px' }} /> */}
+              <HeroImage style={{ width: '95%', maxHeight: '400px' }} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
