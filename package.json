@@ -75,7 +75,6 @@
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
-    "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
     "lint": "eslint ./src/**/*.tsx",
     "netlify:login": "netlify login",
