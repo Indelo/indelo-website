@@ -23,7 +23,7 @@ const RootIndex = () => {
         <div
           style={{
             position: 'absolute',
-            height: '680px',
+            height: '530px',
             top: 0,
             left: 0,
             right: 0,
@@ -31,7 +31,7 @@ const RootIndex = () => {
             zIndex: -10,
           }}
         >
-          <Waves height="680px" width="100%" preserveAspectRatio="none" />
+          <Waves height="530px" width="100%" preserveAspectRatio="none" />
         </div>
         <div className={css.container}>
           <div className={css.hero}>

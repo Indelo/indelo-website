@@ -8,46 +8,51 @@ export const Hero = () => {
   return (
     <>
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        <Grid columns={2}>
-          <Grid.Column verticalAlign="middle">
-            <Header
-              inverted
-              as="h3"
-              style={{ fontFamily: 'Avenir', fontSize: '2.5em' }}
-            >
-              Innovative design and development to solve your business needs
-            </Header>
-            <Segment
-              basic
-              style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
-            >
-              <p style={{ color: '#ccc', fontFamily: 'Avenir' }}>
-                Website development - UI/UX - Design - Branding - SEO
-              </p>
-            </Segment>
-            <br />
-            <Button
-              primary
-              size="large"
-              as={(props: any) => (
+        <Grid centered columns={1}>
+          <Grid.Row>
+            <Grid.Column width={10} verticalAlign="middle" textAlign="center">
+              <Header
+                inverted
+                as="h3"
+                style={{ fontFamily: 'Avenir', fontSize: '2.5em' }}
+              >
+                Innovative design and development to solve your business needs
+              </Header>
+              <Segment
+                basic
+                style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
+              >
+                <p style={{ color: '#fff', fontFamily: 'Avenir' }}>
+                  Website development - UI/UX - Design - Branding - SEO
+                </p>
+              </Segment>
+              <br />
+              <Button
+                // basic
+                primary
+                size="large"
+                as={(props: any) => (
+                  <AnchorLink
+                    className={css.linkButton}
+                    {...props}
+                    to="/#contact"
+                    title="Contact us"
+                  />
+                )}
+              >
                 <AnchorLink
                   className={css.linkButton}
-                  {...props}
                   to="/#contact"
                   title="Contact us"
                 />
-              )}
-            >
-              <AnchorLink
-                className={css.linkButton}
-                to="/#contact"
-                title="Contact us"
-              />
-            </Button>
-          </Grid.Column>
-          <Grid.Column verticalAlign="middle">
-            <HeroImage style={{ width: '95%', maxHeight: '400px' }} />
-          </Grid.Column>
+              </Button>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column verticalAlign="middle">
+              {/* <HeroImage style={{ width: '95%', maxHeight: '400px' }} /> */}
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
       </Responsive>
       <Responsive {...Responsive.onlyMobile}>

@@ -1,3 +1,8 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.button {
+  border-radius: 2em;
+  border-width: 5px;
+}
