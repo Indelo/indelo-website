@@ -38,6 +38,7 @@ const RootIndex = () => {
             <Container>
               <Segment basic padded>
                 <Hero />
+                Test
               </Segment>
             </Container>
           </div>
