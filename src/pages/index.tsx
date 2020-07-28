@@ -45,7 +45,7 @@ const RootIndex = () => {
 
         <Services />
         <AboutUs />
-        <Contact />
+        <ContactUs />
       </Layout>
     </>
   );

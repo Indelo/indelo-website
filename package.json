@@ -12,6 +12,7 @@
     "@types/classnames": "^2.2.10",
     "@types/react-helmet": "^6.0.0",
     "aos": "^3.0.0-beta.6",
+    "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
