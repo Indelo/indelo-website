@@ -5,7 +5,7 @@ import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
 import { Services } from '../components/services';
 import { AboutUs } from '../components/about-us/about-us';
-import { Contact } from '../components/contact-form';
+import { ContactUs } from '../components/contact-us';
 import { Hero } from '../components/hero/hero';
 import Waves from '../assets/svgs/waves.svg';
 import css from './index.module.css';
