@@ -100,7 +100,7 @@ export const ContactForm = () => {
           error={getInputError({ hasBeenSubmitted, value: message })}
           onChange={(e: any) => setMessage(e.target.value)}
         />
-        <Button color="green" size="large" onClick={submit}>
+        <Button primary size="large" onClick={submit}>
           Send message
         </Button>
       </Form>
