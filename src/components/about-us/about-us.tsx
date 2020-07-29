@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Grid, Header, GridColumn, Image, Responsive } from 'semantic-ui-react';
 import { Section } from '../section/section';
 import { team, aboutUsBody } from './copy';
+import Blob from '../../assets/svgs/blob-4.svg';
 import css from './about-us.module.css';
 
 export const AboutUs = () => {
@@ -60,6 +61,15 @@ export const AboutUs = () => {
           <Grid.Column width={12}>{sectionBody(css.desktopBody)}</Grid.Column>
         </Grid>
         <Grid style={{ padding: 0 }}>
+          <Blob
+            style={{
+              position: 'absolute',
+              height: 1500,
+              right: 100,
+              top: 4100,
+            }}
+          />
+
           <Grid.Row className={css.desktopRow}>
             {team.map((person) => (
               <div data-aos="zoom-in">

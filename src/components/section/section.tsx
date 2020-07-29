@@ -16,7 +16,7 @@ export const Section = ({
 
   return (
     <Container className={sectionStyle}>
-      <Header as="h2" textAlign="center">
+      <Header as="h2" textAlign="center" style={{ fontSize: 60 }}>
         {title}
       </Header>
       <div style={{ paddingTop: '40px', paddingBottom: '40px' }}>

@@ -26,7 +26,7 @@ export const team = [
     name: 'George',
     image: George,
     body:
-      'Keeps everyone happy and motivated. George is notorious for lap-cuddles and sleeping on keyboards',
+      'Keeps everyone happy and motivated. George is notorious for lap-cuddles and sleeping on keyboards, after a hard day of work',
   },
 ];
 

@@ -40,10 +40,10 @@ const items = [
     title: 'Node',
     image: Node,
   },
-  {
-    title: 'JavaScript',
-    image: JavaScript,
-  },
+  // {
+  //   title: 'JavaScript',
+  //   image: JavaScript,
+  // },
   {
     title: 'TypeScript',
     image: TypeScript,
@@ -64,18 +64,18 @@ const items = [
     title: 'Python',
     image: Python,
   },
-  {
-    title: 'Django',
-    image: Django,
-  },
-  {
-    title: 'Flask',
-    image: Flask,
-  },
-  {
-    title: 'CSS3',
-    image: Css,
-  },
+  // {
+  //   title: 'Django',
+  //   image: Django,
+  // },
+  // {
+  //   title: 'Flask',
+  //   image: Flask,
+  // },
+  // {
+  //   title: 'CSS3',
+  //   image: Css,
+  // },
   {
     title: 'GraphQL',
     image: Garphql,
@@ -92,10 +92,10 @@ const items = [
     title: 'WordPress',
     image: WordPress,
   },
-  {
-    title: 'CircleCI',
-    image: Circleci,
-  },
+  // {
+  //   title: 'CircleCI',
+  //   image: Circleci,
+  // },
   {
     title: 'AWS',
     image: AWS,
@@ -121,13 +121,13 @@ const items = [
     image: GoogleAds,
   },
   {
-    title: 'Google Analytics',
+    title: 'G. Analytics',
     image: GoogleAnalytics,
   },
-  {
-    title: 'Sketch',
-    image: Sketch,
-  },
+  // {
+  //   title: 'Sketch',
+  //   image: Sketch,
+  // },
   {
     title: 'Figma',
     image: Figma,
@@ -136,7 +136,7 @@ const items = [
 
 export const TechnologyStack = () => {
   return (
-    <Section title="Our technology stack">
+    <Section title="Our Tech">
       <Grid columns={6} padded>
         {chunk(items, 6).map((chunks) => (
           <Grid.Row>

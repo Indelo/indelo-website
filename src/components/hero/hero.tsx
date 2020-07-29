@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Button, Grid, Segment, Responsive } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import css from './hero.module.css';
-import HeroImage from '../../assets/svgs/hero.svg';
+import HeroImage from '../../assets/svgs/h2.svg';
 
 export const Hero = () => {
   const tag = 'We solve business problems with software';
@@ -27,12 +27,20 @@ export const Hero = () => {
               basic
               style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
             >
-              <p style={{ color: '#fff', fontFamily: 'Avenir' }}>{subTag}</p>
+              <p
+                style={{
+                  color: '#fff',
+                  fontFamily: 'Avenir',
+                }}
+              >
+                {subTag}
+              </p>
             </Segment>
             <br />
             <Button
-              primary
+              color="green"
               size="large"
+              style={{ width: 20 }}
               as={(props: any) => (
                 <AnchorLink
                   className={css.linkButton}
@@ -50,7 +58,9 @@ export const Hero = () => {
             </Button>
           </Grid.Column>
           <Grid.Column verticalAlign="middle">
-            <HeroImage style={{ width: '95%', maxHeight: '400px' }} />
+            <div data-aos="zoom-in">
+              <HeroImage style={{ width: '100%', maxHeight: '450px' }} />
+            </div>
           </Grid.Column>
         </Grid>
       </Responsive>
@@ -74,7 +84,7 @@ export const Hero = () => {
             </Segment>
             <Segment basic padded textAlign="center">
               <Button
-                primary
+                color="green"
                 size="huge"
                 as={(props: any) => (
                   <AnchorLink
