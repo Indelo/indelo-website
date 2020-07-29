@@ -34,7 +34,6 @@ export const ContactForm = () => {
     };
 
     setHasBeenSubmitted(true);
-
     const canSubmit = firstName && lastName && email && message;
 
     if (canSubmit) {
