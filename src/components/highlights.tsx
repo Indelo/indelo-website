@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Header, Image } from 'semantic-ui-react';
-import Iterate from '../assets/images/q2.png';
-import Develop from '../assets/images/q3.png';
-import Launch from '../assets/images/q1.png';
+import Develop from '../assets/images/develop2.png';
+import Launch from '../assets/images/launch2.png';
+import Iterate from '../assets/images/iterate1.png';
 import { Section } from './section/section';
 
 export const Highlights = () => {
@@ -12,7 +12,7 @@ export const Highlights = () => {
         <Grid columns={5}>
           <Grid.Column style={{ width: 350, textAlign: 'center' }}>
             <Image
-              src={Launch}
+              src={Iterate}
               style={{
                 width: 80,
                 height: 80,
@@ -34,7 +34,7 @@ export const Highlights = () => {
           </Grid.Column>
           <Grid.Column style={{ width: 350, textAlign: 'center' }}>
             <Image
-              src={Iterate}
+              src={Develop}
               style={{
                 width: 80,
                 height: 80,
@@ -55,7 +55,7 @@ export const Highlights = () => {
           </Grid.Column>
           <Grid.Column style={{ width: 350, textAlign: 'center' }}>
             <Image
-              src={Develop}
+              src={Launch}
               style={{
                 width: 80,
                 height: 80,

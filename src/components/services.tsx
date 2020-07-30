@@ -1,8 +1,8 @@
 import React from 'react';
 import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react';
-import WebDevelopmentSvg from '../assets/images/w1.png';
-import DesignAndBrandingSvg from '../assets/images/w2.png';
-import OngoingSupportSvg from '../assets/images/w2.png';
+import WebDevelopmentSvg from '../assets/images/w8.png';
+import DesignAndBrandingSvg from '../assets/images/w9.png';
+import OngoingSupportSvg from '../assets/images/w10.png';
 import Blob from '../assets/svgs/blob-n.svg';
 import Blob2 from '../assets/svgs/blob-n2.svg';
 import Blob3 from '../assets/svgs/blob-n3.svg';
@@ -29,7 +29,7 @@ const services = [
         cards, email signatures and more.
       </div>
     ),
-    image: <Image src={DesignAndBrandingSvg} style={{ width: 500 }} />,
+    image: <Image src={DesignAndBrandingSvg} style={{ width: 600 }} />,
   },
   {
     title: 'Ongoing maintenance and support',
@@ -43,7 +43,7 @@ const services = [
         online experience.
       </div>
     ),
-    image: <Image src={OngoingSupportSvg} style={{ width: 500 }} />,
+    image: <Image src={OngoingSupportSvg} style={{ width: 600 }} />,
   },
 ];
 

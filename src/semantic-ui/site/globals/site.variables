@@ -8,12 +8,12 @@
 @orange: #fe9a76;
 @yellow: #ffd700;
 @olive: #32cd32;
-@green: #3acdba;
+@green: #016936;
 @teal: #008080;
 @blue: #3f93ee;
 @violet: #ee82ee;
-@purple: #b413ec;
+@purple: #35527f;
 @pink: #ff1493;
 @brown: #a52a2a;
-@grey: #fff;
+@grey: #a0a0a0;
 @black: #000000;

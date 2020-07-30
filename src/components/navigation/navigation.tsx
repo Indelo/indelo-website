@@ -85,7 +85,7 @@ export const Navigation = ({ children }: { children: any }) => {
               })}
               <Menu.Item>
                 <Button
-                  color="green"
+                  primary
                   as={(props: any) => (
                     <AnchorLink
                       className={css.linkButton}
@@ -135,7 +135,7 @@ export const Navigation = ({ children }: { children: any }) => {
           </Menu.Item>
           <Menu.Item>
             <Button
-              color="green"
+              primary
               as={(props: any) => (
                 <AnchorLink
                   className={css.linkButton}

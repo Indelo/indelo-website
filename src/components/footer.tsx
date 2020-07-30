@@ -7,6 +7,7 @@ import {
   Segment,
   List,
   Image,
+  Responsive,
 } from 'semantic-ui-react';
 import Logo from '../assets/images/small-logo.png';
 
@@ -70,7 +71,7 @@ export const Footer = () => {
                 ))}
               </List>
             </Grid.Column>
-            <Grid.Column width="3" floated="right">
+            <Grid.Column width="4" floated="right">
               <Button circular color="facebook" icon="facebook" />
 
               <Button

@@ -7,12 +7,12 @@ import { Services } from '../components/services';
 import { AboutUs } from '../components/about-us/about-us';
 import { Highlights } from '../components/highlights';
 import { ContactUs } from '../components/contact-us';
+import { TechnologyStack } from '../components/technology-stack/technology-stack';
 import { Hero } from '../components/hero/hero';
 import Waves from '../assets/svgs/waves.svg';
 
 import css from './index.module.css';
 import 'aos/dist/aos.css';
-import { TechnologyStack } from '../components/technology-stack';
 
 const RootIndex = () => {
   useEffect(() => {

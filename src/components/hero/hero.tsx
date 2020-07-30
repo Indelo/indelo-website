@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Button, Grid, Segment, Responsive } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import css from './hero.module.css';
-import HeroImage from '../../assets/svgs/h2.svg';
+import HeroImage from '../../assets/svgs/h3.svg';
 
 export const Hero = () => {
   const tag = 'We solve business problems with software';
@@ -38,7 +38,7 @@ export const Hero = () => {
             </Segment>
             <br />
             <Button
-              color="green"
+              primary
               size="large"
               style={{ width: 20 }}
               as={(props: any) => (
@@ -84,7 +84,7 @@ export const Hero = () => {
             </Segment>
             <Segment basic padded textAlign="center">
               <Button
-                color="green"
+                primary
                 size="huge"
                 as={(props: any) => (
                   <AnchorLink

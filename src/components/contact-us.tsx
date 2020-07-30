@@ -18,30 +18,33 @@ const ContactDetails = () => {
       <Header as="h3">Email</Header>
       <p style={{ fontSize: '1.33em' }}>
         <Icon
+          inverted
           circular
-          color="grey"
-          style={{ backgroundColor: '#C63C5D', boxShadow: 'none', width: 25 }}
+          color="purple"
           name="mail"
+          style={{ marginRight: 10 }}
         />
         hello@indelo.co.za
       </p>
       <Header as="h3">Phone</Header>
       <p style={{ fontSize: '1.33em' }}>
         <Icon
+          inverted
           circular
-          color="grey"
-          style={{ backgroundColor: '#C63C5D', boxShadow: 'none', width: 25 }}
+          color="purple"
           name="phone"
+          style={{ marginRight: 10 }}
         />
         +27 83 447 5256
       </p>
       <Header as="h3">Address</Header>
       <p style={{ fontSize: '1.33em' }}>
         <Icon
+          inverted
           circular
-          color="grey"
-          style={{ backgroundColor: '#C63C5D', boxShadow: 'none', width: 25 }}
+          color="purple"
           name="map marker alternate"
+          style={{ marginRight: 10 }}
         />
         Claremont, Cape Town, South Africa
       </p>
@@ -56,7 +59,7 @@ export const ContactUs = () => {
       <Section title="Contact us">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={2} centered>
-            <Grid.Column computer={9} tablet={8}>
+            <Grid.Column computer={9} tablet={9}>
               <Segment
                 padded
                 size="huge"
@@ -69,7 +72,7 @@ export const ContactUs = () => {
                 <ContactForm />
               </Segment>
             </Grid.Column>
-            <Grid.Column computer={6} tablet={8}>
+            <Grid.Column computer={6} tablet={6}>
               <Segment padded basic>
                 <ContactDetails />
                 <Image src={location} style={{ paddingTop: 20, width: 300 }} />
