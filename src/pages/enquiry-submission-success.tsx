@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Button, Header } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
+
 import css from './enquiry-submission-success.module.css';
 
 const EnquirySubmissionSuccessIndex = () => (

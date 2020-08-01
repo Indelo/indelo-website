@@ -1,9 +1,11 @@
 import React from 'react';
 import { Header, Button, Grid, Segment, Responsive } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import css from './hero.module.css';
+
 // @ts-ignore
-import HeroImage from '../../assets/svgs/t3.svg';
+import HeroImage from '../../assets/svgs/hero.svg';
+
+import css from './hero.module.css';
 
 export const Hero = () => {
   const tag = 'We solve business problems with software';

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react';
-import WebDevelopmentSvg from '../assets/images/w25.png';
-import DesignAndBrandingSvg from '../assets/images/w16.png';
-import OngoingSupportSvg from '../assets/images/w17.png';
+
 import { Section } from './section/section';
+
+import WebDevelopmentSvg from '../assets/images/web-development.png';
+import DesignAndBrandingSvg from '../assets/images/design-and-branding.png';
+import OngoingSupportSvg from '../assets/images/ongoing-support.png';
 
 const services = [
   {

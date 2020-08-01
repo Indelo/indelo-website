@@ -9,6 +9,7 @@ import {
   Image,
   Responsive,
 } from 'semantic-ui-react';
+
 import Logo from '../assets/images/small-logo.png';
 
 export const Footer = () => {

@@ -35,7 +35,7 @@ const sections = [
 
 export const Highlights = () => {
   return (
-    <Section title="">
+    <Section>
       <Responsive {...Responsive.onlyMobile}>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Grid>

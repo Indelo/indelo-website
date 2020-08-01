@@ -8,8 +8,10 @@ import {
   Icon,
   Image,
 } from 'semantic-ui-react';
+
 import { Section } from './section/section';
 import { ContactForm } from './contact-form';
+
 import location from '../assets/images/location.png';
 
 const ContactDetails = () => {

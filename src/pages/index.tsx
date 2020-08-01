@@ -1,24 +1,27 @@
 import React, { useEffect } from 'react';
 import { Container, Segment } from 'semantic-ui-react';
+
 import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
 import { Services } from '../components/services';
-import { Team } from '../components/team/team';
+import { Motivation } from '../components/motivation';
 import { Highlights } from '../components/highlights';
 import { ContactUs } from '../components/contact-us';
 import { TechnologyStack } from '../components/technology-stack/technology-stack';
 import { Hero } from '../components/hero/hero';
+import { Team } from '../components/team/team';
+import { Values } from '../components/values';
+import { Mission } from '../components/mission';
+
 // @ts-ignore
-import Wave from '../assets/svgs/w2.svg';
+import Wave from '../assets/svgs/landing-wave.svg';
 // @ts-ignore
-import Test from '../assets/svgs/heroh2.svg';
+import Background from '../assets/svgs/landing-background.svg';
 
 import css from './index.module.css';
-import 'aos/dist/aos.css';
-import { AboutUs } from '../components/about-us/about-us';
-import { Values } from '../components/values';
-import { Section } from '../components/section/section';
 
 const RootIndex = () => {
   useEffect(() => {
@@ -40,7 +43,7 @@ const RootIndex = () => {
             zIndex: -10,
           }}
         >
-          <Test
+          <Background
             height="calc(100% - 100px)"
             width="calc(100%)"
             preserveAspectRatio="none"
@@ -62,25 +65,10 @@ const RootIndex = () => {
         </div>
         <Highlights />
         <Services />
-        <Team />
-        <Section title="Our Mission">
-          <div
-            style={{
-              fontFamily: 'Avenir',
-              fontSize: '1.6em',
-              textAlign: 'center',
-              lineHeight: '1.6em',
-            }}
-          >
-            Our mission is to enable businesses and entrepreneurs to thrive by
-            delivering world-class products that embody the ideas and visions
-            that brought those products to be. Our team specialises in the full
-            range of skills required to take your product from inception to
-            launch.
-          </div>
-        </Section>
+        <Motivation />
+        <Mission />
         <Values />
-        <AboutUs />
+        <Team />
         <TechnologyStack />
         <ContactUs />
       </Layout>

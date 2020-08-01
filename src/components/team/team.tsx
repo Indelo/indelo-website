@@ -1,21 +1,77 @@
 import React from 'react';
-import { Grid, Image, Responsive } from 'semantic-ui-react';
+import { Grid, Header, GridColumn, Image, Responsive } from 'semantic-ui-react';
+import _ from 'lodash';
+
 import { Section } from '../section/section';
-import Indelo from '../../assets/images/indelo4.png';
+import { team } from './copy';
+
 import css from './team.module.css';
-import SS from '../../assets/svgs/b1.svg';
 
 export const Team = () => {
-  const aboutUsBody =
-    'We are a team of passionate and driven developers, designers and UI/UX professionals with a variety of industry experience. We love building things and creating beautiful products that work well. We focus on the details to ensure our products are user friendly, unique and exactly what you ask for. We thrive to empower businesses through technology!';
+  const cardImage = (src: any) => (
+    <Image src={src} size="small" className={css.image} circular />
+  );
+  const cardTitle = (name: string) => <Header as="h3">{name}</Header>;
 
   return (
-    <Section title="Why choose us?">
-      <p
-        style={{ fontSize: '1.6em', lineHeight: '1.6em', textAlign: 'center' }}
-      >
-        {aboutUsBody}
-      </p>
+    <Section title="Indelo's co-founders">
+      <Responsive {...Responsive.onlyMobile}>
+        <Grid>
+          {team.map((person) => (
+            <Grid.Row className={css.mobileRow}>
+              <Grid.Column className={css.card}>
+                {cardImage(person.image)}
+                {cardTitle(person.name)}
+                <p className={css.cardBody}>{person.body}</p>
+              </Grid.Column>
+            </Grid.Row>
+          ))}
+        </Grid>
+      </Responsive>
+
+      <Responsive minWidth={767} maxWidth={1025}>
+        <Grid>
+          {_.chunk(team, 2).map((row: any) => (
+            <Grid.Row className={css.tabletRow}>
+              {row.map((person: any) => (
+                <div data-aos="zoom-in">
+                  <Grid.Column className={css.card}>
+                    {cardImage(person.image)}
+                    {cardTitle(person.name)}
+                    <p className={css.cardBody}>{person.body}</p>
+                  </Grid.Column>
+                </div>
+              ))}
+            </Grid.Row>
+          ))}
+        </Grid>
+      </Responsive>
+
+      <Responsive minWidth={1026}>
+        <Grid style={{ padding: 0 }}>
+          <Grid.Row className={css.desktopRow}>
+            {team.map((person) => (
+              <div data-aos="zoom-in">
+                <GridColumn className={css.card} width={4}>
+                  <div
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    {cardImage(person.image)}
+                  </div>
+
+                  {cardTitle(person.name)}
+                  <p className={css.cardBody}>{person.body}</p>
+                </GridColumn>
+              </div>
+            ))}
+          </Grid.Row>
+        </Grid>
+      </Responsive>
     </Section>
   );
 };
