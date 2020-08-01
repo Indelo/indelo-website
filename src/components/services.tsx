@@ -19,7 +19,9 @@ const services = [
         development offering caters for all requirements.
       </div>
     ),
-    image: <Image src={WebDevelopmentSvg} style={{ width: 400 }} />,
+    image: (
+      <Image src={WebDevelopmentSvg} style={{ width: 400, margin: 'auto' }} />
+    ),
   },
   {
     title: 'Design and branding',
@@ -30,7 +32,12 @@ const services = [
         cards, email signatures and more.
       </div>
     ),
-    image: <Image src={DesignAndBrandingSvg} style={{ width: 350 }} />,
+    image: (
+      <Image
+        src={DesignAndBrandingSvg}
+        style={{ width: 350, margin: 'auto' }}
+      />
+    ),
   },
   {
     title: 'Ongoing maintenance and support',
@@ -44,7 +51,9 @@ const services = [
         online experience.
       </div>
     ),
-    image: <Image src={OngoingSupportSvg} style={{ width: 400 }} />,
+    image: (
+      <Image src={OngoingSupportSvg} style={{ width: 400, margin: 'auto' }} />
+    ),
   },
 ];
 
@@ -52,29 +61,9 @@ export const Services = () => {
   return (
     <Section title="Our services">
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        {/* <SS
-          width="100%"
-          preserveAspectRatio="none"
-          style={{
-            height: 800,
-            position: 'absolute',
-            zIndex: -1,
-            right: -1,
-            top: 2200,
-          }}
-        /> */}
-        {/* <Blob
-          style={{ height: 700, position: 'absolute', left: 450, top: 1250 }}
-        />
-        <Blob2
-          style={{ height: 800, position: 'absolute', right: 0, top: 1600 }}
-        />
-        <Blob3
-          style={{ height: 800, position: 'absolute', left: 800, top: 2200 }}
-        /> */}
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
-            <Grid.Row style={{ padding: 0, paddingBottom: 150 }}>
+            <Grid.Row style={{ padding: 0, paddingBottom: 100 }}>
               <Grid.Column>
                 <Segment basic>
                   {index % 2 === 0 ? (
@@ -126,19 +115,18 @@ export const Services = () => {
           <Grid.Column textAlign="center">
             {services.map(({ title, body, image }) => {
               return (
-                <div style={{ paddingBottom: '20px' }}>
-                  <Grid.Row>
-                    <Header
-                      style={{ fontWeight: 600, color: '#1d3760' }}
-                      as="h3"
-                    >
+                <div style={{ paddingBottom: '50px' }}>
+                  <Grid.Row style={{ paddingBottom: '30px' }}>
+                    <Header style={{ fontWeight: 600 }} as="h3">
                       {title}
                     </Header>
                     <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
                       {body}
                     </p>
                   </Grid.Row>
-                  <Grid.Row>{image}</Grid.Row>
+                  <Grid.Row>
+                    <div style={{ margin: 'auto' }}>{image}</div>
+                  </Grid.Row>
                 </div>
               );
             })}
