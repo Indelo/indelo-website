@@ -1,6 +1,6 @@
 import React from 'react';
 import { chunk } from 'lodash';
-import { Grid, Image, Header, Segment } from 'semantic-ui-react';
+import { Grid, Image, Header, Segment, Responsive } from 'semantic-ui-react';
 import { Section } from '../section/section';
 import Node from '../../assets/svgs/nodejs-icon.svg';
 import JavaScript from '../../assets/svgs/javascript.svg';
@@ -154,22 +154,42 @@ export const TechnologyStack = () => {
           zIndex: -1,
         }}
       />
-      <Grid columns={5} padded>
-        {chunk(items, 5).map((chunks) => (
-          <Grid.Row>
-            {chunks.map(({ title, image: Icon }) => {
-              return (
-                <Grid.Column>
-                  <Image className={css.item}>
-                    <Header textAlign="center">{title}</Header>
-                    <Icon style={{ height: '55px' }} />
-                  </Image>
-                </Grid.Column>
-              );
-            })}
-          </Grid.Row>
-        ))}
-      </Grid>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Grid columns={5} padded>
+          {chunk(items, 5).map((chunks) => (
+            <Grid.Row>
+              {chunks.map(({ title, image: Icon }) => {
+                return (
+                  <Grid.Column>
+                    <Image className={css.item}>
+                      <Header textAlign="center">{title}</Header>
+                      <Icon style={{ height: '55px' }} />
+                    </Image>
+                  </Grid.Column>
+                );
+              })}
+            </Grid.Row>
+          ))}
+        </Grid>
+      </Responsive>
+      <Responsive {...Responsive.onlyMobile}>
+        <Grid columns={4} padded>
+          {chunk(items, 4).map((chunks) => (
+            <Grid.Row>
+              {chunks.map(({ title, image: Icon }) => {
+                return (
+                  <Grid.Column>
+                    <Image className={css.item}>
+                      <Header textAlign="center">{title}</Header>
+                      <Icon style={{ height: '55px' }} />
+                    </Image>
+                  </Grid.Column>
+                );
+              })}
+            </Grid.Row>
+          ))}
+        </Grid>
+      </Responsive>
     </Section>
   );
 };
