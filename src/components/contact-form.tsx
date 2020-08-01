@@ -53,6 +53,7 @@ export const ContactForm = () => {
 
   return (
     <>
+      <Header as="h3">Send us a message</Header>
       {isErrored && (
         <Message
           error
@@ -60,7 +61,6 @@ export const ContactForm = () => {
           content="Something went wrong on our side. Please submit your request again :)"
         />
       )}
-      <Header as="h3">Send us a message</Header>
       <Form size="large" loading={isLoading}>
         <Form.Field
           required

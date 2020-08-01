@@ -1,11 +1,12 @@
 import React from 'react';
 import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react';
-import WebDevelopmentSvg from '../assets/images/w8.png';
-import DesignAndBrandingSvg from '../assets/images/w9.png';
-import OngoingSupportSvg from '../assets/images/w10.png';
+import WebDevelopmentSvg from '../assets/images/w25.png';
+import DesignAndBrandingSvg from '../assets/images/w16.png';
+import OngoingSupportSvg from '../assets/images/w17.png';
 import Blob from '../assets/svgs/blob-n.svg';
 import Blob2 from '../assets/svgs/blob-n2.svg';
 import Blob3 from '../assets/svgs/blob-n3.svg';
+import SS from '../assets/svgs/b1.svg';
 import { Section } from './section/section';
 
 const services = [
@@ -18,7 +19,7 @@ const services = [
         development offering caters for all requirements.
       </div>
     ),
-    image: <Image src={WebDevelopmentSvg} style={{ width: 500 }} />,
+    image: <Image src={WebDevelopmentSvg} style={{ width: 400 }} />,
   },
   {
     title: 'Design and branding',
@@ -29,7 +30,7 @@ const services = [
         cards, email signatures and more.
       </div>
     ),
-    image: <Image src={DesignAndBrandingSvg} style={{ width: 600 }} />,
+    image: <Image src={DesignAndBrandingSvg} style={{ width: 350 }} />,
   },
   {
     title: 'Ongoing maintenance and support',
@@ -43,7 +44,7 @@ const services = [
         online experience.
       </div>
     ),
-    image: <Image src={OngoingSupportSvg} style={{ width: 600 }} />,
+    image: <Image src={OngoingSupportSvg} style={{ width: 400 }} />,
   },
 ];
 
@@ -51,7 +52,18 @@ export const Services = () => {
   return (
     <Section title="Our services">
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        <Blob
+        {/* <SS
+          width="100%"
+          preserveAspectRatio="none"
+          style={{
+            height: 800,
+            position: 'absolute',
+            zIndex: -1,
+            right: -1,
+            top: 2200,
+          }}
+        /> */}
+        {/* <Blob
           style={{ height: 700, position: 'absolute', left: 450, top: 1250 }}
         />
         <Blob2
@@ -59,7 +71,7 @@ export const Services = () => {
         />
         <Blob3
           style={{ height: 800, position: 'absolute', left: 800, top: 2200 }}
-        />
+        /> */}
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
             <Grid.Row style={{ padding: 0, paddingBottom: 150 }}>
@@ -68,12 +80,12 @@ export const Services = () => {
                   {index % 2 === 0 ? (
                     <>
                       <Header
-                        style={{ fontWeight: 600, fontSize: '2.5em' }}
+                        style={{ fontWeight: 600, fontSize: '3em' }}
                         as="h3"
                       >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                      <p style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
                         {body}
                       </p>
                     </>
@@ -89,12 +101,12 @@ export const Services = () => {
                   {index % 2 === 1 ? (
                     <>
                       <Header
-                        style={{ fontWeight: 600, fontSize: '2.5em' }}
+                        style={{ fontWeight: 600, fontSize: '3em' }}
                         as="h3"
                       >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                      <p style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
                         {body}
                       </p>
                     </>

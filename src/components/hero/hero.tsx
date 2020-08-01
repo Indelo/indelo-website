@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Button, Grid, Segment, Responsive } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import css from './hero.module.css';
-import HeroImage from '../../assets/svgs/h3.svg';
+import HeroImage from '../../assets/svgs/t3.svg';
 
 export const Hero = () => {
   const tag = 'We solve business problems with software';
@@ -17,8 +17,9 @@ export const Hero = () => {
               as="h3"
               style={{
                 fontFamily: 'Avenir',
-                fontSize: '2.8em',
+                fontSize: '3.8em',
                 fontWeight: 'bold',
+                paddingTop: 100,
               }}
             >
               {tag}
@@ -58,9 +59,18 @@ export const Hero = () => {
             </Button>
           </Grid.Column>
           <Grid.Column verticalAlign="middle">
-            <div data-aos="zoom-in">
-              <HeroImage style={{ width: '100%', maxHeight: '450px' }} />
+            <div
+              style={{
+                position: 'absolute',
+                left: -300,
+                top: -150,
+              }}
+            >
+              <HeroImage style={{ width: 1000, height: '100%' }} />
             </div>
+            {/* <div data-aos="zoom-in">
+              <HeroImage style={{ width: '100%', maxHeight: '450px' }} />
+            </div> */}
           </Grid.Column>
         </Grid>
       </Responsive>

@@ -2,26 +2,18 @@ import React from 'react';
 import _ from 'lodash';
 import { Grid, Header, GridColumn, Image, Responsive } from 'semantic-ui-react';
 import { Section } from '../section/section';
-import { team, aboutUsBody } from './copy';
-import Blob from '../../assets/svgs/blob-4.svg';
+import { team } from './copy';
 import css from './about-us.module.css';
 
 export const AboutUs = () => {
-  const sectionBody = (className: string) => (
-    <p className={className}>{aboutUsBody}</p>
-  );
-
   const cardImage = (src: any) => (
     <Image src={src} size="small" className={css.image} circular />
   );
   const cardTitle = (name: string) => <Header as="h3">{name}</Header>;
 
   return (
-    <Section title="About the team">
+    <Section title="Indelo's co-founders">
       <Responsive {...Responsive.onlyMobile}>
-        <Grid centered columns={1} style={{ marginBottom: 30 }}>
-          <Grid.Column>{sectionBody(css.mobileBody)}</Grid.Column>
-        </Grid>
         <Grid>
           {team.map((person) => (
             <Grid.Row className={css.mobileRow}>
@@ -36,9 +28,6 @@ export const AboutUs = () => {
       </Responsive>
 
       <Responsive minWidth={767} maxWidth={1025}>
-        <Grid centered columns={1} style={{ marginBottom: 30 }}>
-          <Grid.Column>{sectionBody(css.tabletBody)}</Grid.Column>
-        </Grid>
         <Grid>
           {_.chunk(team, 2).map((row: any) => (
             <Grid.Row className={css.tabletRow}>
@@ -57,24 +46,22 @@ export const AboutUs = () => {
       </Responsive>
 
       <Responsive minWidth={1026}>
-        <Grid centered columns={1} style={{ marginBottom: 50 }}>
-          <Grid.Column width={12}>{sectionBody(css.desktopBody)}</Grid.Column>
-        </Grid>
         <Grid style={{ padding: 0 }}>
-          <Blob
-            style={{
-              position: 'absolute',
-              height: 1500,
-              right: 100,
-              top: 4100,
-            }}
-          />
-
           <Grid.Row className={css.desktopRow}>
             {team.map((person) => (
               <div data-aos="zoom-in">
                 <GridColumn className={css.card} width={4}>
-                  {cardImage(person.image)}
+                  <div
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    {cardImage(person.image)}
+                  </div>
+
                   {cardTitle(person.name)}
                   <p className={css.cardBody}>{person.body}</p>
                 </GridColumn>

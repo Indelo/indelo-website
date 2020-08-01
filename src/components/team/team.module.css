@@ -1,0 +1,16 @@
+.mobileBody {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.tabletBody {
+  font-size: 1.2em;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.desktopBody {
+  font-size: 1.5em;
+  text-align: center;
+}

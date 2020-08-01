@@ -22,7 +22,7 @@ import Flask from '../../assets/svgs/flask.svg';
 import Gatsby from '../../assets/svgs/gatsby.svg';
 import GoogleAds from '../../assets/svgs/google-ads.svg';
 import GoogleAnalytics from '../../assets/svgs/google-analytics.svg';
-import Garphql from '../../assets/svgs/graphql.svg';
+import Graphql from '../../assets/svgs/graphql.svg';
 import Heroku from '../../assets/svgs/heroku-icon.svg';
 import Netlify from '../../assets/svgs/netlify.svg';
 import Postgres from '../../assets/svgs/postgresql.svg';
@@ -35,6 +35,7 @@ import Sketch from '../../assets/svgs/sketch.svg';
 import Webpack from '../../assets/svgs/webpack.svg';
 import WordPress from '../../assets/svgs/wordpress-icon.svg';
 import css from './technology-stack.module.css';
+import SS from '../../assets/svgs/b1.svg';
 
 const items = [
   {
@@ -66,8 +67,8 @@ const items = [
     image: Python,
   },
   {
-    title: 'Django',
-    image: Django,
+    title: 'Docker',
+    image: Docker,
   },
   {
     title: 'Flask',
@@ -79,7 +80,7 @@ const items = [
   },
   {
     title: 'GraphQL',
-    image: Garphql,
+    image: Graphql,
   },
   {
     title: 'Semantic UI',
@@ -118,6 +119,10 @@ const items = [
     image: Redis,
   },
   {
+    title: 'Rails',
+    image: Rails,
+  },
+  {
     title: 'Google Ads',
     image: GoogleAds,
   },
@@ -138,6 +143,17 @@ const items = [
 export const TechnologyStack = () => {
   return (
     <Section title="Our technology stack">
+      <SS
+        width="100%"
+        preserveAspectRatio="none"
+        style={{
+          height: 1300,
+          position: 'absolute',
+          right: -1,
+          top: 6100,
+          zIndex: -1,
+        }}
+      />
       <Grid columns={5} padded>
         {chunk(items, 5).map((chunks) => (
           <Grid.Row>

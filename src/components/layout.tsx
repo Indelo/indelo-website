@@ -1,6 +1,8 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Footer } from './footer';
 import { Navigation } from './navigation/navigation';
+import favicon from '../assets/images/favicon.png';
 
 export const Layout = ({
   children,
@@ -11,6 +13,9 @@ export const Layout = ({
     <div
       style={{ position: 'relative', paddingBottom: 150, minHeight: '85vh' }}
     >
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Navigation>
         {children}
         <Footer />

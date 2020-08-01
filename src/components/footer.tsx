@@ -16,7 +16,7 @@ export const Footer = () => {
     <Segment
       basic
       style={{
-        backgroundColor: '#041738',
+        backgroundColor: '#171432',
         paddingTop: '3em',
         paddingBottom: '3em',
         position: 'absolute',

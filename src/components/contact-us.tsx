@@ -20,7 +20,7 @@ const ContactDetails = () => {
         <Icon
           inverted
           circular
-          color="purple"
+          color="blue"
           name="mail"
           style={{ marginRight: 10 }}
         />
@@ -31,7 +31,7 @@ const ContactDetails = () => {
         <Icon
           inverted
           circular
-          color="purple"
+          color="blue"
           name="phone"
           style={{ marginRight: 10 }}
         />
@@ -42,7 +42,7 @@ const ContactDetails = () => {
         <Icon
           inverted
           circular
-          color="purple"
+          color="blue"
           name="map marker alternate"
           style={{ marginRight: 10 }}
         />
@@ -58,7 +58,7 @@ export const ContactUs = () => {
       <div id="contact" style={{ position: 'relative', top: '-90px' }} />
       <Section title="Contact us">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          <Grid columns={2} centered>
+          <Grid columns={2} centered style={{ marginBottom: 50 }}>
             <Grid.Column computer={9} tablet={9}>
               <Segment
                 padded
