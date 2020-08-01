@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Button, Grid, Segment, Responsive } from 'semantic-ui-react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import css from './hero.module.css';
+// @ts-ignore
 import HeroImage from '../../assets/svgs/t3.svg';
 
 export const Hero = () => {
@@ -9,7 +10,7 @@ export const Hero = () => {
   const subTag = 'Website development - UI/UX - Branding - SEO';
   return (
     <>
-      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+      <Responsive minWidth={Responsive.onlyComputer.minWidth}>
         <Grid columns={2}>
           <Grid.Column verticalAlign="middle">
             <Header
@@ -38,9 +39,10 @@ export const Hero = () => {
               </p>
             </Segment>
             <br />
+            <br />
             <Button
               primary
-              size="large"
+              size="huge"
               style={{ width: 20 }}
               as={(props: any) => (
                 <AnchorLink
@@ -58,61 +60,58 @@ export const Hero = () => {
               />
             </Button>
           </Grid.Column>
-          <Grid.Column verticalAlign="middle">
-            <div
-              style={{
-                position: 'absolute',
-                left: -300,
-                top: -150,
-              }}
-            >
-              <HeroImage style={{ width: 1000, height: '100%' }} />
-            </div>
-            {/* <div data-aos="zoom-in">
-              <HeroImage style={{ width: '100%', maxHeight: '450px' }} />
-            </div> */}
-          </Grid.Column>
+          <Grid.Column verticalAlign="middle" />
         </Grid>
+        <div style={{ position: 'absolute', top: 100, right: 0, width: '70%' }}>
+          <HeroImage height="auto" width="750" />
+        </div>
       </Responsive>
-      <Responsive {...Responsive.onlyMobile}>
+      <Responsive maxWidth={Responsive.onlyTablet.maxWidth}>
         <Grid centered columns={1}>
-          <Grid.Column>
-            <Header
-              inverted
-              textAlign="center"
-              as="h3"
-              style={{ fontFamily: 'Avenir', fontSize: '2.5em' }}
-            >
-              {tag}
-            </Header>
-            <Segment
-              basic
-              textAlign="center"
-              style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
-            >
-              <p style={{ color: '#ccc', fontFamily: 'Avenir' }}>{subTag}</p>
-            </Segment>
-            <Segment basic padded textAlign="center">
-              <Button
-                primary
-                size="huge"
-                as={(props: any) => (
+          <Grid.Row>
+            <Grid.Column>
+              <HeroImage height="auto" width="auto" />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Header
+                inverted
+                textAlign="center"
+                as="h3"
+                style={{ fontFamily: 'Avenir', fontSize: '2.5em' }}
+              >
+                {tag}
+              </Header>
+              <Segment
+                basic
+                textAlign="center"
+                style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
+              >
+                <p style={{ color: '#ccc', fontFamily: 'Avenir' }}>{subTag}</p>
+              </Segment>
+              <Segment basic padded textAlign="center">
+                <Button
+                  primary
+                  size="huge"
+                  as={(props: any) => (
+                    <AnchorLink
+                      className={css.linkButton}
+                      {...props}
+                      to="/#contact"
+                      title="Contact us"
+                    />
+                  )}
+                >
                   <AnchorLink
                     className={css.linkButton}
-                    {...props}
                     to="/#contact"
                     title="Contact us"
                   />
-                )}
-              >
-                <AnchorLink
-                  className={css.linkButton}
-                  to="/#contact"
-                  title="Contact us"
-                />
-              </Button>
-            </Segment>
-          </Grid.Column>
+                </Button>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
       </Responsive>
     </>

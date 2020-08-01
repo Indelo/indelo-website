@@ -9,7 +9,9 @@ import { Highlights } from '../components/highlights';
 import { ContactUs } from '../components/contact-us';
 import { TechnologyStack } from '../components/technology-stack/technology-stack';
 import { Hero } from '../components/hero/hero';
+// @ts-ignore
 import Wave from '../assets/svgs/w2.svg';
+// @ts-ignore
 import Test from '../assets/svgs/heroh2.svg';
 
 import css from './index.module.css';
@@ -38,14 +40,17 @@ const RootIndex = () => {
             zIndex: -10,
           }}
         >
-          <Test height="100%" width="100%" preserveAspectRatio="none" />
+          <Test
+            height="calc(100% - 100px)"
+            width="calc(100%)"
+            preserveAspectRatio="none"
+          />
           <Wave
             height="200px"
             style={{ marginTop: -5 }}
             preserveAspectRatio="none"
           />
         </div>
-
         <div className={css.container}>
           <div className={css.hero}>
             <Container>

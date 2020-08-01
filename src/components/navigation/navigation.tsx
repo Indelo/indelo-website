@@ -84,16 +84,6 @@ export const Navigation = ({ children }: { children: any }) => {
                 );
               })}
               <Menu.Item>
-                <AnchorLink
-                  className={css.linkButton}
-                  to="/"
-                  title="Overview"
-                />
-                <AnchorLink
-                  className={css.linkButton}
-                  to="/about"
-                  title="About us"
-                />
                 <Button
                   primary
                   as={(props: any) => (
