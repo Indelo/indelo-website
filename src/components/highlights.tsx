@@ -1,82 +1,101 @@
 import React from 'react';
-import { Grid, Header, Image } from 'semantic-ui-react';
-import Develop from '../assets/images/d2.png';
-import Launch from '../assets/images/d3.png';
-import Iterate from '../assets/images/d1.png';
+import { Grid, Header, Image, Responsive } from 'semantic-ui-react';
+
 import { Section } from './section/section';
+
+import Develop from '../assets/images/develop.png';
+import Launch from '../assets/images/launch.png';
+import Iterate from '../assets/images/iterate.png';
+
+const sections = [
+  {
+    image: Develop,
+    title: 'Iterate together',
+    body:
+      'From capturing requirements to refining details, we work with you every step of the way',
+    icon: '👨‍👩‍👦',
+    ariaLabel: 'team',
+  },
+  {
+    image: Launch,
+    title: 'World-class technology',
+    body: 'We use the latest tech and standards to ensure your product is ...',
+    icon: '👌',
+    ariaLabel: 'great',
+  },
+  {
+    image: Iterate,
+    title: 'Launch to success',
+    body:
+      "We ensure your product is launched reliably, and with the exact exposure you're looking for",
+    icon: '🚀',
+    ariaLabel: 'rocket',
+  },
+];
 
 export const Highlights = () => {
   return (
-    <Section>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Grid columns={5}>
-          <Grid.Column style={{ width: 350 }}>
-            <Image
-              src={Iterate}
-              style={{
-                width: 80,
-                height: 80,
-                margin: 'auto',
-                marginBottom: 10,
-              }}
-            />
-            <Header style={{ marginTop: 0, fontWeight: 500 }} as="h3">
-              Iterate together
-            </Header>
-            <p style={{ fontSize: 18 }}>
-              From capturing requirements to refining details, we work with you
-              every step of the way
+    <Section title="">
+      <Responsive {...Responsive.onlyMobile}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid>
+            {sections.map((section) => (
+              <Grid.Row>
+                <Grid.Column style={{ textAlign: 'center', marginBottom: 30 }}>
+                  <Image
+                    src={section.image}
+                    style={{
+                      width: 80,
+                      height: 80,
+                      margin: 'auto',
+                      marginBottom: 10,
+                    }}
+                  />
+                  <Header style={{ marginTop: 0, fontWeight: 500 }} as="h3">
+                    {section.title}
+                  </Header>
+                  <p style={{ fontSize: 18 }}>
+                    {section.body}
 {' '}
-              <span role="img" aria-label="team">
-                👨‍👩‍👦
-              </span>
-            </p>
-          </Grid.Column>
-          <Grid.Column style={{ width: 350 }}>
-            <Image
-              src={Develop}
-              style={{
-                width: 80,
-                height: 80,
-                margin: 'auto',
-                marginBottom: 10,
-              }}
-            />
-            <Header style={{ marginTop: 0, fontWeight: 500 }} as="h3">
-              World-class technology
-            </Header>
-            <p style={{ fontSize: 18 }}>
-              We use the latest tech and standards to ensure your product is
+                    <span role="img" aria-label={section.ariaLabel}>
+                      {section.icon}
+                    </span>
+                  </p>
+                </Grid.Column>
+              </Grid.Row>
+            ))}
+          </Grid>
+        </div>
+      </Responsive>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid columns={3}>
+            {sections.map((section) => (
+              <Grid.Column style={{ textAlign: 'center' }}>
+                <Image
+                  src={section.image}
+                  style={{
+                    width: 80,
+                    height: 80,
+                    margin: 'auto',
+                    marginBottom: 10,
+                  }}
+                />
+                <Header style={{ marginTop: 0, fontWeight: 500 }} as="h3">
+                  {section.title}
+                </Header>
+                <p style={{ fontSize: 18 }}>
+                  {section.body}
 {' '}
-              <span role="img" aria-label="great">
-                👌
-              </span>
-            </p>
-          </Grid.Column>
-          <Grid.Column style={{ width: 350 }}>
-            <Image
-              src={Launch}
-              style={{
-                width: 80,
-                height: 80,
-                margin: 'auto',
-                marginBottom: 10,
-              }}
-            />
-            <Header style={{ marginTop: 0, fontWeight: 500 }} as="h3">
-              Launch to success
-            </Header>
-            <p style={{ fontSize: 18 }}>
-              We ensure your product is launched reliably, and with the exact
-              exposure you're looking for
-{' '}
-              <span role="img" aria-label="rocket">
-                🚀
-              </span>
-            </p>
-          </Grid.Column>
-        </Grid>
-      </div>
+                  <span role="img" aria-label={section.ariaLabel}>
+                    {section.icon}
+                  </span>
+                </p>
+              </Grid.Column>
+            ))}
+          </Grid>
+        </div>
+      </Responsive>
     </Section>
   );
 };
