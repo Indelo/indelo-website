@@ -6,6 +6,10 @@ jobs:
   static-dist-dir:
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: npm i
+      - name: Build
+        run: npm run build
       - uses: actions/checkout@v2
       - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v3
