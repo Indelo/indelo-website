@@ -11,7 +11,7 @@ export const Motivation = () => {
   return (
     <div style={{ position: 'relative' }}>
       <LightWave
-        width="170%"
+        width="100%"
         preserveAspectRatio="none"
         style={{
           height: 'calc(100% + 160px)',

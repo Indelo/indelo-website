@@ -56,7 +56,7 @@ const RootIndex = () => {
           </Responsive>
         </div>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          <Wave height="250px" width="200%" preserveAspectRatio="none" />
+          <Wave height="250px" width="100%" preserveAspectRatio="none" />
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
           <Wave height="250px" width="500%" preserveAspectRatio="none" />

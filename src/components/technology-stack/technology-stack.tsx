@@ -135,9 +135,9 @@ const items = [
 
 export const TechnologyStack = () => {
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', width: '100%' }}>
       <LightWave
-        width="470%"
+        width="100%"
         preserveAspectRatio="none"
         style={{
           height: 'calc(100% + 210px)',
