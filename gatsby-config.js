@@ -47,7 +47,7 @@ module.exports = {
       },
     },
     // Dev
-    'gatsby-plugin-eslint',
+    // 'gatsby-plugin-eslint',
     'gatsby-plugin-anchor-links',
     {
       resolve: 'gatsby-plugin-typescript',
