@@ -183,7 +183,7 @@ export const Navigation = ({ children }: { children: any }) => {
                 </Menu.Item>
               </Menu.Menu>
             </Menu>
-            <div>{children}</div>
+            {children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Responsive>

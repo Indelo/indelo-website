@@ -55,7 +55,7 @@ const RootIndex = () => {
             </Container>
           </Responsive>
         </div>
-        <Wave height="250px" width="100%" preserveAspectRatio="none" />
+        <Wave height="250px" width="200%" preserveAspectRatio="none" />
         <Highlights />
         <Services />
         <Motivation />
