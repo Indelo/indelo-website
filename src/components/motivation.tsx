@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Responsive } from 'semantic-ui-react';
+import { Image, Responsive, Grid } from 'semantic-ui-react';
 import { Section } from './section/section';
 import Indelo from '../assets/images/indelo.png';
 import LightWave from '../assets/svgs/lighter-wave.svg';
@@ -21,19 +21,32 @@ export const Motivation = () => {
         }}
       />
       <Section title="Why choose us?">
-        <p
-          style={{
-            fontSize: '1.6em',
-            lineHeight: '1.6em',
-            textAlign: 'center',
-          }}
-        >
-          {aboutUsBody}
-        </p>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          <Image src={Indelo} style={{ width: '65%', margin: 'auto' }} />
+          <Grid columns={1} centered style={{ paddingBottom: '30px' }}>
+            <Grid.Column width={12}>
+              <p
+                style={{
+                  fontSize: '1.6em',
+                  lineHeight: '1.6em',
+                  textAlign: 'center',
+                }}
+              >
+                {aboutUsBody}
+              </p>
+            </Grid.Column>
+          </Grid>
+          <Image src={Indelo} style={{ width: '60%', margin: 'auto' }} />
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
+          <p
+            style={{
+              fontSize: '1.3em',
+              lineHeight: '1.6em',
+              textAlign: 'center',
+            }}
+          >
+            {aboutUsBody}
+          </p>
           <Image src={Indelo} style={{ width: '100%', margin: 'auto' }} />
         </Responsive>
       </Section>

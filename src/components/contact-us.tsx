@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import {
   Grid,
@@ -8,17 +7,15 @@ import {
   Icon,
   Image,
 } from 'semantic-ui-react';
-
 import { Section } from './section/section';
 import { ContactForm } from './contact-form';
-
 import location from '../assets/images/location.png';
 
 const ContactDetails = () => {
   return (
     <div style={{ textAlign: 'start' }}>
       <Header as="h3">Email</Header>
-      <p style={{ fontSize: '1.33em' }}>
+      <p style={{ fontSize: '1.3em' }}>
         <Icon
           inverted
           circular
@@ -28,19 +25,8 @@ const ContactDetails = () => {
         />
         hello@indelo.co.za
       </p>
-      <Header as="h3">Phone</Header>
-      <p style={{ fontSize: '1.33em' }}>
-        <Icon
-          inverted
-          circular
-          color="blue"
-          name="phone"
-          style={{ marginRight: 10 }}
-        />
-        +27 83 447 5256
-      </p>
       <Header as="h3">Address</Header>
-      <p style={{ fontSize: '1.33em' }}>
+      <p style={{ fontSize: '1.3em' }}>
         <Icon
           inverted
           circular
@@ -60,6 +46,16 @@ export const ContactUs = () => {
       <div id="contact" style={{ position: 'relative', top: '-90px' }} />
       <Section title="Contact us">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+          <Grid columns={1} centered>
+            <Grid.Column width={12}>
+              <Segment basic>
+                <p style={{ fontSize: '1.6em' }}>
+                  We'd love to help you turn your great idea into a product your
+                  customers will love.
+                </p>
+              </Segment>
+            </Grid.Column>
+          </Grid>
           <Grid columns={2} centered style={{ marginBottom: 50 }}>
             <Grid.Column computer={9} tablet={9}>
               <Segment

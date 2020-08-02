@@ -16,7 +16,7 @@ const services = [
       </div>
     ),
     image: (
-      <Image src={WebDevelopmentSvg} style={{ width: 400, margin: 'auto' }} />
+      <Image src={WebDevelopmentSvg} style={{ width: 250, margin: 'auto' }} />
     ),
   },
   {
@@ -31,7 +31,7 @@ const services = [
     image: (
       <Image
         src={DesignAndBrandingSvg}
-        style={{ width: 350, margin: 'auto' }}
+        style={{ width: 250, margin: 'auto' }}
       />
     ),
   },
@@ -48,7 +48,7 @@ const services = [
       </div>
     ),
     image: (
-      <Image src={OngoingSupportSvg} style={{ width: 400, margin: 'auto' }} />
+      <Image src={OngoingSupportSvg} style={{ width: 250, margin: 'auto' }} />
     ),
   },
 ];
@@ -60,12 +60,12 @@ export const Services = () => {
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
             <Grid.Row style={{ padding: 0, paddingBottom: 100 }}>
-              <Grid.Column>
+              <Grid.Column width={index % 2 === 0 ? 9 : 7}>
                 <Segment basic>
                   {index % 2 === 0 ? (
                     <>
                       <Header
-                        style={{ fontWeight: 600, fontSize: '3em' }}
+                        style={{ fontWeight: 500, fontSize: '2.6em' }}
                         as="h3"
                       >
                         {title}
@@ -81,12 +81,12 @@ export const Services = () => {
                   )}
                 </Segment>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column width={index % 2 === 0 ? 7 : 9}>
                 <Segment basic>
                   {index % 2 === 1 ? (
                     <>
                       <Header
-                        style={{ fontWeight: 600, fontSize: '3em' }}
+                        style={{ fontWeight: 500, fontSize: '2.6em' }}
                         as="h3"
                       >
                         {title}
@@ -113,10 +113,10 @@ export const Services = () => {
               return (
                 <div style={{ paddingBottom: '50px' }}>
                   <Grid.Row style={{ paddingBottom: '30px' }}>
-                    <Header style={{ fontWeight: 600 }} as="h3">
+                    <Header style={{ fontWeight: 500 }} as="h3">
                       {title}
                     </Header>
-                    <p style={{ fontSize: '1.6em', lineHeight: '1.6em' }}>
+                    <p style={{ fontSize: '1.3em', lineHeight: '1.6em' }}>
                       {body}
                     </p>
                   </Grid.Row>

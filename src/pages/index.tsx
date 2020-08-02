@@ -30,7 +30,13 @@ const RootIndex = () => {
       <Layout>
         <div className={css.container}>
           <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-            <Container style={{ position: 'relative', paddingTop: '100px' }}>
+            <Container
+              style={{
+                position: 'relative',
+                paddingTop: '10%',
+                paddingBottom: '90px',
+              }}
+            >
               <div
                 style={{
                   position: 'absolute',
@@ -59,7 +65,7 @@ const RootIndex = () => {
           <Wave height="250px" width="100%" preserveAspectRatio="none" />
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
-          <Wave height="250px" width="500%" preserveAspectRatio="none" />
+          <Wave height="120px" width="500%" preserveAspectRatio="none" />
         </Responsive>
         <Highlights />
         <Services />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Responsive, Grid } from 'semantic-ui-react';
 import { Section } from './section/section';
 
 export const Mission = () => {
@@ -7,16 +8,34 @@ export const Mission = () => {
 
   return (
     <Section title="Our Mission">
-      <div
-        style={{
-          fontFamily: 'Avenir',
-          fontSize: '1.6em',
-          textAlign: 'center',
-          lineHeight: '1.6em',
-        }}
-      >
-        {missionBody}
-      </div>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Grid columns={1} centered>
+          <Grid.Column width={12}>
+            <div
+              style={{
+                fontFamily: 'Avenir',
+                fontSize: '1.6em',
+                textAlign: 'center',
+                lineHeight: '1.6em',
+              }}
+            >
+              {missionBody}
+            </div>
+          </Grid.Column>
+        </Grid>
+      </Responsive>
+      <Responsive {...Responsive.onlyMobile}>
+        <div
+          style={{
+            fontFamily: 'Avenir',
+            fontSize: '1.3em',
+            textAlign: 'center',
+            lineHeight: '1.6em',
+          }}
+        >
+          {missionBody}
+        </div>
+      </Responsive>
     </Section>
   );
 };

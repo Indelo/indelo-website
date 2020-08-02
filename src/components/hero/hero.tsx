@@ -13,14 +13,13 @@ export const Hero = () => {
       <Responsive minWidth={Responsive.onlyComputer.minWidth}>
         <div style={{ position: 'relative' }}>
           <Grid columns={2}>
-            <Grid.Column verticalAlign="middle">
+            <Grid.Column verticalAlign="middle" width={9}>
               <Header
                 inverted
                 as="h3"
                 style={{
                   fontFamily: 'Avenir',
-                  fontSize: '3.6em',
-                  fontWeight: 'bold',
+                  fontSize: '3.4em',
                   paddingTop: 100,
                 }}
               >
@@ -28,7 +27,7 @@ export const Hero = () => {
               </Header>
               <Segment
                 basic
-                style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
+                style={{ fontSize: '1.6em', margin: 0, padding: 0 }}
               >
                 <p
                   style={{
@@ -69,7 +68,7 @@ export const Hero = () => {
       </Responsive>
       <Responsive maxWidth={Responsive.onlyTablet.maxWidth}>
         <Grid centered columns={1}>
-          <Grid.Row style={{ paddingBottom: '30px' }}>
+          <Grid.Row style={{ paddingBottom: '20px' }}>
             <Grid.Column textAlign="center">
               <HeroImage height="auto" width="100%" />
             </Grid.Column>
@@ -80,21 +79,21 @@ export const Hero = () => {
                 inverted
                 textAlign="center"
                 as="h3"
-                style={{ fontFamily: 'Avenir', fontSize: '2.5em' }}
+                style={{ fontFamily: 'Avenir', fontSize: '2em' }}
               >
                 {tag}
               </Header>
               <Segment
                 basic
                 textAlign="center"
-                style={{ fontSize: '1.33em', margin: 0, padding: 0 }}
+                style={{ fontSize: '1.2em', margin: 0, padding: 0 }}
               >
                 <p style={{ color: '#ccc', fontFamily: 'Avenir' }}>{subTag}</p>
               </Segment>
               <Segment basic padded textAlign="center">
                 <Button
                   primary
-                  size="huge"
+                  size="large"
                   as={(props: any) => (
                     <AnchorLink
                       className={css.linkButton}
