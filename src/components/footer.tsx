@@ -7,7 +7,6 @@ import {
   Segment,
   List,
   Image,
-  Responsive,
 } from 'semantic-ui-react';
 
 import Logo from '../assets/images/small-logo.png';
@@ -20,7 +19,7 @@ export const Footer = () => {
         backgroundColor: '#171432',
         paddingTop: '3em',
         paddingBottom: '3em',
-        position: 'absolute',
+        // position: 'absolute',
         bottom: 0,
         width: '100%',
       }}

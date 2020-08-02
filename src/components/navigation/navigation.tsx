@@ -183,7 +183,7 @@ export const Navigation = ({ children }: { children: any }) => {
                 </Menu.Item>
               </Menu.Menu>
             </Menu>
-            <div style={{ marginTop: '-68px' }}>{children}</div>
+            <div>{children}</div>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Responsive>

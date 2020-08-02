@@ -1,8 +1,6 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
-
 import { Section } from './section/section';
-
 import Indelo from '../assets/images/indelo.png';
 import LightWave from '../../assets/svgs/light-wave.svg';
 
@@ -17,7 +15,7 @@ export const Motivation = () => {
       >
         {aboutUsBody}
       </p>
-      <Image src={Indelo} style={{ width: '60%', margin: 'auto' }} />
+      <Image src={Indelo} style={{ width: '70%', margin: 'auto' }} />
     </Section>
   );
 };
