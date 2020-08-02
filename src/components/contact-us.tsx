@@ -50,8 +50,8 @@ export const ContactUs = () => {
             <Grid.Column width={12}>
               <Segment basic>
                 <p style={{ fontSize: '1.6em' }}>
-                  We'd love to help you turn your great idea into a product your
-                  customers will love.
+                  We&apos;d love to help you turn your great idea into a product
+                  your customers will love.
                 </p>
               </Segment>
             </Grid.Column>

@@ -14,9 +14,7 @@ import { Team } from '../components/team/team';
 import { Values } from '../components/values';
 import { Mission } from '../components/mission';
 import { TechnologyStack } from '../components/technology-stack/technology-stack';
-// @ts-ignore
 import Wave from '../assets/svgs/landing-wave.svg';
-// @ts-ignore
 import Background from '../assets/svgs/landing-background.svg';
 
 const RootIndex = () => {

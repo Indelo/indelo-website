@@ -13,7 +13,9 @@ const EnquirySubmissionSuccessIndex = () => (
     <Layout>
       <Container style={{ marginTop: 150 }}>
         <Header as="h2">Thank you for your enquiry!</Header>
-        <p>We'll have a look and get back to you within the next few hours.</p>
+        <p>
+          We&apos;ll have a look and get back to you within the next few hours.
+        </p>
         <Button
           primary
           as={(props: any) => (
