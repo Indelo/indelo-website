@@ -59,7 +59,7 @@ export const Services = () => {
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
-            <Grid.Row style={{ padding: 0, paddingBottom: 100 }}>
+            <Grid.Row style={{ padding: 0, paddingBottom: 50 }}>
               <Grid.Column width={index % 2 === 0 ? 9 : 7}>
                 <Segment basic>
                   {index % 2 === 0 ? (
