@@ -27,12 +27,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: ['/*'],
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/images/`,
