@@ -140,9 +140,9 @@ export const TechnologyStack = () => {
         width="470%"
         preserveAspectRatio="none"
         style={{
-          height: 'calc(100% + 200px)',
+          height: 'calc(100% + 210px)',
           position: 'absolute',
-          top: -110,
+          top: -120,
           zIndex: -100,
         }}
       />
@@ -166,8 +166,8 @@ export const TechnologyStack = () => {
           </Grid>
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
-          <Grid columns={4} padded>
-            {chunk(items, 4).map((chunks) => (
+          <Grid columns={2} padded>
+            {chunk(items, 2).map((chunks) => (
               <Grid.Row>
                 {chunks.map(({ title, image: Icon }) => {
                   return (
