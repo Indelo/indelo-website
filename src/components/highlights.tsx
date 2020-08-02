@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid, Header, Image, Responsive } from 'semantic-ui-react';
-
 import { Section } from './section/section';
-
 import Develop from '../assets/images/develop.png';
 import Launch from '../assets/images/launch.png';
 import Iterate from '../assets/images/iterate.png';
@@ -56,7 +54,6 @@ export const Highlights = () => {
                   </Header>
                   <p style={{ fontSize: 18 }}>
                     {section.body}
-{' '}
                     <span role="img" aria-label={section.ariaLabel}>
                       {section.icon}
                     </span>
@@ -86,7 +83,6 @@ export const Highlights = () => {
                 </Header>
                 <p style={{ fontSize: 18 }}>
                   {section.body}
-{' '}
                   <span role="img" aria-label={section.ariaLabel}>
                     {section.icon}
                   </span>

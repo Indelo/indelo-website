@@ -1,9 +1,7 @@
 import React from 'react';
 import { chunk } from 'lodash';
 import { Grid, Image, Header, Responsive } from 'semantic-ui-react';
-
 import { Section } from '../section/section';
-
 import Node from '../../assets/svgs/nodejs-icon.svg';
 import JavaScript from '../../assets/svgs/javascript.svg';
 import TypeScript from '../../assets/svgs/typescript-icon.svg';
@@ -29,8 +27,7 @@ import Redux from '../../assets/svgs/redux.svg';
 import SemanticUi from '../../assets/svgs/semantic-ui.svg';
 import Sketch from '../../assets/svgs/sketch.svg';
 import WordPress from '../../assets/svgs/wordpress-icon.svg';
-import SS from '../../assets/svgs/light-wave.svg';
-
+import LightWave from '../../assets/svgs/light-wave.svg';
 import css from './technology-stack.module.css';
 
 const items = [
@@ -138,54 +135,55 @@ const items = [
 
 export const TechnologyStack = () => {
   return (
-    <Section title="Our technology stack">
-      <SS
-        width="100%"
+    <div style={{ position: 'relative' }}>
+      <LightWave
+        width="470%"
         preserveAspectRatio="none"
         style={{
-          height: 1300,
+          height: 'calc(100% + 210px)',
           position: 'absolute',
-          right: -1,
-          top: 6100,
-          zIndex: -1,
+          top: -120,
+          zIndex: -100,
         }}
       />
-      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        <Grid columns={5} padded>
-          {chunk(items, 5).map((chunks) => (
-            <Grid.Row>
-              {chunks.map(({ title, image: Icon }) => {
-                return (
-                  <Grid.Column>
-                    <Image className={css.item}>
-                      <Header textAlign="center">{title}</Header>
-                      <Icon style={{ height: '55px' }} />
-                    </Image>
-                  </Grid.Column>
-                );
-              })}
-            </Grid.Row>
-          ))}
-        </Grid>
-      </Responsive>
-      <Responsive {...Responsive.onlyMobile}>
-        <Grid columns={4} padded>
-          {chunk(items, 4).map((chunks) => (
-            <Grid.Row>
-              {chunks.map(({ title, image: Icon }) => {
-                return (
-                  <Grid.Column>
-                    <Image className={css.item}>
-                      <Header textAlign="center">{title}</Header>
-                      <Icon style={{ height: '55px' }} />
-                    </Image>
-                  </Grid.Column>
-                );
-              })}
-            </Grid.Row>
-          ))}
-        </Grid>
-      </Responsive>
-    </Section>
+      <Section title="Our technology stack">
+        <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+          <Grid columns={5} padded>
+            {chunk(items, 5).map((chunks) => (
+              <Grid.Row>
+                {chunks.map(({ title, image: Icon }) => {
+                  return (
+                    <Grid.Column>
+                      <Image className={css.item}>
+                        <Header textAlign="center">{title}</Header>
+                        <Icon style={{ height: '55px' }} />
+                      </Image>
+                    </Grid.Column>
+                  );
+                })}
+              </Grid.Row>
+            ))}
+          </Grid>
+        </Responsive>
+        <Responsive {...Responsive.onlyMobile}>
+          <Grid columns={2} padded>
+            {chunk(items, 2).map((chunks) => (
+              <Grid.Row>
+                {chunks.map(({ title, image: Icon }) => {
+                  return (
+                    <Grid.Column>
+                      <Image className={css.item}>
+                        <Header textAlign="center">{title}</Header>
+                        <Icon style={{ height: '55px' }} />
+                      </Image>
+                    </Grid.Column>
+                  );
+                })}
+              </Grid.Row>
+            ))}
+          </Grid>
+        </Responsive>
+      </Section>
+    </div>
   );
 };

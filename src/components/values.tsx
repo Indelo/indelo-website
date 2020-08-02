@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Image } from 'semantic-ui-react';
+import { Grid, Header, Image, Responsive } from 'semantic-ui-react';
 import { chunk } from 'lodash';
 
 import { Section } from './section/section';
@@ -45,32 +45,63 @@ const ourValues = [
 
 export const Values = () => (
   <Section title="Our Values">
-    <Grid centered padded columns={3}>
-      {chunk(ourValues, 3).map((chunks) => {
-        return (
-          <Grid.Row>
-            {chunks.map(({ title, body, image }) => {
-              return (
-                <Grid.Column textAlign="center">
-                  <Image
-                    src={image}
-                    style={{
-                      width: 90,
-                      height: 90,
-                      margin: 'auto',
-                      marginBottom: 10,
-                    }}
-                  />
-                  <Header style={{ fontWeight: 500 }} as="h3">
-                    {title}
-                  </Header>
-                  <p style={{ fontSize: '1.3em' }}>{body}</p>
-                </Grid.Column>
-              );
-            })}
-          </Grid.Row>
-        );
-      })}
-    </Grid>
+    <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+      <Grid centered columns={3}>
+        {chunk(ourValues, 3).map((chunks) => {
+          return (
+            <Grid.Row>
+              {chunks.map(({ title, body, image }) => {
+                return (
+                  <Grid.Column textAlign="center">
+                    <Image
+                      src={image}
+                      style={{
+                        width: 90,
+                        height: 90,
+                        margin: 'auto',
+                        marginBottom: 10,
+                      }}
+                    />
+                    <Header style={{ fontWeight: 500 }} as="h3">
+                      {title}
+                    </Header>
+                    <p style={{ fontSize: '1.3em' }}>{body}</p>
+                  </Grid.Column>
+                );
+              })}
+            </Grid.Row>
+          );
+        })}
+      </Grid>
+    </Responsive>
+    <Responsive {...Responsive.onlyMobile}>
+      <Grid centered columns={2}>
+        {chunk(ourValues, 2).map((chunks) => {
+          return (
+            <Grid.Row>
+              {chunks.map(({ title, body, image }) => {
+                return (
+                  <Grid.Column textAlign="center">
+                    <Image
+                      src={image}
+                      style={{
+                        width: 90,
+                        height: 90,
+                        margin: 'auto',
+                        marginBottom: 10,
+                      }}
+                    />
+                    <Header style={{ fontWeight: 500 }} as="h3">
+                      {title}
+                    </Header>
+                    <p style={{ fontSize: '1.3em' }}>{body}</p>
+                  </Grid.Column>
+                );
+              })}
+            </Grid.Row>
+          );
+        })}
+      </Grid>
+    </Responsive>
   </Section>
 );

@@ -1,7 +1,4 @@
 .container {
-  height: 1100px;
-}
-
-.hero {
-  padding-top: 100px;
+  position: relative;
+  background-color: #191154;
 }

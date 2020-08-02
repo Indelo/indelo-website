@@ -10,7 +10,7 @@ export const Layout = ({
   children: JSX.Element | JSX.Element[];
 }) => {
   return (
-    <div style={{ position: 'relative', minHeight: '85vh' }}>
+    <>
       <Helmet>
         <link rel="icon" href={favicon} />
       </Helmet>
@@ -18,7 +18,7 @@ export const Layout = ({
         {children}
         <Footer />
       </Navigation>
-    </div>
+    </>
   );
 };
 

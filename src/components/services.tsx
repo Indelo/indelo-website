@@ -1,8 +1,6 @@
 import React from 'react';
 import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react';
-
 import { Section } from './section/section';
-
 import WebDevelopmentSvg from '../assets/images/web-development.png';
 import DesignAndBrandingSvg from '../assets/images/design-and-branding.png';
 import OngoingSupportSvg from '../assets/images/ongoing-support.png';
