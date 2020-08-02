@@ -1,9 +1,9 @@
 import React from 'react';
-import { Header, Grid, Segment, Responsive } from 'semantic-ui-react';
-import WebDevelopmentSvg from '../assets/svgs/web-development.svg';
-import DesignAndBrandingSvg from '../assets/svgs/design-and-branding.svg';
-import OngoingSupportSvg from '../assets/svgs/ongoing-support.svg';
+import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react';
 import { Section } from './section/section';
+import WebDevelopmentSvg from '../assets/images/web-development.png';
+import DesignAndBrandingSvg from '../assets/images/design-and-branding.png';
+import OngoingSupportSvg from '../assets/images/ongoing-support.png';
 
 const services = [
   {
@@ -15,7 +15,9 @@ const services = [
         development offering caters for all requirements.
       </div>
     ),
-    image: <WebDevelopmentSvg style={{ width: 350, height: 300 }} />,
+    image: (
+      <Image src={WebDevelopmentSvg} style={{ width: 250, margin: 'auto' }} />
+    ),
   },
   {
     title: 'Design and branding',
@@ -26,7 +28,12 @@ const services = [
         cards, email signatures and more.
       </div>
     ),
-    image: <DesignAndBrandingSvg style={{ width: 350, height: 300 }} />,
+    image: (
+      <Image
+        src={DesignAndBrandingSvg}
+        style={{ width: 250, margin: 'auto' }}
+      />
+    ),
   },
   {
     title: 'Ongoing maintenance and support',
@@ -40,7 +47,9 @@ const services = [
         online experience.
       </div>
     ),
-    image: <OngoingSupportSvg style={{ width: 300, height: 300 }} />,
+    image: (
+      <Image src={OngoingSupportSvg} style={{ width: 250, margin: 'auto' }} />
+    ),
   },
 ];
 
@@ -50,15 +59,18 @@ export const Services = () => {
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
-            <Grid.Row style={{ padding: 0 }}>
-              <Grid.Column>
+            <Grid.Row style={{ padding: 0, paddingBottom: 50 }}>
+              <Grid.Column width={index % 2 === 0 ? 9 : 7}>
                 <Segment basic>
                   {index % 2 === 0 ? (
                     <>
-                      <Header style={{ fontWeight: 600 }} as="h3">
+                      <Header
+                        style={{ fontWeight: 500, fontSize: '2.6em' }}
+                        as="h3"
+                      >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                      <p style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
                         {body}
                       </p>
                     </>
@@ -69,14 +81,17 @@ export const Services = () => {
                   )}
                 </Segment>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column width={index % 2 === 0 ? 7 : 9}>
                 <Segment basic>
                   {index % 2 === 1 ? (
                     <>
-                      <Header style={{ fontWeight: 600 }} as="h3">
+                      <Header
+                        style={{ fontWeight: 500, fontSize: '2.6em' }}
+                        as="h3"
+                      >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                      <p style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
                         {body}
                       </p>
                     </>
@@ -96,15 +111,12 @@ export const Services = () => {
           <Grid.Column textAlign="center">
             {services.map(({ title, body, image }) => {
               return (
-                <div style={{ paddingBottom: '20px' }}>
-                  <Grid.Row>
-                    <Header
-                      style={{ fontWeight: 600, color: '#1d3760' }}
-                      as="h3"
-                    >
+                <div style={{ paddingBottom: '50px' }}>
+                  <Grid.Row style={{ paddingBottom: '30px' }}>
+                    <Header style={{ fontWeight: 500 }} as="h3">
                       {title}
                     </Header>
-                    <p style={{ fontSize: '1.33em', lineHeight: '1.5em' }}>
+                    <p style={{ fontSize: '1.3em', lineHeight: '1.6em' }}>
                       {body}
                     </p>
                   </Grid.Row>

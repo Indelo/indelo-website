@@ -29,14 +29,15 @@
   width: 18em !important;
   padding: 20px;
   text-align: center;
-  box-shadow: 3px 3px 20px rgba(70,101,160,.164);
-  height: 25em;
+  box-shadow: 3px 3px 20px rgba(70, 101, 160, 0.164);
+  border-radius: 10px;
+  height: 30em;
   margin: 15px;
   background-color: white;
 }
 
 .cardBody {
-  font-size: 14px;
+  font-size: 1.3em;
 }
 
 .mobileRow {

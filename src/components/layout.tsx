@@ -1,6 +1,8 @@
 import React from 'react';
-import { Footer } from './footer';
+import { Helmet } from 'react-helmet';
+import { Footer } from './footer/footer';
 import { Navigation } from './navigation/navigation';
+import favicon from '../assets/images/favicon.png';
 
 export const Layout = ({
   children,
@@ -9,6 +11,9 @@ export const Layout = ({
 }) => {
   return (
     <>
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Navigation>
         {children}
         <Footer />

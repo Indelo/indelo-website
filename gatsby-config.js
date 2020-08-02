@@ -27,12 +27,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: ['/*'],
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/images/`,
@@ -46,6 +40,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
+        icon: `${__dirname}/src/assets/svgs/w1`,
         rule: {
           include: `${__dirname}/src/assets/svgs`,
         },

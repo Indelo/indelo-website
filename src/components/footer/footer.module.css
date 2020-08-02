@@ -1,0 +1,44 @@
+.container {
+  background-color: #171432 !important;
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+  position: 'absolute' !important;
+  bottom: 0 !important;
+  width: 100% !important;
+}
+
+.mobileContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemColor {
+  color: #dedede
+}
+
+.header { 
+  margin: 0px !important;
+  text-align: left !important;
+  font-size: 40px !important
+}
+
+.image {
+  width: 40px;
+  padding-bottom: 5px;
+  margin: 0px 
+}
+
+.logo {
+  margin: 0px !important;
+  text-align: left !important;
+  font-size: 40px !important;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}

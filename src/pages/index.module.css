@@ -1,7 +1,5 @@
 .container {
-  height: 900px;
-}
-
-.hero {
-  padding-top: 150px;
+  position: relative;
+  background-color: #191154;
+  min-height: 680px;
 }
