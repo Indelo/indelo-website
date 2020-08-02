@@ -16,6 +16,14 @@ module.exports = {
     // SEO
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
+        head: true,
+        pageTransitionDelay: 0,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
     },
     {
