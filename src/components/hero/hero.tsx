@@ -71,7 +71,7 @@ export const Hero = () => {
         <Grid centered columns={1}>
           <Grid.Row style={{ paddingBottom: '30px' }}>
             <Grid.Column textAlign="center">
-              <HeroImage height="auto" width="70%" />
+              <HeroImage height="auto" width="100%" />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
