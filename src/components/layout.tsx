@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Footer } from './footer';
+import { Footer } from './footer/footer';
 import { Navigation } from './navigation/navigation';
 import favicon from '../assets/images/favicon.png';
 
@@ -10,9 +10,7 @@ export const Layout = ({
   children: JSX.Element | JSX.Element[];
 }) => {
   return (
-    <div
-      style={{ position: 'relative', paddingBottom: 150, minHeight: '85vh' }}
-    >
+    <div style={{ position: 'relative', minHeight: '85vh' }}>
       <Helmet>
         <link rel="icon" href={favicon} />
       </Helmet>
