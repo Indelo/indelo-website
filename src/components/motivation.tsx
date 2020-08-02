@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Responsive } from 'semantic-ui-react';
 import { Section } from './section/section';
 import Indelo from '../assets/images/indelo.png';
-import LightWave from '../assets/svgs/light-wave.svg';
+import LightWave from '../assets/svgs/lighter-wave.svg';
 
 export const Motivation = () => {
   const aboutUsBody =

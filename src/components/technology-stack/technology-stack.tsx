@@ -27,7 +27,7 @@ import Redux from '../../assets/svgs/redux.svg';
 import SemanticUi from '../../assets/svgs/semantic-ui.svg';
 import Sketch from '../../assets/svgs/sketch.svg';
 import WordPress from '../../assets/svgs/wordpress-icon.svg';
-import LightWave from '../../assets/svgs/light-wave.svg';
+import LightWave from '../../assets/svgs/lighter-wave.svg';
 import css from './technology-stack.module.css';
 
 const items = [
