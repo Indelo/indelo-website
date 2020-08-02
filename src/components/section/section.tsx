@@ -8,7 +8,7 @@ export const Section = ({
   children,
   className,
 }: {
-  title: string;
+  title?: string;
   children: JSX.Element | JSX.Element[];
   className?: any;
 }) => {
@@ -16,9 +16,11 @@ export const Section = ({
 
   return (
     <Container className={sectionStyle}>
-      <Header as="h2" textAlign="center" style={{ fontSize: 60 }}>
-        {title}
-      </Header>
+      {title && (
+        <Header as="h2" textAlign="center" style={{ fontSize: 60 }}>
+          {title}
+        </Header>
+      )}
       <div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
         {children}
       </div>
