@@ -13,7 +13,7 @@ import css from './footer.module.css';
 import Logo from '../../assets/images/small-logo.png';
 
 const data = {
-  contact: [{ item: 'hello@indelo.co.za' }, { item: '+27 83 447 5256' }],
+  contact: [{ item: 'hello@indelo.co.za' }],
   twitter: 'https://twitter.com/Indelo4',
   offerings: [
     { title: 'Website development' },
@@ -65,9 +65,7 @@ export const Footer = () => {
               </p>
             </div>
             <div>
-              <SocialButton link="" type="facebook" />
               <SocialButton link={data.twitter} type="twitter" />
-              <SocialButton link="" type="linkedin" />
             </div>
           </div>
         </Responsive>
@@ -101,9 +99,7 @@ export const Footer = () => {
               />
 
               <Grid.Column width="4" floated="right">
-                <SocialButton link="" type="facebook" />
                 <SocialButton link={data.twitter} type="twitter" />
-                <SocialButton link="" type="linkedin" />
               </Grid.Column>
             </Grid.Row>
           </Grid>

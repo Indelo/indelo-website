@@ -11,7 +11,7 @@ const sections = [
     title: 'Iterate together',
     body:
       'From capturing requirements to refining details, we work closely with you every step of the way.',
-    icon: '👨‍👩‍👦',
+    icon: ' 👨‍👩‍👦',
     ariaLabel: 'team',
   },
   {
@@ -19,7 +19,7 @@ const sections = [
     title: 'World-class technology',
     body:
       'We use the latest technology and standards to ensure your product stands out in the market.',
-    icon: '👌',
+    icon: ' 👌',
     ariaLabel: 'great',
   },
   {
@@ -27,7 +27,7 @@ const sections = [
     title: 'Launch to success',
     body:
       "We ensure your product is launched reliably, and with the exact exposure you're looking for.",
-    icon: '🚀',
+    icon: ' 🚀',
     ariaLabel: 'rocket',
   },
 ];
