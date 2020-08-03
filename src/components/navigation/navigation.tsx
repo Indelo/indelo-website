@@ -135,12 +135,11 @@ export const Navigation = ({ children }: { children: any }) => {
                 padding: 20,
               }}
             >
-              <Image src={logo} style={{ width: 150 }} />
+              <Image src={logo} style={{ width: '50%' }} />
               <Header
                 style={{
                   margin: 0,
                   color: 'white',
-                  padding: 20,
                   fontSize: 40,
                 }}
               >
