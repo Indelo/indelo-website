@@ -10,16 +10,18 @@ export const Motivation = () => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <LightWave
-        width="100%"
-        preserveAspectRatio="none"
-        style={{
-          height: 'calc(100% + 160px)',
-          position: 'absolute',
-          top: -110,
-          zIndex: -1,
-        }}
-      />
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <LightWave
+          width="100%"
+          preserveAspectRatio="none"
+          style={{
+            height: 'calc(100% + 160px)',
+            position: 'absolute',
+            top: -110,
+            zIndex: -1,
+          }}
+        />
+      </Responsive>
       <Section title="Why choose us?">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={1} centered style={{ paddingBottom: '30px' }}>

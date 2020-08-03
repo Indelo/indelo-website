@@ -26,8 +26,8 @@ const RootIndex = () => {
     <>
       <SEO />
       <Layout>
-        <div className={css.container}>
-          <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+          <div className={css.container}>
             <Container
               style={{
                 position: 'relative',
@@ -52,13 +52,15 @@ const RootIndex = () => {
               </div>
               <Hero />
             </Container>
-          </Responsive>
-          <Responsive {...Responsive.onlyMobile}>
+          </div>
+        </Responsive>
+        <Responsive {...Responsive.onlyMobile}>
+          <div className={css.mobileContainer}>
             <Container>
               <Hero />
             </Container>
-          </Responsive>
-        </div>
+          </div>
+        </Responsive>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Wave height="250px" width="100%" preserveAspectRatio="none" />
         </Responsive>

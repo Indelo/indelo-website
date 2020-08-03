@@ -3,3 +3,8 @@
   background-color: #191154;
   min-height: 680px;
 }
+
+.mobileContainer {
+  position: relative;
+  background-color: #191154;
+}

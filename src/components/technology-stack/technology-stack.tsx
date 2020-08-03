@@ -136,16 +136,18 @@ const items = [
 export const TechnologyStack = () => {
   return (
     <div style={{ position: 'relative', width: '100%' }}>
-      <LightWave
-        width="100%"
-        preserveAspectRatio="none"
-        style={{
-          height: 'calc(100% + 210px)',
-          position: 'absolute',
-          top: -120,
-          zIndex: -100,
-        }}
-      />
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <LightWave
+          width="100%"
+          preserveAspectRatio="none"
+          style={{
+            height: 'calc(100% + 210px)',
+            position: 'absolute',
+            top: -120,
+            zIndex: -100,
+          }}
+        />
+      </Responsive>
       <Section title="Our technology stack">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={5} padded>

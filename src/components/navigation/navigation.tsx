@@ -9,9 +9,12 @@ import {
   Sidebar,
   Icon,
   Responsive,
+  Image,
 } from 'semantic-ui-react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import logo from '../../assets/images/small-logo.png';
+
 import css from './navigation.module.css';
 
 const query = graphql`
@@ -115,25 +118,37 @@ export const Navigation = ({ children }: { children: any }) => {
           vertical
           visible={isVisible}
         >
-          <Menu.Item header>
+          <Menu.Item header style={{ backgroundColor: '#1b1154' }}>
+            <div style={{ textAlign: 'end' }}>
+              <Icon
+                inverted
+                onClick={() => setVisible(!isVisible)}
+                size="large"
+                name="close"
+              />
+            </div>
             <div
               style={{
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'space-between',
+                padding: 20,
               }}
             >
-              <Header style={{ marginBottom: 0 }}>indelo</Header>
-              <div>
-                <Icon
-                  onClick={() => setVisible(!isVisible)}
-                  size="large"
-                  name="close"
-                />
-              </div>
+              <Image src={logo} style={{ width: 150 }} />
+              <Header
+                style={{
+                  margin: 0,
+                  color: 'white',
+                  padding: 20,
+                  fontSize: 40,
+                }}
+              >
+                indelo
+              </Header>
             </div>
           </Menu.Item>
-          <Menu.Item>
+          <Menu.Item style={{ textAlign: 'center' }}>
             <Button
               primary
               as={(props: any) => (
