@@ -99,9 +99,7 @@ export const Footer = () => {
               />
 
               <Grid.Column width="4" floated="right">
-                <SocialButton link="" type="facebook" />
                 <SocialButton link={data.twitter} type="twitter" />
-                <SocialButton link="" type="linkedin" />
               </Grid.Column>
             </Grid.Row>
           </Grid>
