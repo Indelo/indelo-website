@@ -28,7 +28,7 @@ const ContactDetails = () => {
   return (
     <div style={{ textAlign: 'start' }}>
       {contactInfo.map(({ title, body, icon }) => (
-        <div key={title}>
+        <div key={title} style={{ paddingBottom: '25px' }}>
           <Header as="h3">{title}</Header>
           <p style={{ fontSize: '1.3em' }}>
             <Icon name={icon as any} style={{ marginRight: 10 }} />
