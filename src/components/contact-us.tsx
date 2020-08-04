@@ -11,31 +11,31 @@ import { Section } from './section/section';
 import { ContactForm } from './contact-form';
 import location from '../assets/images/location.png';
 
+const contactInfo = [
+  {
+    title: 'Email',
+    body: 'hello@indelo.co.za',
+    icon: 'mail',
+  },
+  {
+    title: 'Address',
+    body: 'Claremont, Cape Town, South Africa',
+    icon: 'map marker alternate',
+  },
+];
+
 const ContactDetails = () => {
   return (
     <div style={{ textAlign: 'start' }}>
-      <Header as="h3">Email</Header>
-      <p style={{ fontSize: '1.3em' }}>
-        <Icon
-          inverted
-          circular
-          color="blue"
-          name="mail"
-          style={{ marginRight: 10 }}
-        />
-        hello@indelo.co.za
-      </p>
-      <Header as="h3">Address</Header>
-      <p style={{ fontSize: '1.3em' }}>
-        <Icon
-          inverted
-          circular
-          color="blue"
-          name="map marker alternate"
-          style={{ marginRight: 10 }}
-        />
-        Claremont, Cape Town, South Africa
-      </p>
+      {contactInfo.map(({ title, body, icon }) => (
+        <>
+          <Header as="h3">{title}</Header>
+          <p style={{ fontSize: '1.3em' }}>
+            <Icon name={icon as any} style={{ marginRight: 10 }} />
+            {body}
+          </p>
+        </>
+      ))}
     </div>
   );
 };
