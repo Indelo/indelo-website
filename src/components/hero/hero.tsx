@@ -49,20 +49,15 @@ export const Hero = () => {
                     className={css.linkButton}
                     {...props}
                     to="/#contact"
-                    title="Contact us"
                   />
                 )}
               >
-                <AnchorLink
-                  className={css.linkButton}
-                  to="/#contact"
-                  title="Contact us"
-                />
+                Contact us
               </Button>
             </Grid.Column>
           </Grid>
           <div style={{ position: 'absolute', top: 100, right: 0, width: 700 }}>
-            <HeroImage height="auto" width="auto" />
+            <HeroImage height="100%" width="100%" />
           </div>
         </div>
       </Responsive>
@@ -70,7 +65,7 @@ export const Hero = () => {
         <Grid centered columns={1}>
           <Grid.Row style={{ paddingBottom: '20px' }}>
             <Grid.Column textAlign="center">
-              <HeroImage height="auto" width="100%" />
+              <HeroImage height="100%" width="100%" />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>

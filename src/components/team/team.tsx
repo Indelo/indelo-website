@@ -18,7 +18,7 @@ export const Team = () => {
       <Responsive {...Responsive.onlyMobile}>
         <Grid>
           {team.map((person) => (
-            <Grid.Row className={css.mobileRow}>
+            <Grid.Row key={person.name + person.body} className={css.mobileRow}>
               <Grid.Column className={css.card}>
                 {cardImage(person.image)}
                 {cardTitle(person.name)}
@@ -31,10 +31,13 @@ export const Team = () => {
 
       <Responsive minWidth={767} maxWidth={1025}>
         <Grid>
-          {_.chunk(team, 2).map((row: any) => (
-            <Grid.Row className={css.tabletRow}>
-              {row.map((person: any) => (
-                <div data-aos="zoom-in">
+          {_.chunk(team, 2).map((row) => (
+            <Grid.Row
+              key={JSON.stringify(row.map(({ name }) => name))}
+              className={css.tabletRow}
+            >
+              {row.map((person) => (
+                <div key={person.name + person.body} data-aos="zoom-in">
                   <Grid.Column className={css.card}>
                     {cardImage(person.image)}
                     {cardTitle(person.name)}
@@ -51,7 +54,7 @@ export const Team = () => {
         <Grid style={{ padding: 0 }}>
           <Grid.Row className={css.desktopRow}>
             {team.map((person) => (
-              <div data-aos="zoom-in">
+              <div key={person.name + person.body} data-aos="zoom-in">
                 <GridColumn className={css.card} width={4}>
                   <div
                     style={{

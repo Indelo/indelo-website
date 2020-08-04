@@ -45,8 +45,8 @@ const RootIndex = () => {
                 }}
               >
                 <Background
-                  height="auto"
-                  width="auto"
+                  height="100%"
+                  width="100%"
                   preserveAspectRatio="none"
                 />
               </div>

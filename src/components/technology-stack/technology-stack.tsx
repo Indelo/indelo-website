@@ -152,10 +152,10 @@ export const TechnologyStack = () => {
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={5} padded>
             {chunk(items, 5).map((chunks) => (
-              <Grid.Row>
+              <Grid.Row key={JSON.stringify(chunks.map(({ title }) => title))}>
                 {chunks.map(({ title, image: Icon }) => {
                   return (
-                    <Grid.Column>
+                    <Grid.Column key={title}>
                       <Image className={css.item}>
                         <Header textAlign="center">{title}</Header>
                         <Icon style={{ height: '55px' }} />
@@ -170,10 +170,10 @@ export const TechnologyStack = () => {
         <Responsive {...Responsive.onlyMobile}>
           <Grid columns={2} padded>
             {chunk(items, 2).map((chunks) => (
-              <Grid.Row>
+              <Grid.Row key={JSON.stringify(chunks.map(({ title }) => title))}>
                 {chunks.map(({ title, image: Icon }) => {
                   return (
-                    <Grid.Column>
+                    <Grid.Column key={title}>
                       <Image className={css.item}>
                         <Header textAlign="center">{title}</Header>
                         <Icon style={{ height: '55px' }} />

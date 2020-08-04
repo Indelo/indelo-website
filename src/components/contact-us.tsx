@@ -11,31 +11,31 @@ import { Section } from './section/section';
 import { ContactForm } from './contact-form';
 import location from '../assets/images/location.png';
 
+const contactInfo = [
+  {
+    title: 'Email',
+    body: 'hello@indelo.co.za',
+    icon: 'mail',
+  },
+  {
+    title: 'Address',
+    body: 'Claremont, Cape Town, South Africa',
+    icon: 'map marker alternate',
+  },
+];
+
 const ContactDetails = () => {
   return (
     <div style={{ textAlign: 'start' }}>
-      <Header as="h3">Email</Header>
-      <p style={{ fontSize: '1.3em' }}>
-        <Icon
-          inverted
-          circular
-          color="blue"
-          name="mail"
-          style={{ marginRight: 10 }}
-        />
-        hello@indelo.co.za
-      </p>
-      <Header as="h3">Address</Header>
-      <p style={{ fontSize: '1.3em' }}>
-        <Icon
-          inverted
-          circular
-          color="blue"
-          name="map marker alternate"
-          style={{ marginRight: 10 }}
-        />
-        Claremont, Cape Town, South Africa
-      </p>
+      {contactInfo.map(({ title, body, icon }) => (
+        <div key={title}>
+          <Header as="h3">{title}</Header>
+          <p style={{ fontSize: '1.3em' }}>
+            <Icon name={icon as any} style={{ marginRight: 10 }} />
+            {body}
+          </p>
+        </div>
+      ))}
     </div>
   );
 };
@@ -43,7 +43,12 @@ const ContactDetails = () => {
 export const ContactUs = () => {
   return (
     <>
-      <div id="contact" style={{ position: 'relative', top: '-90px' }} />
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <div id="contact" style={{ position: 'relative', top: '-90px' }} />
+      </Responsive>
+      <Responsive {...Responsive.onlyMobile}>
+        <div id="contact" style={{ position: 'relative', top: '-10px' }} />
+      </Responsive>
       <Section title="Contact us">
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={1} centered>
