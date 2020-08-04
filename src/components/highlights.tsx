@@ -38,7 +38,7 @@ export const Highlights = () => {
       <Responsive {...Responsive.onlyMobile}>
         <Grid>
           {sections.map((section) => (
-            <Grid.Row>
+            <Grid.Row key={section.title}>
               <Grid.Column style={{ textAlign: 'center', marginBottom: 30 }}>
                 <Image
                   src={section.image}
@@ -67,7 +67,7 @@ export const Highlights = () => {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Grid columns={3}>
             {sections.map((section) => (
-              <Grid.Column style={{ textAlign: 'center' }}>
+              <Grid.Column key={section.title} style={{ textAlign: 'center' }}>
                 <Image
                   src={section.image}
                   style={{

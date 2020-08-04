@@ -9,11 +9,11 @@ const services = [
   {
     title: 'Website development',
     body: (
-      <div>
+      <p>
         From off the shelf WordPress setups to fully bespoke and customized
         websites using the latest technology and UI/UX principles, our website
         development offering caters for all requirements.
-      </div>
+      </p>
     ),
     image: (
       <Image src={WebDevelopmentSvg} style={{ width: 250, margin: 'auto' }} />
@@ -22,11 +22,11 @@ const services = [
   {
     title: 'Design and branding',
     body: (
-      <div>
+      <p>
         Our design and branding offering ranges from individual logo and
         brochure designs, to full corporate image packs including business
         cards, email signatures and more.
-      </div>
+      </p>
     ),
     image: (
       <Image
@@ -39,12 +39,15 @@ const services = [
     title: 'Ongoing maintenance and support',
     body: (
       <div>
-        We help you keep your online offering fully optimized for your business
-        requirements. From security updates and database backups to analytics
-        reviews and SEO optimizations.
-        <br />
-        Our support and maintenance offering has what you need for an optimal
-        online experience.
+        <p>
+          We help you keep your online offering fully optimized for your
+          business requirements. From security updates and database backups to
+          analytics reviews and SEO optimizations.
+        </p>
+        <p>
+          Our support and maintenance offering has what you need for an optimal
+          online experience.
+        </p>
       </div>
     ),
     image: (
@@ -59,7 +62,7 @@ export const Services = () => {
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Grid columns={2} verticalAlign="middle">
           {services.map(({ title, body, image }, index) => (
-            <Grid.Row style={{ padding: 0, paddingBottom: 50 }}>
+            <Grid.Row key={title} style={{ padding: 0, paddingBottom: 50 }}>
               <Grid.Column width={index % 2 === 0 ? 9 : 7}>
                 <Segment basic>
                   {index % 2 === 0 ? (
@@ -70,9 +73,9 @@ export const Services = () => {
                       >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
+                      <div style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
                         {body}
-                      </p>
+                      </div>
                     </>
                   ) : (
                     <Segment basic textAlign="center">
@@ -91,9 +94,9 @@ export const Services = () => {
                       >
                         {title}
                       </Header>
-                      <p style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
+                      <div style={{ fontSize: '1.5em', lineHeight: '1.6em' }}>
                         {body}
-                      </p>
+                      </div>
                     </>
                   ) : (
                     <Segment basic textAlign="center">
@@ -111,7 +114,7 @@ export const Services = () => {
           <Grid.Column textAlign="center">
             {services.map(({ title, body, image }) => {
               return (
-                <div style={{ paddingBottom: '50px' }}>
+                <div key={title} style={{ paddingBottom: '50px' }}>
                   <Grid.Row style={{ paddingBottom: '30px' }}>
                     <Header style={{ fontWeight: 500 }} as="h3">
                       {title}

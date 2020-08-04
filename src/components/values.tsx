@@ -49,10 +49,10 @@ export const Values = () => (
       <Grid centered columns={3}>
         {chunk(ourValues, 3).map((chunks) => {
           return (
-            <Grid.Row>
+            <Grid.Row key={JSON.stringify(chunks.map(({ title }) => title))}>
               {chunks.map(({ title, body, image }) => {
                 return (
-                  <Grid.Column textAlign="center">
+                  <Grid.Column key={title + body} textAlign="center">
                     <Image
                       src={image}
                       style={{
@@ -78,10 +78,10 @@ export const Values = () => (
       <Grid centered columns={2}>
         {chunk(ourValues, 2).map((chunks) => {
           return (
-            <Grid.Row>
+            <Grid.Row key={JSON.stringify(chunks.map(({ title }) => title))}>
               {chunks.map(({ title, body, image }) => {
                 return (
-                  <Grid.Column textAlign="center">
+                  <Grid.Column key={title + body} textAlign="center">
                     <Image
                       src={image}
                       style={{

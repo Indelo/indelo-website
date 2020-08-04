@@ -94,15 +94,10 @@ export const Navigation = ({ children }: { children: any }) => {
                       className={css.linkButton}
                       {...props}
                       to="/#contact"
-                      title="Contact us"
                     />
                   )}
                 >
-                  <AnchorLink
-                    className={css.linkButton}
-                    to="/#contact"
-                    title="Contact us"
-                  />
+                  Contact us
                 </Button>
               </Menu.Item>
             </Menu.Menu>
