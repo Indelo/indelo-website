@@ -11,8 +11,8 @@ const services = [
     body: (
       <p>
         From off the shelf WordPress setups to fully bespoke and customized
-        websites using the latest technology and UI/UX principles, our website
-        development offering caters for all requirements.
+        websites, using the latest technology and UI/UX principles, our website
+        development services cater for all requirements.
       </p>
     ),
     image: (
@@ -40,13 +40,13 @@ const services = [
     body: (
       <div>
         <p>
-          We help you keep your online offering fully optimized for your
-          business requirements. From security updates and database backups to
-          analytics reviews and SEO optimizations.
+          We help you keep your website fully optimized for your business
+          requirements. From security updates and database backups to analytics
+          reviews and SEO optimizations.
         </p>
         <p>
-          Our support and maintenance offering has what you need for an optimal
-          online experience.
+          Our support and maintenance offering provides all you need to keep
+          your online presence operating smoothly.
         </p>
       </div>
     ),

@@ -98,7 +98,11 @@ export const Footer = () => {
                 ))}
               />
 
-              <Grid.Column width="4" floated="right">
+              <Grid.Column
+                width="4"
+                floated="right"
+                style={{ textAlign: 'right' }}
+              >
                 <SocialButton link={data.twitter} type="twitter" />
               </Grid.Column>
             </Grid.Row>

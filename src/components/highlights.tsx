@@ -7,27 +7,24 @@ import Iterate from '../assets/images/iterate.png';
 
 const sections = [
   {
-    image: Develop,
+    image: Iterate,
     title: 'Iterate together',
     body:
       'From capturing requirements to refining details, we work closely with you every step of the way.',
-    icon: ' 👨‍👩‍👦',
     ariaLabel: 'team',
   },
   {
-    image: Launch,
+    image: Develop,
     title: 'World-class technology',
     body:
       'We use the latest technology and standards to ensure your product stands out in the market.',
-    icon: ' 👌',
     ariaLabel: 'great',
   },
   {
-    image: Iterate,
+    image: Launch,
     title: 'Launch to success',
     body:
       "We ensure your product is launched reliably, and with the exact exposure you're looking for.",
-    icon: ' 🚀',
     ariaLabel: 'rocket',
   },
 ];
@@ -52,12 +49,7 @@ export const Highlights = () => {
                 <Header style={{ marginTop: 0, fontWeight: 500 }} as="h3">
                   {section.title}
                 </Header>
-                <p style={{ fontSize: 18 }}>
-                  {section.body}
-                  <span role="img" aria-label={section.ariaLabel}>
-                    {section.icon}
-                  </span>
-                </p>
+                <p style={{ fontSize: 18 }}>{section.body}</p>
               </Grid.Column>
             </Grid.Row>
           ))}

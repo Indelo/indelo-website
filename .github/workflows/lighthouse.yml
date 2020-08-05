@@ -12,7 +12,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          GATSBY_INDELO_API_URL: https://indelo-website-api-staging.herokuapp.com/contact-us
+          INDELO_WEBSITE_API_URL: https://indelo-website-api-staging.herokuapp.com/contact-us
       - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v3
         with:

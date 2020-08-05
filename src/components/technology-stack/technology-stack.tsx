@@ -48,6 +48,14 @@ const items = [
     image: Express,
   },
   {
+    title: 'Python',
+    image: Python,
+  },
+  {
+    title: 'Flask',
+    image: Flask,
+  },
+  {
     title: 'Redux',
     image: Redux,
   },
@@ -56,24 +64,8 @@ const items = [
     image: Gatsby,
   },
   {
-    title: 'Python',
-    image: Python,
-  },
-  {
-    title: 'Docker',
-    image: Docker,
-  },
-  {
-    title: 'Flask',
-    image: Flask,
-  },
-  {
     title: 'CSS3',
     image: Css,
-  },
-  {
-    title: 'GraphQL',
-    image: Graphql,
   },
   {
     title: 'Semantic UI',
@@ -86,6 +78,30 @@ const items = [
   {
     title: 'WordPress',
     image: WordPress,
+  },
+  {
+    title: 'GraphQL',
+    image: Graphql,
+  },
+  {
+    title: 'Google Ads',
+    image: GoogleAds,
+  },
+  {
+    title: 'G. Analytics',
+    image: GoogleAnalytics,
+  },
+  {
+    title: 'Sketch',
+    image: Sketch,
+  },
+  {
+    title: 'Figma',
+    image: Figma,
+  },
+  {
+    title: 'Docker',
+    image: Docker,
   },
   {
     title: 'CircleCI',
@@ -114,22 +130,6 @@ const items = [
   {
     title: 'Rails',
     image: Rails,
-  },
-  {
-    title: 'Google Ads',
-    image: GoogleAds,
-  },
-  {
-    title: 'G. Analytics',
-    image: GoogleAnalytics,
-  },
-  {
-    title: 'Sketch',
-    image: Sketch,
-  },
-  {
-    title: 'Figma',
-    image: Figma,
   },
 ];
 
