@@ -18,8 +18,8 @@ const contactInfo = [
     icon: 'mail',
   },
   {
-    title: 'Address',
-    body: 'Claremont, Cape Town, South Africa',
+    title: 'Location',
+    body: 'Cape Town, South Africa',
     icon: 'map marker alternate',
   },
 ];

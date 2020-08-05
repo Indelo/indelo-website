@@ -6,7 +6,7 @@ import LightWave from '../assets/svgs/lighter-wave.svg';
 
 export const Motivation = () => {
   const aboutUsBody =
-    'We are a team of passionate and driven developers, designers and UI/UX professionals with a variety of industry experience. We love building things and creating beautiful products that work well. We focus on the details to ensure our products are user friendly, unique and exactly what you ask for. We thrive to empower businesses through technology!';
+    'We are a team of passionate and driven developers, designers and UI/UX professionals with many years of industry experience. We love building things and creating beautiful products that work well. We focus on the details to ensure our products are user friendly, unique and exactly what you ask for. We thrive to empower businesses through technology!';
 
   return (
     <div style={{ position: 'relative' }}>

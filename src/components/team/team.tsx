@@ -14,7 +14,7 @@ export const Team = () => {
   const cardTitle = (name: string) => <Header as="h3">{name}</Header>;
 
   return (
-    <Section title="Indelo's co-founders">
+    <Section title="Indelo's founders">
       <Responsive {...Responsive.onlyMobile}>
         <Grid>
           {team.map((person) => (
