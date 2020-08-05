@@ -9,21 +9,21 @@ export const team = [
     image: Megan,
 
     body:
-      'Front-end developer and designer. Holds a degree in Visual Communication and Design (Hons) from Stellenbosch University.',
+      'Front-end developer and designer with a passion for UI/UX. Holds a degree in Visual Communication and Design',
   },
   {
     name: 'Jason',
     image: Jason,
 
     body:
-      'Full-stack developer with a degree in Engineering from UCT and over 10 years of experience developing software and running businesses',
+      'Full-stack developer with a degree in Engineering and over 10 years of experience developing software and running businesses',
   },
   {
     name: 'Nicol',
     image: Nicol,
 
     body:
-      'Full-stack developer with a degree in Computer Science and Business Computing from UCT. A jack of all trades, with a particular love for React',
+      'Full-stack developer with a degree in Computer Science and Business Computing. Passionate about quality and customer-centric design',
   },
   {
     name: 'George',

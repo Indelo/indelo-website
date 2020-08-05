@@ -24,7 +24,7 @@ const ourValues = [
     image: Details,
   },
   {
-    title: 'Teamwork',
+    title: 'Quality',
     body:
       'We delegate work in our team so that each aspect of your product is worked on by a leading specialist.',
     image: TeamWork,
@@ -32,7 +32,7 @@ const ourValues = [
   {
     title: 'Timely',
     body:
-      "We're deadline driven and it is our priority to get your product out the door as soon as you need it.",
+      "We're deadline driven and it is our priority to get your product delivered when you need it.",
     image: Time,
   },
   {
