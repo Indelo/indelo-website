@@ -10,7 +10,7 @@ dotenv.config();
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isErrored, setIsErrored] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
 
   const [firstName, setFirstName] = useState<string | undefined>(undefined);
@@ -19,9 +19,9 @@ export const ContactForm = () => {
   const [company, setCompany] = useState<string | undefined>(undefined);
   const [message, setMessage] = useState<string | undefined>(undefined);
 
-  const indeloApiUrl = process.env.GATSBY_INDELO_API_URL;
+  const indeloApiUrl = process.env.INDELO_WEBSITE_API_URL;
   if (!indeloApiUrl) {
-    throw Error(`GATSBY_INDELO_API_URL environment variable required`);
+    throw Error(`INDELO_WEBSITE_API_URL environment variable required`);
   }
 
   const submit = async () => {
@@ -41,12 +41,12 @@ export const ContactForm = () => {
       try {
         setIsLoading(true);
         await axios.post(indeloApiUrl, body);
+        await navigate('/enquiry-submission-success');
         setIsLoading(false);
-        navigate('/enquiry-submission-success');
       } catch (e) {
         console.log(e);
         setIsLoading(false);
-        setIsErrored(true);
+        setHasError(true);
       }
     }
   };
@@ -54,7 +54,7 @@ export const ContactForm = () => {
   return (
     <>
       <Header as="h3">Send us a message</Header>
-      {isErrored && (
+      {hasError && (
         <Message
           error
           header="An error occurred"

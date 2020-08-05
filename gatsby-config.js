@@ -13,12 +13,18 @@ module.exports = {
     image: 'images/indelo.png',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ['INDELO_WEBSITE_API_URL', 'GOOGLE_ANALYTICS_TRACKING_ID'],
+      },
+    },
     // SEO
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
         pageTransitionDelay: 0,
       },
