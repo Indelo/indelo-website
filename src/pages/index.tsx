@@ -19,7 +19,7 @@ import Background from '../assets/svgs/landing-background.svg';
 
 const RootIndex = () => {
   useEffect(() => {
-    AOS.init({ duration: 600 });
+    AOS.init({ duration: 400 });
   }, []);
 
   return (

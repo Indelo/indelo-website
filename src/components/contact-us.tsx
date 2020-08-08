@@ -63,15 +63,7 @@ export const ContactUs = () => {
           </Grid>
           <Grid columns={2} centered style={{ marginBottom: 50 }}>
             <Grid.Column computer={9} tablet={9}>
-              <Segment
-                padded
-                size="huge"
-                style={{
-                  boxShadow: '3px 3px 20px rgba(70,101,160,.164)',
-                  padding: 30,
-                  border: 'none',
-                }}
-              >
+              <Segment padded size="huge">
                 <ContactForm />
               </Segment>
             </Grid.Column>
@@ -96,13 +88,7 @@ export const ContactUs = () => {
           <Grid columns={1}>
             <Grid.Column>
               <Grid.Row>
-                <Segment
-                  padded
-                  style={{
-                    boxShadow: '3px 3px 20px rgba(70,101,160,.164)',
-                    border: 'none',
-                  }}
-                >
+                <Segment>
                   <ContactForm />
                 </Segment>
               </Grid.Row>
