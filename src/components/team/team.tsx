@@ -1,76 +1,92 @@
 import React from 'react';
-import { Grid, Header, GridColumn, Image, Responsive } from 'semantic-ui-react';
-import _ from 'lodash';
-
+import {
+  Grid,
+  GridColumn,
+  Responsive,
+  Segment,
+  Header,
+  Image,
+} from 'semantic-ui-react';
+import { chunk } from 'lodash';
 import { Section } from '../section/section';
 import { team } from './copy';
 
-import css from './team.module.css';
-
 export const Team = () => {
-  const cardImage = (src: any) => (
-    <Image src={src} size="small" className={css.image} circular />
-  );
-  const cardTitle = (name: string) => <Header as="h3">{name}</Header>;
-
   return (
     <Section title="Indelo's founders">
       <Responsive {...Responsive.onlyMobile}>
-        <Grid>
+        <Grid centered columns={1}>
           {team.map((person) => (
-            <Grid.Row key={person.name + person.body} className={css.mobileRow}>
-              <Grid.Column className={css.card}>
-                {cardImage(person.image)}
-                {cardTitle(person.name)}
-                <p className={css.cardBody}>{person.body}</p>
+            <Grid.Row key={person.name + person.body} textAlign="center">
+              <Grid.Column textAlign="center" width={9}>
+                <Segment padded textAlign="center">
+                  <Image
+                    bordered
+                    centered
+                    circular
+                    src={person.image}
+                    size="small"
+                  />
+                  <Header as="h3">{person.name}</Header>
+                  <p style={{ fontSize: '1.3em' }}>{person.body}</p>
+                </Segment>
               </Grid.Column>
             </Grid.Row>
           ))}
         </Grid>
       </Responsive>
 
-      <Responsive minWidth={767} maxWidth={1025}>
-        <Grid>
-          {_.chunk(team, 2).map((row) => (
-            <Grid.Row
-              key={JSON.stringify(row.map(({ name }) => name))}
-              className={css.tabletRow}
-            >
-              {row.map((person) => (
-                <div key={person.name + person.body} data-aos="zoom-in">
-                  <Grid.Column className={css.card}>
-                    {cardImage(person.image)}
-                    {cardTitle(person.name)}
-                    <p className={css.cardBody}>{person.body}</p>
-                  </Grid.Column>
-                </div>
-              ))}
-            </Grid.Row>
-          ))}
+      <Responsive {...Responsive.onlyTablet}>
+        <Grid stackable centered columns={2}>
+          {chunk(team, 2).map((people) => {
+            return (
+              <Grid.Row>
+                {people.map((person) => (
+                  <GridColumn width={8} key={person.name + person.body}>
+                    <div data-aos="zoom-in">
+                      <Segment padded textAlign="center">
+                        <Image
+                          bordered
+                          centered
+                          circular
+                          src={person.image}
+                          size="small"
+                        />
+                        <Header as="h3">{person.name}</Header>
+                        <p style={{ fontSize: '1.3em' }}>{person.body}</p>
+                      </Segment>
+                    </div>
+                  </GridColumn>
+                ))}
+              </Grid.Row>
+            );
+          })}
         </Grid>
       </Responsive>
 
-      <Responsive minWidth={1026}>
-        <Grid style={{ padding: 0 }}>
-          <Grid.Row className={css.desktopRow}>
+      <Responsive minWidth={Responsive.onlyComputer.minWidth}>
+        <Grid stackable columns={4}>
+          <Grid.Row>
             {team.map((person) => (
-              <div key={person.name + person.body} data-aos="zoom-in">
-                <GridColumn className={css.card} width={4}>
-                  <div
-                    style={{
-                      width: '100%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}
+              <GridColumn key={person.name + person.body}>
+                <div data-aos="zoom-in">
+                  <Segment
+                    padded
+                    textAlign="center"
+                    style={{ minHeight: 420, height: '40%' }}
                   >
-                    {cardImage(person.image)}
-                  </div>
-
-                  {cardTitle(person.name)}
-                  <p className={css.cardBody}>{person.body}</p>
-                </GridColumn>
-              </div>
+                    <Image
+                      bordered
+                      centered
+                      circular
+                      src={person.image}
+                      size="small"
+                    />
+                    <Header as="h3">{person.name}</Header>
+                    <p style={{ fontSize: '1.3em' }}>{person.body}</p>
+                  </Segment>
+                </div>
+              </GridColumn>
             ))}
           </Grid.Row>
         </Grid>

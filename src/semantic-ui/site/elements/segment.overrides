@@ -1,3 +1,13 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.segment {
+  box-shadow: 3px 3px 20px rgba(70, 101, 160, 0.164) !important;
+  border-radius: 15px;
+  border: none;
+}
+
+.ui.basic.segment {
+  box-shadow: none !important;
+}
