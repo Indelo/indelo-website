@@ -167,8 +167,8 @@ export const TechnologyStack = () => {
           </Grid>
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
-          <Grid columns={3} centered padded>
-            {chunk(items, 3).map((chunks) => (
+          <Grid columns={2} centered padded>
+            {chunk(items, 2).map((chunks) => (
               <Grid.Row key={JSON.stringify(chunks.map(({ title }) => title))}>
                 {chunks.map(({ title, image: Icon }) => {
                   return (

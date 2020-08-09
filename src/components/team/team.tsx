@@ -18,7 +18,7 @@ export const Team = () => {
         <Grid centered columns={1}>
           {team.map((person) => (
             <Grid.Row key={person.name + person.body} textAlign="center">
-              <Grid.Column textAlign="center" width={9}>
+              <Grid.Column textAlign="center" width={14}>
                 <Segment padded textAlign="center">
                   <Image
                     bordered
