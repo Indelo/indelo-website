@@ -1,6 +1,6 @@
-import Jason from '../../assets/images/jason.jpeg';
-import Megan from '../../assets/images/megan.jpeg';
-import Nicol from '../../assets/images/nicol.jpeg';
+import Jason from '../../assets/images/Jason-grey.png';
+import Megan from '../../assets/images/Megan-grey.png';
+import Nicol from '../../assets/images/Nicol-grey.png';
 import George from '../../assets/images/george.jpeg';
 
 export const team = [
