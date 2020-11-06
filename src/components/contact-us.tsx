@@ -14,7 +14,7 @@ import location from '../assets/images/location.png';
 const contactInfo = [
   {
     title: 'Email',
-    body: 'hello@indelo.co.za',
+    body: 'nvojacek@gmail.com',
     icon: 'mail',
   },
   {
