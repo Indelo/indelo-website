@@ -1,7 +1,7 @@
-import Jason from '../../assets/images/Jason-grey.png';
-import Megan from '../../assets/images/Megan-grey.png';
-import Nicol from '../../assets/images/Nicol-grey.png';
-import George from '../../assets/images/george.jpeg';
+import Jason from '../../assets/images/Jason.png';
+import Megan from '../../assets/images/Megan.png';
+import Nicol from '../../assets/images/Nicol.png';
+import George from '../../assets/images/george.png';
 
 export const team = [
   {
