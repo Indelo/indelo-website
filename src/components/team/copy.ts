@@ -24,7 +24,7 @@ export const team = [
 
     body:
       'Front-end developer and designer with a broad range of experience. Holds a degree in Visual Communication and Design',
-  }
+  },
   {
     name: 'George',
     image: George,
