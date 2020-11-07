@@ -14,7 +14,7 @@ import location from '../assets/images/location.png';
 const contactInfo = [
   {
     title: 'Email',
-    body: 'nvojacek@gmail.com',
+    body: 'indeloagency@gmail.com',
     icon: 'mail',
   },
   {

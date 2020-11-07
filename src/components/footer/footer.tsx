@@ -13,7 +13,7 @@ import css from './footer.module.css';
 import Logo from '../../assets/images/small-logo.png';
 
 const data = {
-  contact: [{ item: 'nvojacek@gmail.com' }],
+  contact: [{ item: 'indeloagency@gmail.com' }],
   twitter: 'https://twitter.com/Indelo4',
   offerings: [
     { title: 'Website development' },

@@ -5,13 +5,6 @@ import George from '../../assets/images/george.jpeg';
 
 export const team = [
   {
-    name: 'Megan',
-    image: Megan,
-
-    body:
-      'Front-end developer and designer with a passion for UI/UX. Holds a degree in Visual Communication and Design',
-  },
-  {
     name: 'Jason',
     image: Jason,
 
@@ -23,8 +16,15 @@ export const team = [
     image: Nicol,
 
     body:
-      'Full-stack developer with a degree in Computer Science and Business Computing. Passionate about quality and customer-centric design',
+      'Full-stack developer with a degree in Computer Science and Business Computing. Enjoys building all the things.',
   },
+  {
+    name: 'Megan',
+    image: Megan,
+
+    body:
+      'Front-end developer and designer with a broad range of experience. Holds a degree in Visual Communication and Design',
+  }
   {
     name: 'George',
     image: George,
