@@ -15,6 +15,7 @@ import Logo from '../../assets/images/small-logo.png';
 const data = {
   contact: [{ item: 'indeloagency@gmail.com' }],
   twitter: 'https://twitter.com/Indelo4',
+  linkedin: 'https://www.linkedin.com/company/indelo',
   offerings: [
     { title: 'Website development' },
     { title: 'UI/UX' },
@@ -104,6 +105,7 @@ export const Footer = () => {
                 style={{ textAlign: 'right' }}
               >
                 <SocialButton link={data.twitter} type="twitter" />
+                <SocialButton link={data.linkedin} type="linkedin" />
               </Grid.Column>
             </Grid.Row>
           </Grid>
