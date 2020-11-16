@@ -39,7 +39,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "semantic-ui-less": "^2.4.1",
-    "semantic-ui-react": "^1.1.1"
+    "semantic-ui-react": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
