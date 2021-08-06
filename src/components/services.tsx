@@ -79,7 +79,7 @@ export const Services = () => {
                     </>
                   ) : (
                     <Segment basic textAlign="center">
-                      <div data-aos="fade-right">{image}</div>
+                      <div>{image}</div>
                     </Segment>
                   )}
                 </Segment>
@@ -100,7 +100,7 @@ export const Services = () => {
                     </>
                   ) : (
                     <Segment basic textAlign="center">
-                      <div data-aos="fade-left">{image}</div>
+                      <div>{image}</div>
                     </Segment>
                   )}
                 </Segment>

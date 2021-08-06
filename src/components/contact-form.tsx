@@ -21,7 +21,7 @@ export const ContactForm = () => {
 
   const indeloApiUrl = process.env.INDELO_WEBSITE_API_URL;
   if (!indeloApiUrl) {
-    throw Error(`INDELO_WEBSITE_API_URL environment variable required`);
+    '';
   }
 
   const submit = async () => {
